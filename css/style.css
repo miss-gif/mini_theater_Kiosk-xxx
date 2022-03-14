@@ -1,0 +1,158 @@
+body {
+  font-size: 16px;
+}
+
+:root {
+  --Color1: #ed3124;
+  --Color2: #9a1e16;
+  --Color3: #eee;
+  --Color4: #363636;
+}
+
+@font-face {
+  font-family: "GongGothicMedium";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10@1.0/GongGothicMedium.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.wrapper {
+  width: 43.75rem;
+  height: 56.25rem;
+  margin: auto;
+}
+
+.wrapper header {
+  margin-bottom: 1.875rem;
+}
+
+.wrapper header .headerLogo {
+  width: 100%;
+  height: 5.625rem;
+  background-color: #eeeeee;
+}
+
+.wrapper header .headerTitle {
+  letter-spacing: -5px;
+  color: #fff;
+  font-size: 4.375rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 6.25rem;
+  background-color: #ba1a0f;
+}
+
+.wrapper main section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.wrapper main section .mainContent {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 1.875rem;
+  border-radius: 1rem;
+  width: 17.5rem;
+  height: 40rem;
+  -webkit-box-shadow: 0.313rem 0.313rem 1.875rem rgba(51, 51, 51, 0.4);
+          box-shadow: 0.313rem 0.313rem 1.875rem rgba(51, 51, 51, 0.4);
+}
+
+.wrapper main section .mainContent img {
+  width: 13.75rem;
+  -webkit-box-shadow: 0.313rem 0.313rem 1.875rem rgba(51, 51, 51, 0.4);
+          box-shadow: 0.313rem 0.313rem 1.875rem rgba(51, 51, 51, 0.4);
+  margin-bottom: 0.938rem;
+}
+
+.wrapper main section .mainContent .movieInfo {
+  padding: 0.625rem 0;
+}
+
+.wrapper main section .mainContent .movieInfo .infoTitle {
+  position: relative;
+  width: 100%;
+  font-size: 2rem;
+  font-weight: 900;
+  margin-bottom: 1.875rem;
+  white-space: nowrap;
+  letter-spacing: -5px;
+}
+
+.wrapper main section .mainContent .movieInfo .infoTitle::before {
+  position: absolute;
+  bottom: -0.938rem;
+  content: "";
+  width: 100%;
+  height: 3px;
+  background-color: #eee;
+}
+
+.wrapper main section .mainContent .movieInfo .infoTheater {
+  margin: 1.25rem 0;
+}
+
+.wrapper main section .mainContent .movieInfo .infoTheater .infoTheaterLocation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 0.625rem;
+}
+
+.wrapper main section .mainContent .movieInfo .infoTheater .infoTheaterLocation .infoLocation {
+  font-weight: 900;
+  color: #a43a12;
+  margin-right: 0.625rem;
+  font-size: 0.875em;
+}
+
+.wrapper main section .mainContent .movieInfo .infoTheater .infoTheaterLocation .infoFloor {
+  font-size: 0.875rem;
+}
+
+.wrapper main section .mainContent .movieInfo .infoTheater .showTime {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0.313rem 0;
+}
+
+.wrapper main section .mainContent .movieInfo .infoTheater .showTime .timeBox {
+  padding: 0.313em 0.5em;
+  background-color: #808080;
+  color: #fff;
+  font-weight: 900;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.wrapper main section .mainContent .movieInfo .infoTheater .showTime .timeSeat {
+  width: 3rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #82a67d;
+  margin: 0 6px;
+}
+
+.wrapper main section .mainContent .movieInfo .infoTheater .line:before {
+  position: absolute;
+  bottom: -0.938em;
+  content: "";
+  width: 100%;
+  height: 2px;
+  background-color: #eee;
+}
+/*# sourceMappingURL=style.css.map */
