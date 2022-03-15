@@ -1,5 +1,6 @@
 * {
   font-size: 10px;
+  font-family: "GongGothicMedium";
 }
 
 :root {
@@ -17,27 +18,28 @@
 }
 
 .wrapper {
-  width: 43.75rem; // 700px
-  height: 56.25rem; // 900px
+  width: 70rem; // 700px
+  height: 90rem; // 900px
   margin: auto;
   //헤더 영역
   header {
-    margin-bottom: 1.875rem; // 30px
+    margin-bottom: 3rem; // 30px
     .headerLogo {
       width: 100%;
-      height: 5.625rem; // 90px
-      background-color: #eeeeee;
+      height: 9rem; // 90px
+      background-color: #eee;
     }
     .headerTitle {
-      letter-spacing: -5px;
+      // letter-spacing: -0.5rem;
+      font-weight: 300;
       color: #fff;
-      font-size: 4.375rem; // 70px
+      font-size: 7rem; // 70px
       display: flex;
       justify-content: center;
       align-items: center;
       width: 100%;
-      height: 6.25rem; // 100px
-      background-color: #ba1a0f;
+      height: 10rem; // 100px
+      background-color: #9a1e16;
     }
   }
 
@@ -47,80 +49,86 @@
       display: flex;
       .mainContent {
         box-sizing: border-box;
-        padding: 1.875rem;
-        border-radius: 1rem;
-        width: 17.5rem; // 280px
-        height: 40rem; // 640px
-        box-shadow: 0.313rem 0.313rem 1.875rem rgba(51, 51, 51, 0.4); // 5px 5px 30px
+        padding: 3rem; // 30px
+        border-radius: 1rem; // 10px
+        width: 28rem; // 280px
+        height: 64rem; // 640px
+        box-shadow: 0.5rem 0.5rem 3rem rgba(51, 51, 51, 0.4); // 5px 5px 30px
+        // border: 1px solid #808080;
         img {
-          width: 13.75rem; // 220px
-          box-shadow: 0.313rem 0.313rem 1.875rem rgba(51, 51, 51, 0.4); // 5px 5px 30px
-          margin-bottom: 0.938rem;
+          width: 22rem; // 220px
+          box-shadow: 0.5rem 0.5rem 3rem rgba(51, 51, 51, 0.4); // 5px 5px 30px
+          margin-bottom: 1.5rem; // 15px
         }
         .movieInfo {
-          padding: 0.625rem 0; // 10px
+          padding: 1rem 0; // 10px
 
           //영화 제목
           .infoTitle {
             position: relative;
             width: 100%;
-            font-size: 2rem;
-            font-weight: 900;
-            margin-bottom: 1.875rem; // 30px
+            font-size: 2.4rem; // 24px
+            // margin-bottom: 1rem; // 30px
             white-space: nowrap;
-            letter-spacing: -5px;
+            // letter-spacing: -0.5rem; // 5px
           }
           .infoTitle::before {
             position: absolute;
-            bottom: -0.938rem; // 15px
+            bottom: -1rem; // 10px
             content: "";
             width: 100%;
-            height: 3px;
-            background-color: #eee;
+            height: 0.3rem; // 3px
+            background-color: rgb(207, 204, 204);
           }
           // 상영관 정보
           .infoTheater {
-            margin: 1.25rem 0; // 20px
+            margin: 2rem 0; // 20px
             .infoTheaterLocation {
               display: flex;
-              margin-bottom: 0.625rem; //10px
+              margin-bottom: 1rem; //10px
               .infoLocation {
                 font-weight: 900;
-                color: #a43a12;
-                margin-right: 0.625rem;
-                font-size: 0.875em; // 14px
+                color: #9a1e16;
+                margin-right: 0.5rem;
+                font-size: 1rem; // 14px
               }
               .infoFloor {
-                font-size: 0.875rem; // 14px
+                font-size: 1rem; // 14px
               }
             }
             .showTime {
               position: relative;
               display: flex;
+              justify-content: space-between;
               align-items: center;
-              margin: 0.313rem 0; // 5px
+              // margin: 0.5rem 0; // 5px
 
               .timeBox {
-                padding: 0.313em 0.5em; // 5px 8px
+                width: 6.5rem; // 65px
+                padding: 0.5rem 0; // 5px
+                text-align: center;
+                font-size: 1.6rem; // 16px
+                font-weight: 100;
                 background-color: #808080;
                 color: #fff;
-                font-weight: 900;
                 box-sizing: border-box;
+                // white-space: nowrap;
               }
               .timeSeat {
-                width: 3rem;
-                font-size: 0.875rem; // 14px
-                font-weight: 600;
+                text-align: center;
+                display: block;
+                width: 4rem; // 40px
+                font-size: 1.2rem; // 14px
+                font-weight: 300;
                 color: #82a67d;
-                margin: 0 6px;
               }
             }
             .line:before {
               position: absolute;
-              bottom: -0.938em; // 15px
+              bottom: -1rem; // 10px
               content: "";
               width: 100%;
-              height: 2px;
+              height: 0.2rem; // 2px
               background-color: #eee;
             }
           }
