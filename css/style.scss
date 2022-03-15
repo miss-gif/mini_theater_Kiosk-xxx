@@ -1,6 +1,12 @@
+// common
+
 * {
   font-size: 10px;
   font-family: "GongGothicMedium";
+}
+
+body {
+  background-color: #eee;
 }
 
 :root {
@@ -17,18 +23,38 @@
   font-style: normal;
 }
 
+i {
+  margin: 0 1rem; // 10px
+}
+
+// input에서 숫자타입을 사용할 경우 생기는 화살표 제거
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
 .wrapper {
   width: 70rem; // 700px
   height: 90rem; // 900px
   margin: auto;
+
   //헤더 영역
   header {
     margin-bottom: 3rem; // 30px
-    .headerLogo {
-      width: 100%;
+
+    h1 {
+      display: flex;
+      align-items: center;
       height: 9rem; // 90px
       background-color: #eee;
+
+      img {
+        height: 3rem; // 30px
+        // margin: 1rem; // 10px
+      }
     }
+
     .headerTitle {
       // letter-spacing: -0.5rem;
       font-weight: 300;
@@ -45,7 +71,10 @@
 
   //메인 영역
   main {
+    position: relative;
+    //현재 상영표
     section {
+      // display: none; // 작업 중 임시 처리
       display: flex;
       .mainContent {
         box-sizing: border-box;
@@ -54,12 +83,14 @@
         width: 28rem; // 280px
         height: 64rem; // 640px
         box-shadow: 0.5rem 0.5rem 3rem rgba(51, 51, 51, 0.4); // 5px 5px 30px
+
         // border: 1px solid #808080;
         img {
           width: 22rem; // 220px
           box-shadow: 0.5rem 0.5rem 3rem rgba(51, 51, 51, 0.4); // 5px 5px 30px
           margin-bottom: 1.5rem; // 15px
         }
+
         .movieInfo {
           padding: 1rem 0; // 10px
 
@@ -72,6 +103,7 @@
             white-space: nowrap;
             // letter-spacing: -0.5rem; // 5px
           }
+
           .infoTitle::before {
             position: absolute;
             bottom: -1rem; // 10px
@@ -80,22 +112,27 @@
             height: 0.3rem; // 3px
             background-color: rgb(207, 204, 204);
           }
+
           // 상영관 정보
           .infoTheater {
             margin: 2rem 0; // 20px
+
             .infoTheaterLocation {
               display: flex;
               margin-bottom: 1rem; //10px
+
               .infoLocation {
                 font-weight: 900;
                 color: #9a1e16;
                 margin-right: 0.5rem;
                 font-size: 1rem; // 14px
               }
+
               .infoFloor {
                 font-size: 1rem; // 14px
               }
             }
+
             .showTime {
               position: relative;
               display: flex;
@@ -114,6 +151,12 @@
                 box-sizing: border-box;
                 // white-space: nowrap;
               }
+
+              .timeBox:hover {
+                background-color: var(--Color2);
+                cursor: pointer;
+              }
+
               .timeSeat {
                 text-align: center;
                 display: block;
@@ -123,6 +166,7 @@
                 color: #82a67d;
               }
             }
+
             .line:before {
               position: absolute;
               bottom: -1rem; // 10px
@@ -132,6 +176,277 @@
               background-color: #eee;
             }
           }
+        }
+      }
+    }
+
+    //결제창 이외에 필터처리
+    .backgroundFilter {
+      display: none;
+      // display: flex;
+      position: absolute;
+      top: 0;
+      width: 70rem; // 700px
+      height: 64rem; // 640px
+      z-index: 10;
+      background-color: rgba(255, 255, 255, 0.7);
+      justify-content: center;
+      align-self: center;
+
+      // 결제창
+      .paymentWindow {
+        display: flex;
+        justify-content: center;
+        align-self: center;
+        flex-direction: column;
+        width: 51rem; // 510px
+        height: 33rem; // 330px
+        border-radius: 2rem; // 20px
+        background-color: #fff;
+        box-shadow: 0.5rem 0.5rem 3rem rgba(50, 50, 50, 0.3); // 5px 5px 30px
+
+        .inner {
+          display: flex;
+          justify-content: center;
+          align-self: center;
+          flex-direction: column;
+
+          // 영화를 예매하시겠습니까?
+          .paymentWindowTitle {
+            font-size: 4rem; // 40px
+            text-align: center;
+          }
+
+          .paymentWindowMain {
+            margin: 2rem 0; // 20px
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .paymentWindowMovie {
+              img {
+                display: block;
+                width: 11rem; // 110px
+                height: 15.5rem; // 155px
+                background-color: #808080;
+              }
+            }
+
+            // 예매 상세 내용
+            .paymentWindowInfo {
+              .movieTitle {
+                box-sizing: border-box;
+                padding: 1rem; // 10px
+                font-size: 4rem; // 40px
+                line-height: 6rem; // 60px
+                width: 28rem; // 280px
+                height: 7rem; // 70px
+                background-color: #d8d8d8;
+              }
+
+              .movieFloor,
+              .movieTime {
+                box-sizing: border-box;
+
+                width: 28rem; // 280px
+                height: 4.25rem; // 42.5px
+                background-color: #b5b5b5;
+              }
+
+              .movieFloor {
+                padding: 1rem; // 10px
+                font-size: 2rem; // 20px
+                color: #9a1e16;
+              }
+
+              .movieTime {
+                padding: 0 1rem 1rem; // 0 10px 10px
+                font-size: 3rem; // 30px
+              }
+            }
+          }
+
+          .paymentWindowBtn {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            button {
+              font-size: 2.4rem; // 24px
+              line-height: 4rem; // 시각보정
+              width: 15.5rem; // 155px
+              height: 4.5rem; // 45px
+              border-radius: 1.5rem; // 15px
+              margin: 0 1.5rem; // 15px
+              font-weight: 500;
+              background-color: #fff;
+              border: 0.3rem solid #595959;
+            }
+
+            button:hover {
+              background-color: var(--Color4);
+              color: #fff;
+              cursor: pointer;
+            }
+
+            .selectionBtn {
+              background-color: #ba1a0f;
+              color: #fff;
+              border: 0;
+            }
+          }
+        }
+      }
+    }
+
+    // 좌석선택 화면
+    .seatSelection {
+      display: none;
+      position: absolute;
+      top: 0;
+      width: 100%;
+      height: 90rem;
+      background-color: #eee;
+      z-index: 20;
+
+      .screenBox {
+        text-align: center;
+        width: 55rem; // 550px
+        height: 4.5rem; // 45px
+        background-color: #424242;
+        margin: auto;
+        font-size: 3rem; // 30px
+        line-height: 5rem; // 시각보정 50px
+        color: #fff;
+        letter-spacing: 3rem; // 30px
+        font-weight: 100;
+      }
+
+      .seatArea {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 2rem 0; // 20px 0
+
+        .matrix {
+          display: flex;
+        }
+
+        .seatNumber {
+          width: 3.2rem; // 32px
+          height: 3.2rem; // 32px
+          border-radius: 0.5rem; // 5px
+          background-color: #d6d6d6;
+          margin: 0.75rem; // 7.5px
+        }
+        .sideAreaA {
+          margin-right: 3rem; // 30px
+        }
+        .sideAreaB {
+          margin-left: 3rem; // 30px
+        }
+      }
+
+      .paymentArea {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .paymentPeople {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          width: 33rem; // 330px
+          height: 10rem; // 100px
+          background-color: #fff;
+          border-radius: 1.5rem; // 15px
+          margin-right: 3rem; // 30px
+
+          .peopleAdult {
+            display: flex;
+            justify-content: left;
+            align-items: center;
+            white-space: nowrap;
+            p {
+              width: 30rem; // 300px
+              display: block;
+              text-align: justify;
+              width: 12rem; // 120px
+              font-size: 3rem; // 30px
+              font-weight: 100;
+              letter-spacing: 4.8rem; // 48px
+            }
+
+            button {
+              width: 1.8rem; // 18px
+              height: 1.8rem; // 18px
+              background-color: #797979;
+              border: 0;
+              color: #fff;
+              border-radius: 0.2rem;
+            }
+            input {
+              margin: 0 1rem; // 0 10px
+              width: 9rem; // 90px
+              height: 3rem; // 30px
+              border-radius: 0.5rem; // 5px
+              border: 0;
+              background-color: #fddedb;
+              text-align: center;
+              font-size: 2rem; // 20px
+              font-weight: 100;
+              outline: none;
+              border-radius: 0.5rem; //5px
+            }
+          }
+
+          .peopleChildren {
+            display: flex;
+            justify-content: left;
+            align-items: center;
+
+            p {
+              width: 12rem; // 120px
+              font-size: 3rem; // 30px
+              letter-spacing: 1rem; // 10px
+            }
+
+            button {
+              width: 1.8rem; // 18px
+              height: 1.8rem; // 18px
+              background-color: #797979;
+              color: #fff;
+              border: 0;
+              border-radius: 0.2rem; // 2px
+            }
+            input {
+              margin: 0 1rem; // 0 10px
+              width: 9rem; // 90px
+              height: 3rem; // 30px
+              border-radius: 0.5rem; // 5px
+              border: 0;
+              background-color: #fddedb;
+              text-align: center;
+              font-size: 2rem; // 20px
+              font-weight: 100;
+              outline: none;
+              border-radius: 0.5rem; //5px
+            }
+          }
+        }
+
+        .paymentBtn {
+          font-size: 3rem; // 30px
+          color: #fff;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 18rem; // 180px
+          height: 10rem; // 100px
+          background-color: #ba1a0f;
+          border-radius: 2rem; // 20px
         }
       }
     }

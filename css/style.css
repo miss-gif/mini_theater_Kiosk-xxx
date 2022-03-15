@@ -3,6 +3,10 @@
   font-family: "GongGothicMedium";
 }
 
+body {
+  background-color: #eee;
+}
+
 :root {
   --Color1: #ed3124;
   --Color2: #9a1e16;
@@ -17,6 +21,16 @@
   font-style: normal;
 }
 
+i {
+  margin: 0 1rem;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
 .wrapper {
   width: 70rem;
   height: 90rem;
@@ -27,10 +41,19 @@
   margin-bottom: 3rem;
 }
 
-.wrapper header .headerLogo {
-  width: 100%;
+.wrapper header h1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   height: 9rem;
   background-color: #eee;
+}
+
+.wrapper header h1 img {
+  height: 3rem;
 }
 
 .wrapper header .headerTitle {
@@ -49,6 +72,10 @@
   width: 100%;
   height: 10rem;
   background-color: #9a1e16;
+}
+
+.wrapper main {
+  position: relative;
 }
 
 .wrapper main section {
@@ -142,6 +169,11 @@
           box-sizing: border-box;
 }
 
+.wrapper main section .mainContent .movieInfo .infoTheater .showTime .timeBox:hover {
+  background-color: var(--Color2);
+  cursor: pointer;
+}
+
 .wrapper main section .mainContent .movieInfo .infoTheater .showTime .timeSeat {
   text-align: center;
   display: block;
@@ -158,5 +190,349 @@
   width: 100%;
   height: 0.2rem;
   background-color: #eee;
+}
+
+.wrapper main .backgroundFilter {
+  display: none;
+  position: absolute;
+  top: 0;
+  width: 70rem;
+  height: 64rem;
+  z-index: 10;
+  background-color: rgba(255, 255, 255, 0.7);
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.wrapper main .backgroundFilter .paymentWindow {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-item-align: center;
+      align-self: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 51rem;
+  height: 33rem;
+  border-radius: 2rem;
+  background-color: #fff;
+  -webkit-box-shadow: 0.5rem 0.5rem 3rem rgba(50, 50, 50, 0.3);
+          box-shadow: 0.5rem 0.5rem 3rem rgba(50, 50, 50, 0.3);
+}
+
+.wrapper main .backgroundFilter .paymentWindow .inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-item-align: center;
+      align-self: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.wrapper main .backgroundFilter .paymentWindow .inner .paymentWindowTitle {
+  font-size: 4rem;
+  text-align: center;
+}
+
+.wrapper main .backgroundFilter .paymentWindow .inner .paymentWindowMain {
+  margin: 2rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.wrapper main .backgroundFilter .paymentWindow .inner .paymentWindowMain .paymentWindowMovie img {
+  display: block;
+  width: 11rem;
+  height: 15.5rem;
+  background-color: #808080;
+}
+
+.wrapper main .backgroundFilter .paymentWindow .inner .paymentWindowMain .paymentWindowInfo .movieTitle {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 1rem;
+  font-size: 4rem;
+  line-height: 6rem;
+  width: 28rem;
+  height: 7rem;
+  background-color: #d8d8d8;
+}
+
+.wrapper main .backgroundFilter .paymentWindow .inner .paymentWindowMain .paymentWindowInfo .movieFloor,
+.wrapper main .backgroundFilter .paymentWindow .inner .paymentWindowMain .paymentWindowInfo .movieTime {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 28rem;
+  height: 4.25rem;
+  background-color: #b5b5b5;
+}
+
+.wrapper main .backgroundFilter .paymentWindow .inner .paymentWindowMain .paymentWindowInfo .movieFloor {
+  padding: 1rem;
+  font-size: 2rem;
+  color: #9a1e16;
+}
+
+.wrapper main .backgroundFilter .paymentWindow .inner .paymentWindowMain .paymentWindowInfo .movieTime {
+  padding: 0 1rem 1rem;
+  font-size: 3rem;
+}
+
+.wrapper main .backgroundFilter .paymentWindow .inner .paymentWindowBtn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.wrapper main .backgroundFilter .paymentWindow .inner .paymentWindowBtn button {
+  font-size: 2.4rem;
+  line-height: 4rem;
+  width: 15.5rem;
+  height: 4.5rem;
+  border-radius: 1.5rem;
+  margin: 0 1.5rem;
+  font-weight: 500;
+  background-color: #fff;
+  border: 0.3rem solid #595959;
+}
+
+.wrapper main .backgroundFilter .paymentWindow .inner .paymentWindowBtn button:hover {
+  background-color: var(--Color4);
+  color: #fff;
+  cursor: pointer;
+}
+
+.wrapper main .backgroundFilter .paymentWindow .inner .paymentWindowBtn .selectionBtn {
+  background-color: #ba1a0f;
+  color: #fff;
+  border: 0;
+}
+
+.wrapper main .seatSelection {
+  display: none;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 90rem;
+  background-color: #eee;
+  z-index: 20;
+}
+
+.wrapper main .seatSelection .screenBox {
+  text-align: center;
+  width: 55rem;
+  height: 4.5rem;
+  background-color: #424242;
+  margin: auto;
+  font-size: 3rem;
+  line-height: 5rem;
+  color: #fff;
+  letter-spacing: 3rem;
+  font-weight: 100;
+}
+
+.wrapper main .seatSelection .seatArea {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 2rem 0;
+}
+
+.wrapper main .seatSelection .seatArea .matrix {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.wrapper main .seatSelection .seatArea .seatNumber {
+  width: 3.2rem;
+  height: 3.2rem;
+  border-radius: 0.5rem;
+  background-color: #d6d6d6;
+  margin: 0.75rem;
+}
+
+.wrapper main .seatSelection .seatArea .sideAreaA {
+  margin-right: 3rem;
+}
+
+.wrapper main .seatSelection .seatArea .sideAreaB {
+  margin-left: 3rem;
+}
+
+.wrapper main .seatSelection .paymentArea {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.wrapper main .seatSelection .paymentArea .paymentPeople {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 33rem;
+  height: 10rem;
+  background-color: #fff;
+  border-radius: 1.5rem;
+  margin-right: 3rem;
+}
+
+.wrapper main .seatSelection .paymentArea .paymentPeople .peopleAdult {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  white-space: nowrap;
+}
+
+.wrapper main .seatSelection .paymentArea .paymentPeople .peopleAdult p {
+  width: 30rem;
+  display: block;
+  text-align: justify;
+  width: 12rem;
+  font-size: 3rem;
+  font-weight: 100;
+  letter-spacing: 4.8rem;
+}
+
+.wrapper main .seatSelection .paymentArea .paymentPeople .peopleAdult button {
+  width: 1.8rem;
+  height: 1.8rem;
+  background-color: #797979;
+  border: 0;
+  color: #fff;
+  border-radius: 0.2rem;
+}
+
+.wrapper main .seatSelection .paymentArea .paymentPeople .peopleAdult input {
+  margin: 0 1rem;
+  width: 9rem;
+  height: 3rem;
+  border-radius: 0.5rem;
+  border: 0;
+  background-color: #fddedb;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 100;
+  outline: none;
+  border-radius: 0.5rem;
+}
+
+.wrapper main .seatSelection .paymentArea .paymentPeople .peopleChildren {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.wrapper main .seatSelection .paymentArea .paymentPeople .peopleChildren p {
+  width: 12rem;
+  font-size: 3rem;
+  letter-spacing: 1rem;
+}
+
+.wrapper main .seatSelection .paymentArea .paymentPeople .peopleChildren button {
+  width: 1.8rem;
+  height: 1.8rem;
+  background-color: #797979;
+  color: #fff;
+  border: 0;
+  border-radius: 0.2rem;
+}
+
+.wrapper main .seatSelection .paymentArea .paymentPeople .peopleChildren input {
+  margin: 0 1rem;
+  width: 9rem;
+  height: 3rem;
+  border-radius: 0.5rem;
+  border: 0;
+  background-color: #fddedb;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 100;
+  outline: none;
+  border-radius: 0.5rem;
+}
+
+.wrapper main .seatSelection .paymentArea .paymentBtn {
+  font-size: 3rem;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 18rem;
+  height: 10rem;
+  background-color: #ba1a0f;
+  border-radius: 2rem;
 }
 /*# sourceMappingURL=style.css.map */

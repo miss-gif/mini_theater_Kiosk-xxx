@@ -1,159 +1,311 @@
 <!DOCTYPE html>
 <html lang="ko">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CGV KIOSK</title>
-    <link rel="stylesheet" href="./css/reset.css" />
-    <link rel="stylesheet" href="./css/style.css" />
-  </head>
 
-  <body>
-    <div class="wrapper">
-      <header>
-        <h1 class="headerLogo"></h1>
-        <h2 class="headerTitle">현재 상영표</h2>
-      </header>
-      <main>
-        <section>
-          <div id="mainContent" class="mainContent">
-            <img src="./img/01.jpg" alt="더 배트맨" />
-            <div class="movieInfo">
-              <h3 class="infoTitle">더 배트맨</h3>
-              <!-- 상영관 정보 -->
-              <div class="infoTheater">
-                <div class="infoTheaterLocation">
-                  <p class="infoLocation">SCREENX 2D</p>
-                  <p class="infoFloor">4관(SCREENX) 8층</p>
-                </div>
-                <div class="showTime line">
-                  <p class="timeBox">14 : 10</p>
-                  <p class="timeSeat">118석</p>
-                  <p class="timeBox">20 : 15</p>
-                  <p class="timeSeat">115석</p>
-                </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CGV KIOSK</title>
+  <!-- 아이콘 -->
+  <link rel="stylesheet" href="http://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+  <!-- 리셋 CSS -->
+  <link rel="stylesheet" href="./CSS/reset.css" />
+  <!-- CSS -->
+  <link rel="stylesheet" href="./CSS/style.css" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <header>
+      <h1 class="headerLogo">
+        <a href="javascript:void(0)"><i class="xi-home-o xi-5x"></i></a>
+        <img src="./img/logoRed.png" alt="logo">
+      </h1>
+      <h2 class="headerTitle">현재 상영표</h2>
+    </header>
+    <main>
+      
+
+      <!-- 현재상영표 -->
+      <section class="nowMovie">
+        <div id="mainContent" class="mainContent">
+          <img src="./img/01.jpg" alt="더 배트맨" />
+          <div class="movieInfo">
+            <h3 class="infoTitle">더 배트맨</h3>
+            <!-- 상영관 정보 -->
+            <div class="infoTheater">
+              <div class="infoTheaterLocation">
+                <p class="infoLocation">SCREENX 2D</p>
+                <p class="infoFloor">4관(SCREENX) 8층</p>
               </div>
-              <!-- 상영관 정보 -->
-              <div class="infoTheater">
-                <div class="infoTheaterLocation">
-                  <p class="infoLocation">2D</p>
-                  <p class="infoFloor">2관[Laser] 6층</p>
-                </div>
-                <div class="showTime line">
-                  <p class="timeBox">12 : 00</p>
-                  <p class="timeSeat">114석</p>
-                  <p class="timeBox">18 : 15</p>
-                  <p class="timeSeat">110석</p>
-                </div>
+              <div class="showTime line">
+                <p class="timeBox">14 : 10</p>
+                <p class="timeSeat">118석</p>
+                <p class="timeBox">20 : 15</p>
+                <p class="timeSeat">115석</p>
               </div>
-              <!-- 상영관 정보 -->
-              <div class="infoTheater">
-                <div class="infoTheaterLocation">
-                  <p class="infoLocation">2D</p>
-                  <p class="infoFloor">3관 8층</p>
-                </div>
-                <div class="showTime">
-                  <p class="timeBox">13 : 25</p>
-                  <p class="timeSeat">161석</p>
-                  <p class="timeBox">19 : 50</p>
-                  <p class="timeSeat">155석</p>
-                </div>
+            </div>
+            <!-- 상영관 정보 -->
+            <div class="infoTheater">
+              <div class="infoTheaterLocation">
+                <p class="infoLocation">2D</p>
+                <p class="infoFloor">2관[Laser] 6층</p>
+              </div>
+              <div class="showTime line">
+                <p class="timeBox">12 : 00</p>
+                <p class="timeSeat">114석</p>
+                <p class="timeBox">18 : 15</p>
+                <p class="timeSeat">110석</p>
+              </div>
+            </div>
+            <!-- 상영관 정보 -->
+            <div class="infoTheater">
+              <div class="infoTheaterLocation">
+                <p class="infoLocation">2D</p>
+                <p class="infoFloor">3관 8층</p>
+              </div>
+              <div class="showTime">
+                <p class="timeBox">13 : 25</p>
+                <p class="timeSeat">161석</p>
+                <p class="timeBox">19 : 50</p>
+                <p class="timeSeat">155석</p>
               </div>
             </div>
           </div>
-          <div id="mainContent" class="mainContent">
-            <img src="./img/02.jpg" alt="레벤느망" />
-            <div class="movieInfo">
-              <h3 class="infoTitle">레벤느망</h3>
-              <!-- 상영관 정보 -->
-              <div class="infoTheater">
-                <div class="infoTheaterLocation">
-                  <p class="infoLocation">SCREENX 2D</p>
-                  <p class="infoFloor">씨네앤포레</p>
-                </div>
-                <div class="showTime line">
-                  <p class="timeBox">15 : 40</p>
-                  <p class="timeSeat">34석</p>
-                  <p class="timeBox">22 : 10</p>
-                  <p class="timeSeat">115석</p>
-                </div>
+        </div>
+        <div id="mainContent" class="mainContent">
+          <img src="./img/02.jpg" alt="레벤느망" />
+          <div class="movieInfo">
+            <h3 class="infoTitle">레벤느망</h3>
+            <!-- 상영관 정보 -->
+            <div class="infoTheater">
+              <div class="infoTheaterLocation">
+                <p class="infoLocation">SCREENX 2D</p>
+                <p class="infoFloor">씨네앤포레</p>
               </div>
-              <!-- 상영관 정보 -->
-              <div class="infoTheater">
-                <div class="infoTheaterLocation">
-                  <p class="infoLocation">2D</p>
-                  <p class="infoFloor">3관[Laser]</p>
-                </div>
-                <div class="showTime line">
-                  <p class="timeBox">12 : 05</p>
-                  <p class="timeSeat">204석</p>
-                  <p class="timeBox">16 : 59</p>
-                  <p class="timeSeat">110석</p>
-                </div>
+              <div class="showTime line">
+                <p class="timeBox">15 : 40</p>
+                <p class="timeSeat">34석</p>
+                <p class="timeBox">22 : 10</p>
+                <p class="timeSeat">115석</p>
               </div>
-              <!-- 상영관 정보 -->
-              <div class="infoTheater">
-                <div class="infoTheaterLocation">
-                  <p class="infoLocation">2D</p>
-                  <p class="infoFloor">3관 8층</p>
-                </div>
-                <div class="showTime">
-                  <p class="timeBox">17 : 35</p>
-                  <p class="timeSeat">136석</p>
-                  <p class="timeBox">20 : 00</p>
-                  <p class="timeSeat">155석</p>
-                </div>
+            </div>
+            <!-- 상영관 정보 -->
+            <div class="infoTheater">
+              <div class="infoTheaterLocation">
+                <p class="infoLocation">2D</p>
+                <p class="infoFloor">3관[Laser]</p>
+              </div>
+              <div class="showTime line">
+                <p class="timeBox">12 : 05</p>
+                <p class="timeSeat">204석</p>
+                <p class="timeBox">16 : 59</p>
+                <p class="timeSeat">110석</p>
+              </div>
+            </div>
+            <!-- 상영관 정보 -->
+            <div class="infoTheater">
+              <div class="infoTheaterLocation">
+                <p class="infoLocation">2D</p>
+                <p class="infoFloor">3관 8층</p>
+              </div>
+              <div class="showTime">
+                <p class="timeBox">17 : 35</p>
+                <p class="timeSeat">136석</p>
+                <p class="timeBox">20 : 00</p>
+                <p class="timeSeat">155석</p>
               </div>
             </div>
           </div>
-          <div id="mainContent" class="mainContent">
-            <img src="./img/03.jpg" alt="이상한나라의 수학자" />
-            <div class="movieInfo">
-              <h3 class="infoTitle">이상한나라의 수학자</h3>
-              <!-- 상영관 정보 -->
-              <div class="infoTheater">
-                <div class="infoTheaterLocation">
-                  <p class="infoLocation">SCREENX 2D</p>
-                  <p class="infoFloor">씨네앤포레</p>
-                </div>
-                <div class="showTime line">
-                  <p class="timeBox">14 : 10</p>
-                  <p class="timeSeat">34석</p>
-                  <p class="timeBox">22 : 10</p>
-                  <p class="timeSeat">32석</p>
-                </div>
+        </div>
+        <div id="mainContent" class="mainContent">
+          <img src="./img/03.jpg" alt="이상한나라의 수학자" />
+          <div class="movieInfo">
+            <h3 class="infoTitle">이상한나라의 수학자</h3>
+            <!-- 상영관 정보 -->
+            <div class="infoTheater">
+              <div class="infoTheaterLocation">
+                <p class="infoLocation">SCREENX 2D</p>
+                <p class="infoFloor">씨네앤포레</p>
               </div>
-              <!-- 상영관 정보 -->
-              <div class="infoTheater">
-                <div class="infoTheaterLocation">
-                  <p class="infoLocation">2D</p>
-                  <p class="infoFloor">2관[Laser] 6층</p>
-                </div>
-                <div class="showTime line">
-                  <p class="timeBox">12 : 00</p>
-                  <p class="timeSeat">204석</p>
-                  <p class="timeBox">16 : 55</p>
-                  <p class="timeSeat">207석</p>
-                </div>
+              <div class="showTime line">
+                <p class="timeBox">14 : 10</p>
+                <p class="timeSeat">34석</p>
+                <p class="timeBox">22 : 10</p>
+                <p class="timeSeat">32석</p>
               </div>
-              <!-- 상영관 정보 -->
-              <div class="infoTheater">
-                <div class="infoTheaterLocation">
-                  <p class="infoLocation">2D</p>
-                  <p class="infoFloor">3관 8층</p>
-                </div>
-                <div class="showTime">
-                  <p class="timeBox">13 : 25</p>
-                  <p class="timeSeat">136석</p>
-                  <p class="timeBox">20 : 00</p>
-                  <p class="timeSeat">154석</p>
-                </div>
+            </div>
+            <!-- 상영관 정보 -->
+            <div class="infoTheater">
+              <div class="infoTheaterLocation">
+                <p class="infoLocation">2D</p>
+                <p class="infoFloor">2관[Laser] 6층</p>
+              </div>
+              <div class="showTime line">
+                <p class="timeBox">12 : 00</p>
+                <p class="timeSeat">204석</p>
+                <p class="timeBox">16 : 55</p>
+                <p class="timeSeat">207석</p>
+              </div>
+            </div>
+            <!-- 상영관 정보 -->
+            <div class="infoTheater">
+              <div class="infoTheaterLocation">
+                <p class="infoLocation">2D</p>
+                <p class="infoFloor">3관 8층</p>
+              </div>
+              <div class="showTime">
+                <p class="timeBox">13 : 25</p>
+                <p class="timeSeat">136석</p>
+                <p class="timeBox">20 : 00</p>
+                <p class="timeSeat">154석</p>
               </div>
             </div>
           </div>
-        </section>
-      </main>
-    </div>
-  </body>
+        </div>
+      </section>
+      <!-- 결제창 모달 -->
+      <div class="backgroundFilter">
+        <div class="paymentWindow">
+          <div class="inner">
+            <p class="paymentWindowTitle">영화를 예매하시겠습니까?</ㅔ>
+              <div class="paymentWindowMain">
+                <div class="paymentWindowMovie">
+                  <img src="./img/01.jpg" alt="예매 영화이미지" />
+                </div>
+                <div class="paymentWindowInfo">
+                  <p class="movieTitle">더 배트맨</p>
+                  <p class="movieFloor">2D 3관[Laser]</p>
+                  <p class="movieTime">12 : 05</p>
+                </div>
+              </div>
+              <div class="paymentWindowBtn">
+                <button class="cancelBtn">취소</button>
+                <button class="selectionBtn">좌석 선택</button>
+              </div>
+          </div>
+        </div>
+      </div>
+      <!-- 좌석선택 화면 -->
+      <div class="seatSelection">
+        <div class="screenBox">SCREEN</div>
+        <div class="seatArea">
+          <div class="matrix seatRowA">
+            <div class="seatNumber"></div>
+            <div class="seatNumber"></div>
+            <div class="seatNumber"></div>
+            <div class="seatNumber"></div>
+            <div class="seatNumber"></div>
+            <div class="seatNumber"></div>
+            <div class="seatNumber"></div>
+          </div>
+          <div class="matrix seatRowB">
+            <div class="seatNumber sideAreaA"></div>
+            <div class="seatNumber"></div>
+            <div class="seatNumber"></div>
+            <div class="seatNumber"></div>
+            <div class="seatNumber"></div>
+            <div class="seatNumber"></div>
+            <div class="seatNumber"></div>
+            <div class="seatNumber"></div>
+            <div class="seatNumber  sideAreaB"></div>
+          </div>
+          <div class="matrix seatRowC">
+            <div class="seatNumber "></div>
+            <div class="seatNumber sideAreaA"></div>
+            <div class="seatNumber"></div>
+            <div class="seatNumber"></div>
+            <div class="seatNumber"></div>
+            <div class="seatNumber"></div>
+            <div class="seatNumber"></div>
+            <div class="seatNumber"></div>
+            <div class="seatNumber"></div>
+            <div class="seatNumber sideAreaB"></div>
+            <div class="seatNumber "></div>
+          </div>
+          <div class="matrix seatRowD">
+            <div class="seatNumber "></div>
+            <div class="seatNumber sideAreaA"></div>
+            <div class="seatNumber"></div>
+            <div class="seatNumber"></div>
+            <div class="seatNumber"></div>
+            <div class="seatNumber"></div>
+            <div class="seatNumber"></div>
+            <div class="seatNumber"></div>
+            <div class="seatNumber"></div>
+            <div class="seatNumber sideAreaB"></div>
+            <div class="seatNumber "></div>
+          </div>
+          <div class="matrix seatRowE">
+            <div class="seatNumber "></div>
+            <div class="seatNumber sideAreaA"></div>
+            <div class="seatNumber"></div>
+            <div class="seatNumber"></div>
+            <div class="seatNumber"></div>
+            <div class="seatNumber"></div>
+            <div class="seatNumber"></div>
+            <div class="seatNumber"></div>
+            <div class="seatNumber"></div>
+            <div class="seatNumber sideAreaB"></div>
+            <div class="seatNumber "></div>
+          </div>
+          <div class="matrix seatRowF">
+            <div class="seatNumber  "></div>
+            <div class="seatNumber  sideAreaA"></div>
+            <div class="seatNumber"></div>
+            <div class="seatNumber"></div>
+            <div class="seatNumber"></div>
+            <div class="seatNumber"></div>
+            <div class="seatNumber"></div>
+            <div class="seatNumber"></div>
+            <div class="seatNumber"></div>
+            <div class="seatNumber sideAreaB"></div>
+            <div class="seatNumber "></div>
+          </div>
+          <div class="matrix seatRowG">
+            <div class="seatNumber  "></div>
+            <div class="seatNumber  sideAreaA"></div>
+            <div class="seatNumber"></div>
+            <div class="seatNumber"></div>
+            <div class="seatNumber"></div>
+            <div class="seatNumber"></div>
+            <div class="seatNumber"></div>
+            <div class="seatNumber"></div>
+            <div class="seatNumber"></div>
+            <div class="seatNumber sideAreaB"></div>
+            <div class="seatNumber "></div>
+          </div>
+          <div class="matrix seatRowH">
+            <div class="seatNumber"></div>
+            <div class="seatNumber"></div>
+            <div class="seatNumber"></div>
+            <div class="seatNumber"></div>
+            <div class="seatNumber"></div>
+            <div class="seatNumber"></div>
+            <div class="seatNumber"></div>
+          </div>
+        </div>
+        <div class="paymentArea">
+          <div class="paymentPeople">
+            <div class="peopleAdult">
+              <p>성인</p>
+              <button class="minusBtn">-</button>
+              <input type="number" value="0" disabled>
+              <button class="plusBtn">+</button>
+            </div>
+            <div class="peopleChildren">
+              <p>어린이</p>
+              <button class="minusBtn">-</button>
+              <input type="number" value="0" disabled>
+              <button class="plusBtn">+</button>
+            </div>
+          </div>
+          <div class="paymentBtn">결제하기</div>
+        </div>
+      </div>
+    </main>
+  </div>
+  <script src="./JS/main.js"></script>
+</body>
+
 </html>
