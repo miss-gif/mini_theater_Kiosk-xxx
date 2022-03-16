@@ -1,44 +1,16 @@
-* {
-  font-size: 10px;
-  font-family: "GongGothicMedium";
-}
-
-body {
-  background-color: #eee;
-}
-
-:root {
-  --Color1: #ed3124;
-  --Color2: #9a1e16;
-  --Color3: #eee;
-  --Color4: #363636;
-}
-
-@font-face {
-  font-family: "GongGothicMedium";
-  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10@1.0/GongGothicMedium.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-
-i {
-  margin: 0 1rem;
-}
-
-input[type="number"]::-webkit-outer-spin-button,
-input[type="number"]::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-
+@import url(./common.css);
 .wrapper {
   width: 70rem;
   height: 90rem;
   margin: auto;
+  border: 1px solid red;
 }
 
 .wrapper header {
-  margin-bottom: 3rem;
+  position: fixed;
+  width: 70rem;
+  margin: auto;
+  z-index: 99;
 }
 
 .wrapper header h1 {
@@ -76,15 +48,21 @@ input[type="number"]::-webkit-inner-spin-button {
 
 .wrapper main {
   position: relative;
+  top: 21rem;
 }
 
-.wrapper main section {
+.wrapper main section.nowMovie {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  z-index: 10;
+  margin: 0 1.5rem;
 }
 
-.wrapper main section .mainContent {
+.wrapper main section.nowMovie .mainContent {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   padding: 3rem;
@@ -95,25 +73,25 @@ input[type="number"]::-webkit-inner-spin-button {
           box-shadow: 0.5rem 0.5rem 3rem rgba(51, 51, 51, 0.4);
 }
 
-.wrapper main section .mainContent img {
+.wrapper main section.nowMovie .mainContent img {
   width: 22rem;
   -webkit-box-shadow: 0.5rem 0.5rem 3rem rgba(51, 51, 51, 0.4);
           box-shadow: 0.5rem 0.5rem 3rem rgba(51, 51, 51, 0.4);
   margin-bottom: 1.5rem;
 }
 
-.wrapper main section .mainContent .movieInfo {
+.wrapper main section.nowMovie .mainContent .movieInfo {
   padding: 1rem 0;
 }
 
-.wrapper main section .mainContent .movieInfo .infoTitle {
+.wrapper main section.nowMovie .mainContent .movieInfo .infoTitle {
   position: relative;
   width: 100%;
   font-size: 2.4rem;
   white-space: nowrap;
 }
 
-.wrapper main section .mainContent .movieInfo .infoTitle::before {
+.wrapper main section.nowMovie .mainContent .movieInfo .infoTitle::before {
   position: absolute;
   bottom: -1rem;
   content: "";
@@ -122,29 +100,29 @@ input[type="number"]::-webkit-inner-spin-button {
   background-color: #cfcccc;
 }
 
-.wrapper main section .mainContent .movieInfo .infoTheater {
+.wrapper main section.nowMovie .mainContent .movieInfo .infoTheater {
   margin: 2rem 0;
 }
 
-.wrapper main section .mainContent .movieInfo .infoTheater .infoTheaterLocation {
+.wrapper main section.nowMovie .mainContent .movieInfo .infoTheater .infoTheaterLocation {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   margin-bottom: 1rem;
 }
 
-.wrapper main section .mainContent .movieInfo .infoTheater .infoTheaterLocation .infoLocation {
+.wrapper main section.nowMovie .mainContent .movieInfo .infoTheater .infoTheaterLocation .infoLocation {
   font-weight: 900;
   color: #9a1e16;
   margin-right: 0.5rem;
   font-size: 1rem;
 }
 
-.wrapper main section .mainContent .movieInfo .infoTheater .infoTheaterLocation .infoFloor {
+.wrapper main section.nowMovie .mainContent .movieInfo .infoTheater .infoTheaterLocation .infoFloor {
   font-size: 1rem;
 }
 
-.wrapper main section .mainContent .movieInfo .infoTheater .showTime {
+.wrapper main section.nowMovie .mainContent .movieInfo .infoTheater .showTime {
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -157,24 +135,25 @@ input[type="number"]::-webkit-inner-spin-button {
           align-items: center;
 }
 
-.wrapper main section .mainContent .movieInfo .infoTheater .showTime .timeBox {
+.wrapper main section.nowMovie .mainContent .movieInfo .infoTheater .showTime .timeBox {
   width: 6.5rem;
   padding: 0.5rem 0;
   text-align: center;
   font-size: 1.6rem;
   font-weight: 100;
   background-color: #808080;
+  border-radius: 0.3rem;
   color: #fff;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
 
-.wrapper main section .mainContent .movieInfo .infoTheater .showTime .timeBox:hover {
+.wrapper main section.nowMovie .mainContent .movieInfo .infoTheater .showTime .timeBox:hover {
   background-color: var(--Color2);
   cursor: pointer;
 }
 
-.wrapper main section .mainContent .movieInfo .infoTheater .showTime .timeSeat {
+.wrapper main section.nowMovie .mainContent .movieInfo .infoTheater .showTime .timeSeat {
   text-align: center;
   display: block;
   width: 4rem;
@@ -183,7 +162,7 @@ input[type="number"]::-webkit-inner-spin-button {
   color: #82a67d;
 }
 
-.wrapper main section .mainContent .movieInfo .infoTheater .line:before {
+.wrapper main section.nowMovie .mainContent .movieInfo .infoTheater .line:before {
   position: absolute;
   bottom: -1rem;
   content: "";
@@ -192,14 +171,23 @@ input[type="number"]::-webkit-inner-spin-button {
   background-color: #eee;
 }
 
+.wrapper main section.nowMovie .mainContent:first-child {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: 11;
+  background-color: #fff;
+}
+
 .wrapper main .backgroundFilter {
   display: none;
   position: absolute;
   top: 0;
-  width: 70rem;
+  width: 100%;
   height: 64rem;
-  z-index: 10;
-  background-color: rgba(255, 255, 255, 0.7);
+  z-index: 20;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -274,10 +262,13 @@ input[type="number"]::-webkit-inner-spin-button {
           box-sizing: border-box;
   padding: 1rem;
   font-size: 4rem;
-  line-height: 6rem;
+  line-height: 5.5rem;
   width: 28rem;
   height: 7rem;
   background-color: #d8d8d8;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 .wrapper main .backgroundFilter .paymentWindow .inner .paymentWindowMain .paymentWindowInfo .movieFloor,
@@ -341,9 +332,8 @@ input[type="number"]::-webkit-inner-spin-button {
   position: absolute;
   top: 0;
   width: 100%;
-  height: 90rem;
   background-color: #eee;
-  z-index: 20;
+  z-index: 30;
 }
 
 .wrapper main .seatSelection .screenBox {
