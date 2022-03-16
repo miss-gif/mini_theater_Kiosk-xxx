@@ -4,6 +4,7 @@
   height: 90rem;
   margin: auto;
   border: 1px solid red;
+  background-color: #eee;
 }
 
 .wrapper header {
@@ -71,6 +72,7 @@
   height: 64rem;
   -webkit-box-shadow: 0.5rem 0.5rem 3rem rgba(51, 51, 51, 0.4);
           box-shadow: 0.5rem 0.5rem 3rem rgba(51, 51, 51, 0.4);
+  background-color: #eee;
 }
 
 .wrapper main section.nowMovie .mainContent img {
@@ -178,7 +180,38 @@
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   z-index: 11;
-  background-color: #fff;
+}
+
+.wrapper main section.nowMovie .mainContent:first-child::before {
+  position: absolute;
+  font-size: 6rem;
+  top: 50%;
+  left: -60px;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+  content: "\f053";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+}
+
+.wrapper main section.nowMovie .mainContent:first-child::after {
+  position: absolute;
+  font-size: 6rem;
+  top: 50%;
+  right: -60px;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+  content: "\f054";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+}
+
+.wrapper main section.nowMovie .mainContent:nth-child(2) {
+  opacity: 0.4;
+}
+
+.wrapper main section.nowMovie .mainContent:nth-child(3) {
+  opacity: 0.4;
 }
 
 .wrapper main .backgroundFilter {

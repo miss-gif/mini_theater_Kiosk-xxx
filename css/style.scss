@@ -6,6 +6,7 @@
   height: 90rem; // 900px
   margin: auto;
   border: 1px solid red; // 작업 영역 표시
+  background-color: #eee;
 
   //헤더 영역
   header {
@@ -47,20 +48,19 @@
 
     //현재 상영표
     section.nowMovie {
-      // display: none; // 작업 중 임시 처리
+      // display: none; // 작업 중에 사용
       display: flex;
       justify-content: space-between;
       z-index: 10;
       margin: 0 1.5rem; //15px
-      // background-color: #156;
       .mainContent {
-        // background-color: red;
         box-sizing: border-box;
         padding: 3rem; // 30px
         border-radius: 1rem; // 10px
         width: 28rem; // 280px
         height: 64rem; // 640px
         box-shadow: 0.5rem 0.5rem 3rem rgba(51, 51, 51, 0.4); // 5px 5px 30px
+        background-color: #eee;
 
         // border: 1px solid #808080; // 작업 중에 사용
         img {
@@ -77,9 +77,8 @@
             position: relative;
             width: 100%;
             font-size: 2.4rem; // 24px
-            // margin-bottom: 1rem; // 30px
             white-space: nowrap;
-            // letter-spacing: -0.5rem; // 5px
+            // letter-spacing: -0.5rem; // 미사용
           }
 
           .infoTitle::before {
@@ -116,7 +115,6 @@
               display: flex;
               justify-content: space-between;
               align-items: center;
-              // margin: 0.5rem 0; // 5px
 
               .timeBox {
                 width: 6.5rem; // 65px
@@ -128,7 +126,7 @@
                 border-radius: 0.3rem; // 3px
                 color: #fff;
                 box-sizing: border-box;
-                // white-space: nowrap;
+                // white-space: nowrap; // 미사용
               }
 
               .timeBox:hover {
@@ -164,14 +162,35 @@
         left: 50%;
         transform: translate(-50%, -50%);
         z-index: 11;
-        background-color: #fff;
-        // display: none;
       }
+      .mainContent:first-child::before {
+        position: absolute;
+        font-size: 6rem;
+        top: 50%;
+        left: -60px;
+        transform: translate(0, -50%);
+        content: "\f053";
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        // background-color: red;
+      }
+      .mainContent:first-child::after {
+        position: absolute;
+        font-size: 6rem;
+        top: 50%;
+        right: -60px;
+        transform: translate(0, -50%);
+        content: "\f054";
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        // background-color: red;
+      }
+
       .mainContent:nth-child(2) {
-        // background-color: #156;
+        opacity: 0.4;
       }
       .mainContent:nth-child(3) {
-        // background-color: #333;
+        opacity: 0.4;
       }
     }
 
@@ -184,7 +203,6 @@
       width: 100%; // 700px
       height: 64rem; // 640px
       z-index: 20;
-      // background-color: rgba(255, 255, 255, 0.7);
       justify-content: center;
       align-self: center;
 
