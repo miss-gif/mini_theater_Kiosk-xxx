@@ -5,7 +5,7 @@
   width: 70rem; // 700px
   height: 90rem; // 900px
   margin: auto;
-  border: 1px solid red; // 작업 영역 표시
+  // border: 1px solid red; // 작업 영역 표시
   background-color: #eee;
 
   //헤더 영역
@@ -53,6 +53,7 @@
       justify-content: space-between;
       z-index: 10;
       margin: 0 1.5rem; //15px
+
       .mainContent {
         box-sizing: border-box;
         padding: 3rem; // 30px
@@ -144,13 +145,13 @@
               }
             }
 
-            .line:before {
+            .lineGW:before {
               position: absolute;
               bottom: -1rem; // 10px
               content: "";
               width: 100%;
               height: 0.2rem; // 2px
-              background-color: #eee;
+              background-color: #cfcccc;
             }
           }
         }
@@ -162,35 +163,56 @@
         left: 50%;
         transform: translate(-50%, -50%);
         z-index: 11;
+        width: 28rem; // 280px
+        height: 66rem; // 640px
       }
-      .mainContent:first-child::before {
-        position: absolute;
-        font-size: 6rem;
-        top: 50%;
-        left: -60px;
-        transform: translate(0, -50%);
-        content: "\f053";
-        font-family: "Font Awesome 5 Free";
-        font-weight: 900;
-        // background-color: red;
-      }
-      .mainContent:first-child::after {
-        position: absolute;
-        font-size: 6rem;
-        top: 50%;
-        right: -60px;
-        transform: translate(0, -50%);
-        content: "\f054";
-        font-family: "Font Awesome 5 Free";
-        font-weight: 900;
-        // background-color: red;
-      }
+
+      // .mainContent:first-child::before {
+      //   position: absolute;
+      //   font-size: 6rem;
+      //   top: 50%;
+      //   left: -60px;
+      //   transform: translate(0, -50%);
+      //   content: "\f053";
+      //   font-family: "Font Awesome 5 Free";
+      //   font-weight: 900;
+      //   // background-color: red;
+      // }
+
+      // .mainContent:first-child::after {
+      //   position: absolute;
+      //   font-size: 6rem;
+      //   top: 50%;
+      //   right: -60px;
+      //   transform: translate(0, -50%);
+      //   content: "\f054";
+      //   font-family: "Font Awesome 5 Free";
+      //   font-weight: 900;
+      //   // background-color: red;
+      // }
 
       .mainContent:nth-child(2) {
         opacity: 0.4;
       }
+
       .mainContent:nth-child(3) {
         opacity: 0.4;
+      }
+
+      .previousBtn,
+      .afterBtn {
+        position: absolute;
+        font-size: 3rem;
+        top: 50%;
+        transform: translate(0, -50%);
+        cursor: pointer;
+      }
+
+      .previousBtn {
+        left: 13rem;
+      }
+      .afterBtn {
+        right: 13rem;
       }
     }
 
@@ -343,7 +365,7 @@
         align-items: center;
         margin: 2rem 0; // 20px 0
 
-        .matrix {
+        .matrixGW {
           display: flex;
         }
 
@@ -351,7 +373,8 @@
           width: 3.2rem; // 32px
           height: 3.2rem; // 32px
           border-radius: 0.5rem; // 5px
-          background-color: #d6d6d6;
+          // background-color: #d6d6d6;
+          // background-color: transparent;
           margin: 0.75rem; // 7.5px
         }
 
@@ -469,5 +492,34 @@
         }
       }
     }
+  }
+}
+
+// 좌석 상태
+.seatSelection {
+  //예약 가능
+  .emtySeat {
+    background-color: #d6d6d6;
+  }
+  // 선택 좌석
+  .SelectedSeat {
+    background-color: #f44336;
+  }
+  // 예약 불가
+  .BookedSeat {
+    position: relative;
+    background-color: #343234;
+  }
+  .BookedSeat::before {
+    position: absolute;
+    font-size: 3rem;
+    line-height: 3rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    content: "\58";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    color: #eee;
   }
 }

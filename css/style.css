@@ -3,7 +3,6 @@
   width: 70rem;
   height: 90rem;
   margin: auto;
-  border: 1px solid red;
   background-color: #eee;
 }
 
@@ -164,13 +163,13 @@
   color: #82a67d;
 }
 
-.wrapper main section.nowMovie .mainContent .movieInfo .infoTheater .line:before {
+.wrapper main section.nowMovie .mainContent .movieInfo .infoTheater .lineGW:before {
   position: absolute;
   bottom: -1rem;
   content: "";
   width: 100%;
   height: 0.2rem;
-  background-color: #eee;
+  background-color: #cfcccc;
 }
 
 .wrapper main section.nowMovie .mainContent:first-child {
@@ -180,30 +179,8 @@
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   z-index: 11;
-}
-
-.wrapper main section.nowMovie .mainContent:first-child::before {
-  position: absolute;
-  font-size: 6rem;
-  top: 50%;
-  left: -60px;
-  -webkit-transform: translate(0, -50%);
-          transform: translate(0, -50%);
-  content: "\f053";
-  font-family: "Font Awesome 5 Free";
-  font-weight: 900;
-}
-
-.wrapper main section.nowMovie .mainContent:first-child::after {
-  position: absolute;
-  font-size: 6rem;
-  top: 50%;
-  right: -60px;
-  -webkit-transform: translate(0, -50%);
-          transform: translate(0, -50%);
-  content: "\f054";
-  font-family: "Font Awesome 5 Free";
-  font-weight: 900;
+  width: 28rem;
+  height: 66rem;
 }
 
 .wrapper main section.nowMovie .mainContent:nth-child(2) {
@@ -212,6 +189,24 @@
 
 .wrapper main section.nowMovie .mainContent:nth-child(3) {
   opacity: 0.4;
+}
+
+.wrapper main section.nowMovie .previousBtn,
+.wrapper main section.nowMovie .afterBtn {
+  position: absolute;
+  font-size: 3rem;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+  cursor: pointer;
+}
+
+.wrapper main section.nowMovie .previousBtn {
+  left: 13rem;
+}
+
+.wrapper main section.nowMovie .afterBtn {
+  right: 13rem;
 }
 
 .wrapper main .backgroundFilter {
@@ -399,7 +394,7 @@
   margin: 2rem 0;
 }
 
-.wrapper main .seatSelection .seatArea .matrix {
+.wrapper main .seatSelection .seatArea .matrixGW {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -409,7 +404,6 @@
   width: 3.2rem;
   height: 3.2rem;
   border-radius: 0.5rem;
-  background-color: #d6d6d6;
   margin: 0.75rem;
 }
 
@@ -557,5 +551,32 @@
   height: 10rem;
   background-color: #ba1a0f;
   border-radius: 2rem;
+}
+
+.seatSelection .emtySeat {
+  background-color: #d6d6d6;
+}
+
+.seatSelection .SelectedSeat {
+  background-color: #f44336;
+}
+
+.seatSelection .BookedSeat {
+  position: relative;
+  background-color: #343234;
+}
+
+.seatSelection .BookedSeat::before {
+  position: absolute;
+  font-size: 3rem;
+  line-height: 3rem;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  content: "\58";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  color: #eee;
 }
 /*# sourceMappingURL=style.css.map */
