@@ -21,10 +21,6 @@ body {
   font-style: normal;
 }
 
-i {
-  margin: 0 1rem;
-}
-
 /* input에서 숫자타입을 사용할 경우 생기는 화살표 제거 */
 input[type="number"]::-webkit-outer-spin-button,
 input[type="number"]::-webkit-inner-spin-button {

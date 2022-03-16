@@ -24,6 +24,15 @@
   background-color: #eee;
 }
 
+.wrapper header h1 a.homeBtn {
+  margin-right: 5px;
+}
+
+.wrapper header h1 a.replyBtn {
+  position: absolute;
+  right: 0;
+}
+
 .wrapper header h1 img {
   height: 3rem;
 }
@@ -369,7 +378,7 @@
   width: 55rem;
   height: 4.5rem;
   background-color: #424242;
-  margin: auto;
+  margin: 3rem auto;
   font-size: 3rem;
   line-height: 5rem;
   color: #fff;
@@ -405,6 +414,7 @@
   height: 3.2rem;
   border-radius: 0.5rem;
   margin: 0.75rem;
+  border: 1px solid rgba(0, 0, 0, 0.5);
 }
 
 .wrapper main .seatSelection .seatArea .sideAreaA {
@@ -425,6 +435,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-top: 2.5rem;
 }
 
 .wrapper main .seatSelection .paymentArea .paymentPeople {
@@ -535,7 +546,7 @@
   border-radius: 0.5rem;
 }
 
-.wrapper main .seatSelection .paymentArea .paymentBtn {
+.wrapper main .seatSelection .paymentBtn {
   font-size: 3rem;
   color: #fff;
   display: -webkit-box;
@@ -551,6 +562,7 @@
   height: 10rem;
   background-color: #ba1a0f;
   border-radius: 2rem;
+  margin: 5rem auto;
 }
 
 .seatSelection .emtySeat {

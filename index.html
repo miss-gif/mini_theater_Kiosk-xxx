@@ -22,8 +22,9 @@
   <div class="wrapper">
     <header>
       <h1 class="headerLogo">
-        <a href="javascript:void(0)"><i class="xi-home-o xi-5x"></i></a>
+        <a class="homeBtn" href="javascript:void(0)"><i class="xi-home-o xi-5x"></i></a>
         <img src="./img/logoRed.png" alt="logo">
+        <a class="replyBtn" href="javascript:void(0)"><i class="xi-reply xi-5x"></i></a>
       </h1>
       <h2 class="headerTitle">현재 상영표</h2>
     </header>
@@ -31,7 +32,7 @@
       <!-- 현재상영표 -->
       <section id="nowMovie" class="nowMovie">
         <div id="mainContent" class="mainContent">
-          <img src="./img/01.jpg" alt="더 배트맨" />
+          <img src="./img/theBatman.jpg" alt="더 배트맨" />
           <div id="movieInfo" class="movieInfo">
             <h3 id="infoTitle" class="infoTitle">더 배트맨</h3>
             <!-- 상영관 정보 -->
@@ -76,7 +77,7 @@
           </div>
         </div>
         <div id="mainContent" class="mainContent">
-          <img src="./img/02.jpg" alt="레벤느망" />
+          <img src="./img/levenement.jpg" alt="레벤느망" />
           <div id="movieInfo" class="movieInfo">
             <h3 id="infoTitle" class="infoTitle">레벤느망</h3>
             <!-- 상영관 정보 -->
@@ -121,7 +122,7 @@
           </div>
         </div>
         <div id="mainContent" class="mainContent">
-          <img src="./img/03.jpg" alt="이상한나라의 수학자" />
+          <img src="./img/mathMan.jpg" alt="이상한나라의 수학자" />
           <div id="" class="movieInfo">
             <h3 id="" class="infoTitle">이상한나라의 수학자</h3>
             <!-- 상영관 정보 -->
@@ -176,7 +177,8 @@
             <p id="paymentWindowTitle" class="paymentWindowTitle">영화를 예매하시겠습니까?</ㅔ>
               <div id="paymentWindowMain" class="paymentWindowMain">
                 <div id="paymentWindowMovie" class="paymentWindowMovie">
-                  <img src="./img/01.jpg" alt="예매 영화이미지" />
+                  <!-- <img src="./img/theBatman.jpg" alt="예매 영화이미지" /> -->
+                  <img id="paymentImg" src="./img/theBatman.jpg" alt="예매 영화이미지" />
                 </div>
                 <div id="paymentWindowInfo" class="paymentWindowInfo">
                   <p id="movieTitle" class="movieTitle">더 배트맨</p>
@@ -193,6 +195,23 @@
       </div>
       <!-- 좌석선택 화면 -->
       <div id="seatSelection" class="seatSelection">
+        <!-- 결제 인원 -->
+        <div id="paymentArea" class="paymentArea">
+          <div id="paymentPeople" class="paymentPeople">
+            <div id="peopleAdult" class="peopleAdult">
+              <p>성인</p>
+              <button id="minusBtn" class="minusBtn">-</button>
+              <input id="" type="number" value="0" disabled>
+              <button id="plusBtn" class="plusBtn">+</button>
+            </div>
+            <div id="peopleChildren" class="peopleChildren">
+              <p>어린이</p>
+              <button id="minusBtn" class="minusBtn">-</button>
+              <input id="" type="number" value="0" disabled>
+              <button id="plusBtn" class="plusBtn">+</button>
+            </div>
+          </div>
+        </div>
         <div id="screenBox" class="screenBox">SCREEN</div>
         <div id="seatArea" class="seatArea">
           <div id="seatRowA" class="matrixGW seatRowA">
@@ -234,26 +253,11 @@
             <div id="seatNumber" class="seatNumber emtySeat"></div>
             <div id="seatNumber" class="seatNumber emtySeat"></div>
             <div id="seatNumber" class="seatNumber emtySeat"></div>
+            
           </div>
           
         </div>
-        <div id="paymentArea" class="paymentArea">
-          <div id="paymentPeople" class="paymentPeople">
-            <div id="peopleAdult" class="peopleAdult">
-              <p>성인</p>
-              <button id="minusBtn" class="minusBtn">-</button>
-              <input id="" type="number" value="0" disabled>
-              <button id="plusBtn" class="plusBtn">+</button>
-            </div>
-            <div id="peopleChildren" class="peopleChildren">
-              <p>어린이</p>
-              <button id="minusBtn" class="minusBtn">-</button>
-              <input id="" type="number" value="0" disabled>
-              <button id="plusBtn" class="plusBtn">+</button>
-            </div>
-          </div>
-          <div id="paymentBtn" class="paymentBtn">결제하기</div>
-        </div>
+        <div id="paymentBtn" class="paymentBtn">결제하기</div>
       </div>
     </main>
   </div>
