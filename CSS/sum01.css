@@ -1,0 +1,1052 @@
+@font-face {
+  font-family: 'GongGothicLight';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10@1.0/GongGothicLight.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+* { margin: 0; padding: 0; font-size: 10px; font-family: 'GongGothicLight'; list-style-type: none; text-decoration: none; color: #363636; };
+
+/*1번*/
+.mainBox01 {
+  width: 70rem;
+  height: 90rem;
+  margin: 3.5rem;
+}
+.mainBox01 {
+  width: 70rem;
+  height: 90rem;
+  margin: 3.5rem;
+  margin: 0 auto;
+}
+.headerBox01 {
+  width: 70rem;
+  height: 15rem;
+  margin: 0 auto;
+}
+.headerBox01 h1 {
+  text-align: center;
+  font-size: 4rem;
+  padding-top: 4rem;
+}
+.headerBox01 i::before {
+  content:"";
+  margin-top: -7rem;
+  margin-right: 3rem;
+  display: block;
+  float: right;
+  padding-left: 65rem;
+  cursor: pointer;
+}
+.discountButton01 {
+  width: 70rem;
+  height: 30rem;
+  margin: 0 auto;
+}
+.discountButton01 p {
+  font-size: 4rem;
+}
+#pointButton01 {
+  margin-left: 8rem;
+  width: 22.5rem;
+  height: 22.5rem;
+  box-shadow: 0.3rem 0.3rem 0.3rem 0.3rem rgb(221, 221, 221);
+  border-radius: 3rem;
+  cursor: pointer;
+  border: none;
+}
+#couponButton01 {
+  margin-left: 9rem;
+  width: 22.5rem;
+  height: 22.5rem;
+  box-shadow: 0.3rem 0.3rem 0.3rem 0.3rem rgb(221, 221, 221);
+  border-radius: 3rem;
+  cursor: pointer;
+  border: none;
+}
+.resultButton01 {
+  width: 70rem;
+  height: 35rem;
+  margin: 0 auto;
+}
+.resultButton01 p {
+  font-size: 3rem;
+  text-align: center;
+  padding-top: 5rem;
+  line-height: 1rem;
+}
+#resultLeft01 {
+  float: left;
+  width: 50%;
+  height: 30rem;
+  padding-top: -10rem;
+}
+#resultRight01 {
+  float: right;
+  width: 50%;
+  height: 30rem;
+}
+#resultLeft01 p {
+  padding-left: 3rem;
+}
+#resultRight01 p {
+  color: #9a1e16;
+  padding-right: 3rem;
+}
+#resultMoneyLeft01 {
+  width: 35rem;
+  height: 10rem;
+  float: left;
+  margin-top: -9rem;
+}
+#resultMoneyLeft01 p {
+  padding-left: 3rem;
+  padding-top: 0rem;
+  padding-bottom: 10rem;
+}
+#resultMoneyRight01 {
+  width: 35rem;
+  height: 10rem;
+  float: right;
+  margin-top: -9rem;
+}
+#resultMoneyRight01 p {
+  color: #9a1e16;
+  font-weight: bold;
+  font-size: 4rem;
+  padding-right: 3rem;
+  padding-top: 0rem;
+}
+.underLine01 {
+  width: 50rem;
+  height: 0.3rem;
+  background:  #c2c2c2;
+  float: left;
+  margin-left: 10rem;
+  position: relative;
+  margin-top: -15rem;
+}
+.payButton01 {
+  width: 70rem;
+  border: none;
+  height: 10rem;
+  cursor: pointer;
+}
+.payButton01 p {
+  font-size: 3rem;
+  font-weight: bold;
+}
+#previousButton01 {
+  float: left;
+  width: 30%;
+}
+#nextButton01 {
+  float: right;
+  width: 70%;
+  background: #ed3124;
+}
+#nextButton01 p {
+  color: white;
+}
+
+/*2번*/
+.mainBox02 {
+  width: 70rem;
+  height: 90rem;
+  margin: 3.5rem auto;
+  background: #eeeeee;
+}
+.headerBox02 {
+  width: 70rem;
+  height: 10rem;
+}
+.headerBox02 h1 {
+  text-align: center;
+  font-size: 4rem;
+  padding-top: 4rem;
+  color: rgb(154, 154, 154);
+}
+.headerBox02 i::before {
+  content:"";
+  margin-top: -7rem;
+  margin-right: 3rem;
+  color: rgb(170, 170, 170);
+  display: block;
+  float: right;
+  padding-left: 65rem;
+}
+
+.pointBox02 {
+  width: 70rem;
+  height: 70rem;
+  background: white;
+  border-radius: 3rem 3rem 0 0;
+  box-shadow: 0rem -1rem 1rem 0 rgb(221, 221, 221);
+}
+.pointBox02 h1 {
+  font-size: 4rem;
+  text-align: center;
+  padding-top: 3rem;
+}
+.pointBox02 img {
+  margin: 0 auto;
+  display: block;
+  width: 40rem;
+  margin-top: 6rem;
+  margin-top: 1rem;
+}
+.pointBox02 p {
+  font-size: 4rem;
+  text-align: center;
+  font-weight: bold;
+  line-height: 4rem;
+  line-height: 4.5rem;
+}
+.pointBox02 i::before {
+  content:"";
+  display: block;
+  float: right;
+  padding-top: -10rem;
+  padding-left: 65rem;
+}
+.pointBox02 i {
+  font-size: 3rem;
+  font-weight: bold;
+  float: right;
+  margin-top: -6rem;
+  margin-right: 3rem;
+  border: none;
+  background: white;
+  cursor: pointer;
+}
+.checkButton02 {
+  width: 70rem;
+  height: 10rem;
+  background: #ed3124;
+  border: none;
+  cursor: pointer;
+}
+.checkButton02 p {
+  color: white;
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+/*3번*/
+.mainBox03 {
+  width: 70rem;
+  height: 90rem;
+  margin: 3.5rem auto;
+  background: #eeeeee;
+}
+.headerBox03 {
+  width: 70rem;
+  height: 10rem;
+}
+.headerBox03 h1 {
+  text-align: center;
+  font-size: 4rem;
+  padding-top: 4rem;
+  color: rgb(154, 154, 154);
+}
+.headerBox03 i::before {
+  content:"";
+  margin-top: -7rem;
+  margin-right: 3rem;
+  color: rgb(170, 170, 170);
+  display: block;
+  float: right;
+  padding-left: 65rem;
+}
+.pointBox03 {
+  width: 70rem;
+  height: 70rem;
+  background: white;
+  border-radius: 3rem 3rem 0 0;
+  box-shadow: 0rem -1rem 1rem 0 rgb(221, 221, 221);
+}
+.pointBox03 h1 {
+  font-size: 4rem;
+  text-align: center;
+  padding-top: 3rem;
+  font-weight: 600;
+  line-height: 5rem;
+}
+.pointBox03 h2 {
+  font-size: 4rem;
+  line-height: 6rem;
+  text-align: center;
+  font-weight: 900;
+}
+.numberBox03 {
+  width: 26rem;
+  height: 34.5rem;
+  margin: 0 auto;
+  margin-top: 5rem;
+}
+.numberButton03 {
+  border: none;
+  border-radius: 50%;
+  width: 7rem;
+  height: 7rem;
+  margin: 0 auto;
+  display: block;
+  cursor: pointer;
+}
+.numberButton03 p {
+  font-size: 3rem;
+  padding-left: 5rem;
+}
+#numberOne03 {
+  float: left;
+}
+#numberOne03 p {
+  margin-left: -7.5rem;
+  margin-top: -6.5rem;
+}
+#numberTwo03 {
+  margin-right: 9.5rem;
+}
+#numberTwo03 p {
+  margin-left: -7.5rem;
+  margin-top: -6.5rem;
+}
+#numberThree03 {
+  float: right;
+  margin-top: -7rem;
+}
+#numberThree03 p {
+  margin-left: -7.5rem;
+  margin-top: -6.5rem;
+}
+#numberFour03 p {
+  margin-left: -7.5rem;
+  margin-top: -6.5rem;
+}
+#numberFour03 {
+  float: left;
+  margin-top: 2.5rem;
+}
+#numberFive03 {
+  margin-right: 9.5rem;
+  margin-top: 2.5rem;
+}
+#numberFive03 p {
+  margin-left: -7.5rem;
+  margin-top: -6.5rem;
+}
+#numberSix03 {
+  float: right;
+  margin-top: -7rem;
+}
+#numberSix03 p {
+  margin-left: -7.5rem;
+  margin-top: -6.5rem;
+}
+#numberSeven03 {
+  float: left;
+  margin-top: 2.5rem;
+}
+#numberSeven03 p {
+  margin-left: -7.5rem;
+  margin-top: -6.5rem;
+}
+#numberEight03 {
+  margin-right: 9.5rem;
+  margin-top: 2.5rem;
+}
+#numberEight03 p {
+  margin-left: -7.5rem;
+  margin-top: -6.5rem;
+}
+#numberNine03 {
+  margin-top: -7rem;
+  float: right;
+}
+#numberNine03 p {
+  margin-left: -7.5rem;
+  margin-top: -6.5rem;
+}
+#resetButton03 {
+  float: left;
+  margin-top: 2.5rem;
+}
+#resetButton03 p::before {
+  content: "";
+}
+#numberZero03 {
+  margin-right: 9.5rem;
+  margin-top: 2.5rem;
+}
+#numberZero03 p {
+  margin-left: -7.5rem;
+  margin-top: -6.5rem;
+}
+#eraseButton03 {
+  float: right;
+  margin-top: -7rem;
+}
+#eraseButton03 p::before {
+  content: "";
+}
+.pointBox03 i {
+  font-size: 3.5rem;
+  text-align: center;
+  font-weight: 900;
+  line-height: 4rem;
+}
+.pointBox03 i {
+  font-size: 3rem;
+  font-weight: bold;
+  float: right;
+  margin-top: -5.5rem;
+  margin-right: 3rem;
+  cursor: pointer;
+}
+.pointBox03 p {
+  padding-top: 7rem;
+  padding-left: 7.5rem;
+}
+.checkButton03 {
+  width: 70rem;
+  height: 10rem;
+  background: #ed3124;
+  border: none;
+  cursor: pointer;
+}
+.checkButton03 p {
+  color: white;
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+/*4번*/
+.mainBox04 {
+  width: 70rem;
+  height: 90rem;
+  margin: 3.5rem auto;
+  background: #eeeeee;
+}
+.headerBox04 {
+  width: 70rem;
+  height: 10rem;
+}
+.headerBox04 h1 {
+  text-align: center;
+  font-size: 4rem;
+  padding-top: 4rem;
+  color: rgb(154, 154, 154);
+}
+.headerBox04 i::before {
+  content:"";
+  margin-top: -7rem;
+  margin-right: 3rem;
+  color: rgb(170, 170, 170);
+  display: block;
+  float: right;
+  padding-left: 65rem;
+}
+.headerBox04 p::before {
+  content: "";
+}
+.pointBox04 {
+  width: 70rem;
+  height: 70rem;
+  background: white;
+  border-radius: 3rem 3rem 0 0;
+  box-shadow: 0rem -1rem 1rem 0 rgb(221, 221, 221);
+  position: relative;
+  z-index: 1;
+}
+.pointBox04 h1 {
+  font-size: 4rem;
+  text-align: center;
+  padding-top: 3rem;
+  font-weight: 600;
+  line-height: 5rem;
+}
+.pointBox04 h2 {
+  font-size: 4rem;
+  line-height: 6rem;
+  text-align: center;
+  font-weight: 900;
+}
+.numberBox04 {
+  width: 26rem;
+  height: 34.5rem;
+  margin: 0 auto;
+  margin-top: 5rem;
+}
+.numberButton04 {
+  border: none;
+  border-radius: 50%;
+  width: 7rem;
+  height: 7rem;
+  margin: 0 auto;
+  display: block;
+}
+.numberButton04 p {
+  font-size: 3rem;
+  padding-left: 5rem;
+}
+#numberOne04 {
+  float: left;
+}
+#numberOne04 p {
+  margin-left: -7.5rem;
+  margin-top: -6.5rem;
+}
+#numberTwo04 {
+  margin-right: 9.5rem;
+}
+#numberTwo04 p {
+  margin-left: -7.5rem;
+  margin-top: -6.5rem;
+}
+#numberThree04 {
+  float: right;
+  margin-top: -7rem;
+}
+#numberThree04 p {
+  margin-left: -7.5rem;
+  margin-top: -6.5rem;
+}
+#numberFour04 p {
+  margin-left: -7.5rem;
+  margin-top: -6.5rem;
+}
+#numberFour04 {
+  float: left;
+  margin-top: 2.5rem;
+}
+#numberFive04 {
+  margin-right: 9.5rem;
+  margin-top: 2.5rem;
+}
+#numberFive04 p {
+  margin-left: -7.5rem;
+  margin-top: -6.5rem;
+}
+#numberSix04 {
+  float: right;
+  margin-top: -7rem;
+}
+#numberSix04 p {
+  margin-left: -7.5rem;
+  margin-top: -6.5rem;
+}
+#numberSeven04 {
+  float: left;
+  margin-top: 2.5rem;
+}
+#numberSeven04 p {
+  margin-left: -7.5rem;
+  margin-top: -6.5rem;
+}
+#numberEight04 {
+  margin-right: 9.5rem;
+  margin-top: 2.5rem;
+}
+#numberEight04 p {
+  margin-left: -7.5rem;
+  margin-top: -6.5rem;
+}
+#numberNine04 {
+  margin-top: -7rem;
+  float: right;
+}
+#numberNine04 p {
+  margin-left: -7.5rem;
+  margin-top: -6.5rem;
+}
+#resetButton04 {
+  float: left;
+  margin-top: 2.5rem;
+}
+#resetButton04 p::before {
+  content: "";
+}
+#numberZero04 {
+  margin-right: 9.5rem;
+  margin-top: 2.5rem;
+}
+#numberZero04 p {
+  margin-left: -7.5rem;
+  margin-top: -6.5rem;
+}
+#eraseButton04 {
+  float: right;
+  margin-top: -7rem;
+}
+#eraseButton04 p::before {
+  content: "";
+}
+.pointBox04 i {
+  font-size: 3.5rem;
+  text-align: center;
+  font-weight: 900;
+  line-height: 4rem;
+}
+.pointBox04 i {
+  font-size: 3rem;
+  font-weight: bold;
+  float: right;
+  margin-top: -5.5rem;
+  margin-right: 3rem;
+}
+.pointBox04 p {
+  padding-top: 7rem;
+  padding-left: 7.5rem;
+}
+.checkButton04 {
+  width: 70rem;
+  height: 10rem;
+  background: #ed3124;
+  border: none;
+}
+.checkButton04 p {
+  color: white;
+  font-size: 3rem;
+  font-weight: bold;
+}
+.errorBox04 {
+  width: 50rem;
+  height: 38rem;
+  background: #eeeeee;
+  margin: 0 auto;
+  margin-top: -66rem;
+  position: relative;
+  z-index: 2;
+  border-radius: 4rem;
+  box-shadow: 0.3rem 0.3rem 0.3rem 0.3rem rgb(221, 221, 221);
+}
+.errorBox04 i::before {
+  content:"";
+  display: block;
+  float: right;
+  padding-left: 45rem;
+  padding-top: 2rem;
+  cursor: pointer;
+}
+.errorBox04 p {
+  font-size: 4rem;
+  font-weight: 900;
+  white-space: nowrap;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  top: 6rem;
+}
+.errorBox04 a {
+  text-decoration: none;
+}
+.errorClose04 {
+  border: none;
+  font-size: 4rem;
+  font-weight: bold;
+  display: block;
+  padding-top: 1rem;
+  margin-left: 45rem;
+  background: transparent;
+  cursor: pointer;
+}
+.errorBox04 span {
+  color: #ed3124;
+  font-size: 4rem;
+}
+
+/*6번*/
+.mainBox06 {
+  width: 70rem;
+  height: 90rem;
+  margin: 3.5rem auto;
+}
+.headerBox06 {
+  width: 70rem;
+  height: 15rem;
+}
+.headerBox06 h1 {
+  text-align: center;
+  font-size: 4rem;
+  padding-top: 4rem;
+}
+.headerBox06 i::before {
+  content:"";
+  margin-top: -7rem;
+  margin-right: 3rem;
+  display: block;
+  float: right;
+  padding-left: 65rem;
+  cursor: pointer;
+}
+.cardBox06 {
+  width: 70rem;
+  height: 65rem;
+}
+.cardBox06 img {
+  margin: 0 auto;
+  display: block;
+  width: 30rem;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+.cardBox06 p {
+  font-size: 5rem;
+  text-align: center;
+  padding-top: 7rem;
+  font-weight: bold;
+}
+.payButton06 {
+  width: 70rem;
+  border: none;
+  height: 10rem;
+  cursor: pointer;
+}
+.payButton06 p {
+  font-size: 3rem;
+  font-weight: 700;
+}
+#previousButton06 {
+  float: left;
+  width: 30%;
+}
+#checkButton06 {
+  float: right;
+  width: 70%;
+  background: #ed3124;
+}
+#checkButton06 p {
+  color: white;
+}
+
+/*7번*/
+.mainBox07 {
+  width: 70rem;
+  height: 90rem;
+  margin: 3.5rem auto;
+}
+.headerBox07 {
+  width: 70rem;
+  height: 15rem;
+}
+.headerBox07 h1 {
+  text-align: center;
+  font-size: 4rem;
+  padding-top: 4rem;
+}
+.headerBox07 p {
+  font-size: 4rem;
+  font-weight: bold;
+  float: right;
+  margin-top: -7rem;
+  margin-right: 3rem;
+}
+.cardBox07 {
+  width: 70rem;
+  height: 65rem;
+}
+.cardBox07 img {
+  margin: 0 auto;
+  display: block;
+  width: 30rem;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+.cardBox07 p {
+  font-size: 5rem;
+  text-align: center;
+  padding-top: 7rem;
+  font-weight: bold;
+  line-height: 0.1rem;
+}
+#smallText07 {
+  font-size: 3rem;
+}
+.payButton07 {
+  width: 70rem;
+  border: none;
+  height: 10rem;
+  cursor: pointer;
+}
+.payButton07 p {
+  font-size: 3rem;
+  font-weight: 700;
+}
+#previousButton07 {
+  float: left;
+  width: 30%;
+}
+#checkButton07 {
+  float: right;
+  width: 70%;
+  background: #ed3124;
+}
+#checkButton07 p {
+  color: white;
+}
+
+/*8번*/
+.mainBox08 {
+  width: 70rem;
+  height: 90rem;
+  margin: 3.5rem auto;
+}
+.headerBox08 {
+  width: 70rem;
+  height: 15rem;
+}
+.headerBox08 h1 {
+  text-align: center;
+  font-size: 4rem;
+  padding-top: 4rem;
+}
+.headerBox08 p {
+  font-size: 4rem;
+  font-weight: bold;
+  float: right;
+  margin-top: -7rem;
+  margin-right: 3rem;
+  transform: rotate(45deg);
+}
+.cardBox08 {
+  width: 70rem;
+  height: 65rem;
+}
+#smallText08 {
+  font-size: 3rem;
+  line-height: 1rem;
+}
+.cardBox08 img {
+  margin: 0 auto;
+  display: block;
+  width: 60rem;
+  padding-bottom: 5rem;
+}
+.cardBox08 p {
+  font-size: 5rem;
+  text-align: center;
+  padding-top: 1rem;
+  font-weight: bold;
+}
+.payButton08 {
+  width: 70rem;
+  border: none;
+  height: 10rem;
+  cursor: pointer;
+}
+.payButton08 p {
+  font-size: 3rem;
+  font-weight: 700;
+}
+#previousButton08 {
+  float: left;
+  width: 30%;
+}
+#checkButton08 {
+  float: right;
+  width: 70%;
+  background: #ed3124;
+}
+#checkButton08 p {
+  color: white;
+}
+
+/*9번*/
+.mainBox09 {
+  width: 70rem;
+  height: 90rem;
+  margin: 3.5rem auto;
+}
+.headerBox09 {
+  width: 70rem;
+  height: 20rem;
+}
+.headerBox09 i::before {
+  content:"";
+  margin-top: -7rem;
+  margin-right: 3rem;
+  display: block;
+  float: right;
+  padding-left: 65rem;
+  cursor: pointer;
+}
+.headerBox09 p::before {
+  content: "";
+}
+.headerBox09 h1 {
+  font-size: 4rem;
+  text-align: center;
+  padding-top: 3rem;
+  font-weight: 600;
+  line-height: 4rem;
+  position: relative;
+  top: 3rem;
+}
+.headerBox09 h2 {
+  font-size: 5rem;
+  line-height: 10rem;
+  text-align: center;
+  font-weight: 900;
+  padding-top: 7rem;
+}
+.headerBox09 i::before {
+  content:"";
+  margin-top: -7rem;
+  margin-right: 3rem;
+  display: block;
+  float: right;
+  padding-left: 65rem;
+}
+.numberBox09 {
+  width: 30rem;
+  height: 48rem;
+  margin: 0 auto;
+  margin-top: 5rem;
+  padding-top: 7rem;
+}
+.numberButton09 {
+  border: none;
+  border-radius: 50%;
+  width: 8rem;
+  height: 8rem;
+  margin: 0 auto;
+  display: block;
+  cursor: pointer;
+}
+.numberButton09 p {
+  font-size: 3.5rem;
+  text-align: center;
+  line-height: 4rem;
+}
+#numberOne09 {
+  float: left;
+}
+#numberTwo09 {
+  margin-left: 11rem;
+}
+#numberThree09 {
+  float: right;
+  margin-top: -8rem;
+}
+#numberFour09 {
+  float: left;
+  margin-top: 3rem;
+}
+#numberFive09 {
+  margin-right: 11rem;
+  margin-top: 3rem;
+}
+#numberSix09 {
+  float: right;
+  margin-top: -8rem;
+}
+#numberSeven09 {
+  float: left;
+  margin-top: 3rem;
+}
+#numberEight09 {
+  margin-right: 11rem;
+  margin-top: 3rem;
+}
+#numberNine09 {
+  margin-top: -8rem;
+  float: right;
+}
+#resetButton09 {
+  float: left;
+  margin-top: 3rem;
+}
+#resetButton09::before {
+  content: "";
+}
+#numberZero09 {
+  margin-right: 11rem;
+  margin-top: 3rem;
+}
+#eraseButton09 {
+  float: right;
+  margin-top: -8rem;
+}
+#eraseButton09 p::before {
+  content: "";
+}
+#closeButton09 {
+  font-size: 4rem;
+  font-weight: bold;
+  float: right;
+  margin-top: -5rem;
+  margin-right: 3rem;
+  border: none;
+  background: white;
+}
+.checkButton09 {
+  width: 70rem;
+  height: 10rem;
+  background: #ed3124;
+  border: none;
+  cursor: pointer;
+}
+.checkButton09 p {
+  color: white;
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+/*10번*/
+.mainBox10 {
+  width: 70rem;
+  height: 90rem;
+  margin: 3.5rem auto;
+}
+.headerBox10 {
+  width: 70rem;
+  height: 15rem;
+}
+.headerBox10 h1 {
+  text-align: center;
+  font-size: 4rem;
+  padding-top: 4rem;
+}
+.headerBox10 p {
+  font-size: 4rem;
+  font-weight: bold;
+  float: right;
+  margin-top: -7rem;
+  margin-right: 3rem;
+}
+.cardBox10 {
+  width: 70rem;
+  height: 65rem;
+}
+#smallText10 {
+  font-size: 2.5rem;
+}
+.cardBox10 img {
+  margin: 0 auto;
+  display: block;
+  width: 60rem;
+  padding-bottom: 5rem;
+}
+.cardBox10 p {
+  font-size: 5rem;
+  text-align: center;
+}
+.payButton10 {
+  width: 70rem;
+  border: none;
+  height: 10rem;
+  cursor: pointer;
+}
+.payButton10 p {
+  font-size: 3rem;
+  font-weight: bold;
+}
+#checkButton10 {
+  float: right;
+  width: 70rem;
+  background: #ed3124;
+}
+#checkButton10 p {
+  color: white;
+}

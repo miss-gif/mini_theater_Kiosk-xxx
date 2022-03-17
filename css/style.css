@@ -1,28 +1,11 @@
 @import url(./common.css);
 .storeSelectPage {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   width: 70rem;
-  background-color: #eee;
-  margin: auto;
-}
-
-.storeSelectPage .cafeteriaStoreButton,
-.storeSelectPage .ticketPublishButton {
-  width: 28rem;
-  height: 42rem;
-  border-radius: 1.5rem;
-  border: 0;
-  background-color: #fff;
-  margin: 1rem;
-  font-size: 3rem;
+  height: 90rem;
+  position: absolute;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+  left: 50%;
 }
 
 .wrapper {
@@ -39,6 +22,7 @@
   width: 70rem;
   margin: auto;
   z-index: 99;
+  background-color: transparent;
 }
 
 .wrapper header h1 {
@@ -91,7 +75,7 @@
   top: 19rem;
 }
 
-.wrapper main .nowMovie {
+.wrapper main section.nowMovie {
   width: 70rem;
   height: 71rem;
   display: -webkit-box;
@@ -103,7 +87,7 @@
   z-index: 10;
 }
 
-.wrapper main .nowMovie .bat {
+.wrapper main section.nowMovie .bat {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -123,7 +107,7 @@
   transition: 0.5s;
 }
 
-.wrapper main .nowMovie .reben {
+.wrapper main section.nowMovie .reben {
   position: absolute;
   top: 50%;
   left: 0;
@@ -142,7 +126,7 @@
   transition: 0.5s;
 }
 
-.wrapper main .nowMovie .Math {
+.wrapper main section.nowMovie .Math {
   position: absolute;
   top: 50%;
   left: 42rem;
@@ -161,25 +145,25 @@
   transition: 0.5s;
 }
 
-.wrapper main .nowMovie .mainContent img {
+.wrapper main section.nowMovie .mainContent img {
   width: 22rem;
   -webkit-box-shadow: 0.5rem 0.5rem 3rem rgba(51, 51, 51, 0.4);
           box-shadow: 0.5rem 0.5rem 3rem rgba(51, 51, 51, 0.4);
   margin-bottom: 1.5rem;
 }
 
-.wrapper main .nowMovie .mainContent .movieInfo {
+.wrapper main section.nowMovie .mainContent .movieInfo {
   padding: 1rem 0;
 }
 
-.wrapper main .nowMovie .mainContent .movieInfo .infoTitle {
+.wrapper main section.nowMovie .mainContent .movieInfo .infoTitle {
   position: relative;
   width: 100%;
   font-size: 2.4rem;
   white-space: nowrap;
 }
 
-.wrapper main .nowMovie .mainContent .movieInfo .infoTitle::before {
+.wrapper main section.nowMovie .mainContent .movieInfo .infoTitle::before {
   position: absolute;
   bottom: -1rem;
   content: "";
@@ -188,29 +172,29 @@
   background-color: #cfcccc;
 }
 
-.wrapper main .nowMovie .mainContent .movieInfo .infoTheater {
+.wrapper main section.nowMovie .mainContent .movieInfo .infoTheater {
   margin: 2rem 0;
 }
 
-.wrapper main .nowMovie .mainContent .movieInfo .infoTheater .infoTheaterLocation {
+.wrapper main section.nowMovie .mainContent .movieInfo .infoTheater .infoTheaterLocation {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   margin-bottom: 1rem;
 }
 
-.wrapper main .nowMovie .mainContent .movieInfo .infoTheater .infoTheaterLocation .infoLocation {
+.wrapper main section.nowMovie .mainContent .movieInfo .infoTheater .infoTheaterLocation .infoLocation {
   font-weight: 900;
   color: #9a1e16;
   margin-right: 0.5rem;
   font-size: 1rem;
 }
 
-.wrapper main .nowMovie .mainContent .movieInfo .infoTheater .infoTheaterLocation .infoFloor {
+.wrapper main section.nowMovie .mainContent .movieInfo .infoTheater .infoTheaterLocation .infoFloor {
   font-size: 1rem;
 }
 
-.wrapper main .nowMovie .mainContent .movieInfo .infoTheater .showTime {
+.wrapper main section.nowMovie .mainContent .movieInfo .infoTheater .showTime {
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -223,7 +207,7 @@
           align-items: center;
 }
 
-.wrapper main .nowMovie .mainContent .movieInfo .infoTheater .showTime .timeBox {
+.wrapper main section.nowMovie .mainContent .movieInfo .infoTheater .showTime .timeBox {
   width: 6.5rem;
   padding: 0.5rem 0;
   text-align: center;
@@ -236,12 +220,12 @@
           box-sizing: border-box;
 }
 
-.wrapper main .nowMovie .mainContent .movieInfo .infoTheater .showTime .timeBox:hover {
+.wrapper main section.nowMovie .mainContent .movieInfo .infoTheater .showTime .timeBox:hover {
   background-color: var(--Color2);
   cursor: pointer;
 }
 
-.wrapper main .nowMovie .mainContent .movieInfo .infoTheater .showTime .timeSeat {
+.wrapper main section.nowMovie .mainContent .movieInfo .infoTheater .showTime .timeSeat {
   text-align: center;
   display: block;
   width: 4rem;
@@ -250,7 +234,7 @@
   color: #82a67d;
 }
 
-.wrapper main .nowMovie .mainContent .movieInfo .infoTheater .lineGW:before {
+.wrapper main section.nowMovie .mainContent .movieInfo .infoTheater .lineGW:before {
   position: absolute;
   bottom: -1rem;
   content: "";
@@ -259,16 +243,16 @@
   background-color: #cfcccc;
 }
 
-.wrapper main .nowMovie .mainContent:nth-child(2) {
+.wrapper main section.nowMovie .mainContent:nth-child(2) {
   opacity: 0.4;
 }
 
-.wrapper main .nowMovie .mainContent:nth-child(3) {
+.wrapper main section.nowMovie .mainContent:nth-child(3) {
   opacity: 0.4;
 }
 
-.wrapper main .nowMovie .previousBtn,
-.wrapper main .nowMovie .afterBtn {
+.wrapper main section.nowMovie .previousBtn,
+.wrapper main section.nowMovie .afterBtn {
   position: absolute;
   font-size: 3rem;
   top: 50%;
@@ -277,15 +261,15 @@
   cursor: pointer;
 }
 
-.wrapper main .nowMovie .previousBtn {
+.wrapper main section.nowMovie .previousBtn {
   left: 13rem;
 }
 
-.wrapper main .nowMovie .afterBtn {
+.wrapper main section.nowMovie .afterBtn {
   right: 13rem;
 }
 
-.wrapper main .backgroundFilter {
+.wrapper main section.backgroundFilter {
   display: none;
   position: absolute;
   top: 0;
@@ -300,7 +284,7 @@
       align-self: center;
 }
 
-.wrapper main .backgroundFilter .paymentWindow {
+.wrapper main section.backgroundFilter .paymentWindow {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -321,7 +305,7 @@
           box-shadow: 0.5rem 0.5rem 3rem rgba(50, 50, 50, 0.3);
 }
 
-.wrapper main .backgroundFilter .paymentWindow .inner {
+.wrapper main section.backgroundFilter .paymentWindow .inner {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -336,12 +320,12 @@
           flex-direction: column;
 }
 
-.wrapper main .backgroundFilter .paymentWindow .inner .paymentWindowTitle {
+.wrapper main section.backgroundFilter .paymentWindow .inner .paymentWindowTitle {
   font-size: 4rem;
   text-align: center;
 }
 
-.wrapper main .backgroundFilter .paymentWindow .inner .paymentWindowMain {
+.wrapper main section.backgroundFilter .paymentWindow .inner .paymentWindowMain {
   margin: 2rem 0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -354,14 +338,14 @@
           align-items: center;
 }
 
-.wrapper main .backgroundFilter .paymentWindow .inner .paymentWindowMain .paymentWindowMovie img {
+.wrapper main section.backgroundFilter .paymentWindow .inner .paymentWindowMain .paymentWindowMovie img {
   display: block;
   width: 11rem;
   height: 15.5rem;
   background-color: #808080;
 }
 
-.wrapper main .backgroundFilter .paymentWindow .inner .paymentWindowMain .paymentWindowInfo .movieTitle {
+.wrapper main section.backgroundFilter .paymentWindow .inner .paymentWindowMain .paymentWindowInfo .movieTitle {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   padding: 1rem;
@@ -375,8 +359,8 @@
   text-overflow: ellipsis;
 }
 
-.wrapper main .backgroundFilter .paymentWindow .inner .paymentWindowMain .paymentWindowInfo .movieFloor,
-.wrapper main .backgroundFilter .paymentWindow .inner .paymentWindowMain .paymentWindowInfo .movieTime {
+.wrapper main section.backgroundFilter .paymentWindow .inner .paymentWindowMain .paymentWindowInfo .movieFloor,
+.wrapper main section.backgroundFilter .paymentWindow .inner .paymentWindowMain .paymentWindowInfo .movieTime {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   width: 28rem;
@@ -384,18 +368,18 @@
   background-color: #b5b5b5;
 }
 
-.wrapper main .backgroundFilter .paymentWindow .inner .paymentWindowMain .paymentWindowInfo .movieFloor {
+.wrapper main section.backgroundFilter .paymentWindow .inner .paymentWindowMain .paymentWindowInfo .movieFloor {
   padding: 1rem;
   font-size: 2rem;
   color: #9a1e16;
 }
 
-.wrapper main .backgroundFilter .paymentWindow .inner .paymentWindowMain .paymentWindowInfo .movieTime {
+.wrapper main section.backgroundFilter .paymentWindow .inner .paymentWindowMain .paymentWindowInfo .movieTime {
   padding: 0 1rem 1rem;
   font-size: 3rem;
 }
 
-.wrapper main .backgroundFilter .paymentWindow .inner .paymentWindowBtn {
+.wrapper main section.backgroundFilter .paymentWindow .inner .paymentWindowBtn {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -407,7 +391,7 @@
           align-items: center;
 }
 
-.wrapper main .backgroundFilter .paymentWindow .inner .paymentWindowBtn button {
+.wrapper main section.backgroundFilter .paymentWindow .inner .paymentWindowBtn button {
   font-size: 2.4rem;
   line-height: 4rem;
   width: 15.5rem;
@@ -419,19 +403,19 @@
   border: 0.3rem solid #595959;
 }
 
-.wrapper main .backgroundFilter .paymentWindow .inner .paymentWindowBtn button:hover {
+.wrapper main section.backgroundFilter .paymentWindow .inner .paymentWindowBtn button:hover {
   background-color: var(--Color4);
   color: #fff;
   cursor: pointer;
 }
 
-.wrapper main .backgroundFilter .paymentWindow .inner .paymentWindowBtn .selectionBtn {
+.wrapper main section.backgroundFilter .paymentWindow .inner .paymentWindowBtn .selectionBtn {
   background-color: #ba1a0f;
   color: #fff;
   border: 0;
 }
 
-.wrapper main .seatSelection {
+.wrapper main section.seatSelection {
   display: none;
   position: absolute;
   top: 0;
@@ -440,7 +424,7 @@
   z-index: 30;
 }
 
-.wrapper main .seatSelection .screenBox {
+.wrapper main section.seatSelection .screenBox {
   text-align: center;
   width: 55rem;
   height: 4.5rem;
@@ -453,7 +437,7 @@
   font-weight: 100;
 }
 
-.wrapper main .seatSelection .seatArea {
+.wrapper main section.seatSelection .seatArea {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -470,13 +454,13 @@
   margin: 2rem 0;
 }
 
-.wrapper main .seatSelection .seatArea .matrixGW {
+.wrapper main section.seatSelection .seatArea .matrixGW {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.wrapper main .seatSelection .seatArea .seatNumber {
+.wrapper main section.seatSelection .seatArea .seatNumber {
   width: 3.2rem;
   height: 3.2rem;
   border-radius: 0.5rem;
@@ -484,15 +468,15 @@
   border: 1px solid rgba(0, 0, 0, 0.5);
 }
 
-.wrapper main .seatSelection .seatArea .sideAreaA {
+.wrapper main section.seatSelection .seatArea .sideAreaA {
   margin-right: 3rem;
 }
 
-.wrapper main .seatSelection .seatArea .sideAreaB {
+.wrapper main section.seatSelection .seatArea .sideAreaB {
   margin-left: 3rem;
 }
 
-.wrapper main .seatSelection .paymentArea {
+.wrapper main section.seatSelection .paymentArea {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -505,7 +489,7 @@
   margin-top: 2.5rem;
 }
 
-.wrapper main .seatSelection .paymentArea .paymentPeople {
+.wrapper main section.seatSelection .paymentArea .paymentPeople {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -526,7 +510,7 @@
   margin-right: 3rem;
 }
 
-.wrapper main .seatSelection .paymentArea .paymentPeople .peopleAdult {
+.wrapper main section.seatSelection .paymentArea .paymentPeople .peopleAdult {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -539,7 +523,7 @@
   white-space: nowrap;
 }
 
-.wrapper main .seatSelection .paymentArea .paymentPeople .peopleAdult p {
+.wrapper main section.seatSelection .paymentArea .paymentPeople .peopleAdult p {
   width: 30rem;
   display: block;
   text-align: justify;
@@ -549,7 +533,7 @@
   letter-spacing: 4.8rem;
 }
 
-.wrapper main .seatSelection .paymentArea .paymentPeople .peopleAdult button {
+.wrapper main section.seatSelection .paymentArea .paymentPeople .peopleAdult button {
   width: 1.8rem;
   height: 1.8rem;
   background-color: #797979;
@@ -558,7 +542,7 @@
   border-radius: 0.2rem;
 }
 
-.wrapper main .seatSelection .paymentArea .paymentPeople .peopleAdult input {
+.wrapper main section.seatSelection .paymentArea .paymentPeople .peopleAdult input {
   margin: 0 1rem;
   width: 9rem;
   height: 3rem;
@@ -572,7 +556,7 @@
   border-radius: 0.5rem;
 }
 
-.wrapper main .seatSelection .paymentArea .paymentPeople .peopleChildren {
+.wrapper main section.seatSelection .paymentArea .paymentPeople .peopleChildren {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -584,13 +568,13 @@
           align-items: center;
 }
 
-.wrapper main .seatSelection .paymentArea .paymentPeople .peopleChildren p {
+.wrapper main section.seatSelection .paymentArea .paymentPeople .peopleChildren p {
   width: 12rem;
   font-size: 3rem;
   letter-spacing: 1rem;
 }
 
-.wrapper main .seatSelection .paymentArea .paymentPeople .peopleChildren button {
+.wrapper main section.seatSelection .paymentArea .paymentPeople .peopleChildren button {
   width: 1.8rem;
   height: 1.8rem;
   background-color: #797979;
@@ -599,7 +583,7 @@
   border-radius: 0.2rem;
 }
 
-.wrapper main .seatSelection .paymentArea .paymentPeople .peopleChildren input {
+.wrapper main section.seatSelection .paymentArea .paymentPeople .peopleChildren input {
   margin: 0 1rem;
   width: 9rem;
   height: 3rem;
@@ -613,7 +597,7 @@
   border-radius: 0.5rem;
 }
 
-.wrapper main .seatSelection .paymentBtn {
+.wrapper main section.seatSelection .paymentBtn {
   font-size: 3rem;
   color: #fff;
   display: -webkit-box;

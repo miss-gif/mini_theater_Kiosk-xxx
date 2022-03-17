@@ -3,7 +3,6 @@
 let moviePageWrapper = document.querySelector("#wrapper");
 let movieSelectPage = document.querySelector("#nowMovie");  // 상영표 페이지
 let seatSelectPage = document.querySelector("#seatSelection"); // 좌석선택 페이지
-let nowPage = "";
 
 let homeButton = document.querySelector(".homeBtn"); // 홈버튼
 let replyButton = document.querySelector(".replyBtn"); // 뒤로가기 버튼
@@ -12,7 +11,7 @@ homeButton.addEventListener('click',function(){
   // 홈 버튼 : 모든 선택을 리셋하고, 가장 최초의 화면으로 돌아간다.
   //console.log("clickHome");
   showStoreSelectPage()
-  console.log("NowPage");
+  console.log(NowPage);
 });
 
 replyButton.addEventListener('click',function(){

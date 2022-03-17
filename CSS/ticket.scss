@@ -1,0 +1,60 @@
+@font-face {
+  font-family: 'GongGothicLight';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10@1.0/GongGothicLight.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+* { margin: 0; padding: 0; font-size: 10px; font-family: 'GongGothicLight'; list-style-type: none; text-decoration: none; color: #363636; };
+
+.mainBox {
+  width: 70rem;
+  height: 90rem;
+  background: #eeeeee;
+  margin: 3.5rem auto;
+  .header {
+    width: 70rem;
+    height: 22.5rem;
+    position: relative;
+    background: white;
+    #logoBackground {
+      width: 70rem;
+    }
+    #logo {
+      top: 20rem;
+      transform: translate(100%,-180%);
+    }
+  }
+  .buttonBox {
+    width: 70rem;
+    height: 55.8rem;
+    .ticketButton {
+      width: 29rem;
+      height: 40rem;
+      border-radius: 3rem;
+      margin-top: 7rem;
+      cursor: pointer;
+      box-shadow: 0.3rem 0.3rem 0.3rem 0.3rem rgb(221, 221, 221);
+      background: white;
+      float: left;
+      margin-left: 3rem;
+      margin-right: 3rem;
+      .ticketButtonImage {
+        width: 18rem;
+        margin: 0 auto;
+        display: block;
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+      }
+      p {
+        font-size: 4rem;
+        text-align: center;
+        font-weight: bold;
+      }
+    }
+  }
+  .footerBox {
+    width: 70rem;
+    height: 11.7rem;
+  }
+}

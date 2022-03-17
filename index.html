@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="ko">
   <head>
     <meta charset="UTF-8" />
@@ -14,14 +15,39 @@
     <link rel="stylesheet" href="./CSS/reset.css" />
     <!-- CSS -->
     <link rel="stylesheet" href="./CSS/style.css" />
+    <link rel="stylesheet" href="./css/index.css" />
   </head>
 
   <body>
     <!-- (임시) storeSelectPage -->
     <div id="storeSelectPage" class="storeSelectPage">
-      <button id="cafeteriaStoreButton" class="cafeteriaStoreButton">매점</button>
-      <button id="ticketPublishButton" class="ticketPublishButton">티켓발행</button>
+      <!--전체상자-->
+      <div class="box">
+        <!--cgv로고와 이미지 배경-->
+        <header>
+          <img class="logo" id="logoBackground" src="image/logobackground.png" alt="cgv로고 배경" />
+          <img class="logo" id="logoMain" src="image/logoRed.png" alt="cgv로고" />
+        </header>
+        <!--티켓과 매점 버튼-->
+        <button type="button" class="orderButton" id="ticketPublishButton">
+          <a href="#">
+            <img src="image/ticket.png" alt="티켓" />
+            <p>티켓</p>
+          </a>
+        </button>
+        <button type="button" class="orderButton" id="cafeteriaStoreButton">
+          <a href="#">
+            <img src="image/popcorn.png" alt="팝콘" />
+            <p>매점</p>
+          </a>
+        </button>
+        <!--광고-->
+        <footer>
+          <img src="image/01.png" alt="광고" />
+        </footer>
+      </div>
     </div>
+
     <!-- (임시) storeSelectPage -->
     <div id="wrapper" class="wrapper">
       <header>
@@ -32,12 +58,11 @@
         </h1>
         <h2 class="headerTitle">현재 상영표</h2>
       </header>
-
       <main>
         <div id="전체상영표를보여주는페이지" class="전체상영표를보여주는페이지">
           <!-- (임시) ticketPublishPage -->
           <!-- 현재상영표 -->
-          <div id="nowMovie" class="nowMovie">
+          <section id="nowMovie" class="nowMovie">
             <div class="mainContent bat">
               <img src="./img/theBatman.jpg" alt="더 배트맨" />
               <div id="movieInfo" class="movieInfo">
@@ -175,10 +200,10 @@
             </div>
             <div id="previousBtn" class="previousBtn"><i class="xi-angle-left xi-2x"></i></div>
             <div id="afterBtn" class="afterBtn"><i class="xi-angle-right xi-2x"></i></div>
-          </div>
+          </section>
         </div>
         <!-- 결제창 모달 -->
-        <div id="backgroundFilter" class="backgroundFilter">
+        <section id="backgroundFilter" class="backgroundFilter">
           <div id="paymentWindow" class="paymentWindow">
             <div id="inner" class="inner">
               <p id="paymentWindowTitle" class="paymentWindowTitle">영화를 예매하시겠습니까?</p>
@@ -199,10 +224,10 @@
               </div>
             </div>
           </div>
-        </div>
+        </section>
         <div id="좌석을선택하는페이지" class="좌석을선택하는페이지">
           <!-- 좌석선택 화면 -->
-          <div id="seatSelection" class="seatSelection">
+          <section id="seatSelection" class="seatSelection">
             <!-- 결제 인원 -->
             <div id="paymentArea" class="paymentArea">
               <div id="paymentPeople" class="paymentPeople">
@@ -264,7 +289,7 @@
               </div>
             </div>
             <div id="paymentBtn" class="paymentBtn">결제하기</div>
-          </div>
+          </section>
         </div>
       </main>
     </div>
