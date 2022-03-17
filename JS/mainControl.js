@@ -1,18 +1,17 @@
-// 메인페이지 컨트롤하는 스크립트파일
-const previousBtn = document.querySelector("#previousBtn");
-const afterBtn = document.querySelector("#afterBtn");
+// 전체 상영표 컨트롤하는 스크립트파일
+const previousBtn = document.querySelector("#previousBtn"); // 이전버튼
+const afterBtn = document.querySelector("#afterBtn"); // 다음버튼
 const timeBox = document.querySelectorAll(".timeBox"); // 상영시간 버튼
 const cancelBtn = document.querySelector(".cancelBtn"); //예매 취소 버튼
 const mainContent = document.querySelectorAll(".mainContent");
 let className = [mainContent[0],mainContent[1],mainContent[2]]; 
 const nowMovie = document.querySelector(".nowMovie"); //현재 상영중인 영화 화면
 const backgroundFilter = document.querySelector(".backgroundFilter"); // 예매 선택 화면
-// 예매 취소 버튼 클릭 시
-cancelBtn.addEventListener("click", function () {
-  backgroundFilter.style.display = "none";
-  mainContent.style.opacity = "1";
-});
 
+let selectedMovieName = ""; // 선택된 영화 이름
+let selectedMovieImageUrl = ""; // 선택된 영화 URL
+let selectedMoviePlace = ""; // 선택된 영화 상영장소
+let selectedMovieStartTime = ""; // 선택된 영화 시작시간
 
 previousBtn.addEventListener('click',function(){
   className.unshift(className.pop());
@@ -52,20 +51,3 @@ afterBtn.addEventListener('click',function(){
   className[2].style.opacity = "0.4";
 });
 
-// 상영시간 버튼 클릭 시
-timeBox.forEach(function (v, i, a) {
-  a[i].addEventListener("click", function (e) {
-    backgroundFilter.style.display = "flex";
-    mainContent.style.opacity = "0.9";
-    // 모달창에 영화 이미지 넣기
-    selectedBox = e.target.parentNode.parentNode.parentNode.parentNode.children;
-    //console.log(selectedBox);
-    document.querySelector("#paymentImg").src = selectedBox[0].src;
-    // 모달창에 영화 이름 넣기
-    document.querySelector("#movieTitle").innerHTML = selectedBox[1].children[0].innerHTML;
-    // 모달창에 상영관 이름 넣기
-    document.querySelector("#movieFloor").innerHTML = e.target.parentNode.parentNode.children[0].children[1].innerHTML;
-    // 모달창에 상영 시간 넣기
-    document.querySelector("#movieTime").innerHTML = e.target.innerHTML;
-  });
-});

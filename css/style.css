@@ -1,5 +1,13 @@
 @import url(./common.css);
+.storeSelectPage {
+  width: 70rem;
+  height: 90rem;
+  background-color: beige;
+}
+
 .wrapper {
+  display: none;
+  visibility: hidden;
   width: 70rem;
   height: 90rem;
   margin: auto;
@@ -28,13 +36,16 @@
   margin-right: 5px;
 }
 
-.wrapper header h1 a.replyBtn {
-  position: absolute;
-  right: 0;
-}
-
 .wrapper header h1 img {
   height: 3rem;
+}
+
+.wrapper header h1 .replyBtn {
+  width: 7rem;
+  height: 7rem;
+  position: absolute;
+  right: 0;
+  cursor: pointer;
 }
 
 .wrapper header .headerTitle {
@@ -60,7 +71,7 @@
   top: 19rem;
 }
 
-.wrapper main .nowMovie {
+.wrapper main section.nowMovie {
   width: 70rem;
   height: 71rem;
   display: -webkit-box;
@@ -72,7 +83,7 @@
   z-index: 10;
 }
 
-.wrapper main .nowMovie .bat {
+.wrapper main section.nowMovie .bat {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -92,7 +103,7 @@
   transition: 0.5s;
 }
 
-.wrapper main .nowMovie .reben {
+.wrapper main section.nowMovie .reben {
   position: absolute;
   top: 50%;
   left: 0;
@@ -111,7 +122,7 @@
   transition: 0.5s;
 }
 
-.wrapper main .nowMovie .Math {
+.wrapper main section.nowMovie .Math {
   position: absolute;
   top: 50%;
   left: 42rem;
@@ -130,25 +141,25 @@
   transition: 0.5s;
 }
 
-.wrapper main .nowMovie .mainContent img {
+.wrapper main section.nowMovie .mainContent img {
   width: 22rem;
   -webkit-box-shadow: 0.5rem 0.5rem 3rem rgba(51, 51, 51, 0.4);
           box-shadow: 0.5rem 0.5rem 3rem rgba(51, 51, 51, 0.4);
   margin-bottom: 1.5rem;
 }
 
-.wrapper main .nowMovie .mainContent .movieInfo {
+.wrapper main section.nowMovie .mainContent .movieInfo {
   padding: 1rem 0;
 }
 
-.wrapper main .nowMovie .mainContent .movieInfo .infoTitle {
+.wrapper main section.nowMovie .mainContent .movieInfo .infoTitle {
   position: relative;
   width: 100%;
   font-size: 2.4rem;
   white-space: nowrap;
 }
 
-.wrapper main .nowMovie .mainContent .movieInfo .infoTitle::before {
+.wrapper main section.nowMovie .mainContent .movieInfo .infoTitle::before {
   position: absolute;
   bottom: -1rem;
   content: "";
@@ -157,29 +168,29 @@
   background-color: #cfcccc;
 }
 
-.wrapper main .nowMovie .mainContent .movieInfo .infoTheater {
+.wrapper main section.nowMovie .mainContent .movieInfo .infoTheater {
   margin: 2rem 0;
 }
 
-.wrapper main .nowMovie .mainContent .movieInfo .infoTheater .infoTheaterLocation {
+.wrapper main section.nowMovie .mainContent .movieInfo .infoTheater .infoTheaterLocation {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   margin-bottom: 1rem;
 }
 
-.wrapper main .nowMovie .mainContent .movieInfo .infoTheater .infoTheaterLocation .infoLocation {
+.wrapper main section.nowMovie .mainContent .movieInfo .infoTheater .infoTheaterLocation .infoLocation {
   font-weight: 900;
   color: #9a1e16;
   margin-right: 0.5rem;
   font-size: 1rem;
 }
 
-.wrapper main .nowMovie .mainContent .movieInfo .infoTheater .infoTheaterLocation .infoFloor {
+.wrapper main section.nowMovie .mainContent .movieInfo .infoTheater .infoTheaterLocation .infoFloor {
   font-size: 1rem;
 }
 
-.wrapper main .nowMovie .mainContent .movieInfo .infoTheater .showTime {
+.wrapper main section.nowMovie .mainContent .movieInfo .infoTheater .showTime {
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -192,7 +203,7 @@
           align-items: center;
 }
 
-.wrapper main .nowMovie .mainContent .movieInfo .infoTheater .showTime .timeBox {
+.wrapper main section.nowMovie .mainContent .movieInfo .infoTheater .showTime .timeBox {
   width: 6.5rem;
   padding: 0.5rem 0;
   text-align: center;
@@ -205,12 +216,12 @@
           box-sizing: border-box;
 }
 
-.wrapper main .nowMovie .mainContent .movieInfo .infoTheater .showTime .timeBox:hover {
+.wrapper main section.nowMovie .mainContent .movieInfo .infoTheater .showTime .timeBox:hover {
   background-color: var(--Color2);
   cursor: pointer;
 }
 
-.wrapper main .nowMovie .mainContent .movieInfo .infoTheater .showTime .timeSeat {
+.wrapper main section.nowMovie .mainContent .movieInfo .infoTheater .showTime .timeSeat {
   text-align: center;
   display: block;
   width: 4rem;
@@ -219,7 +230,7 @@
   color: #82a67d;
 }
 
-.wrapper main .nowMovie .mainContent .movieInfo .infoTheater .lineGW:before {
+.wrapper main section.nowMovie .mainContent .movieInfo .infoTheater .lineGW:before {
   position: absolute;
   bottom: -1rem;
   content: "";
@@ -228,16 +239,16 @@
   background-color: #cfcccc;
 }
 
-.wrapper main .nowMovie .mainContent:nth-child(2) {
+.wrapper main section.nowMovie .mainContent:nth-child(2) {
   opacity: 0.4;
 }
 
-.wrapper main .nowMovie .mainContent:nth-child(3) {
+.wrapper main section.nowMovie .mainContent:nth-child(3) {
   opacity: 0.4;
 }
 
-.wrapper main .nowMovie .previousBtn,
-.wrapper main .nowMovie .afterBtn {
+.wrapper main section.nowMovie .previousBtn,
+.wrapper main section.nowMovie .afterBtn {
   position: absolute;
   font-size: 3rem;
   top: 50%;
@@ -246,11 +257,11 @@
   cursor: pointer;
 }
 
-.wrapper main .nowMovie .previousBtn {
+.wrapper main section.nowMovie .previousBtn {
   left: 13rem;
 }
 
-.wrapper main .nowMovie .afterBtn {
+.wrapper main section.nowMovie .afterBtn {
   right: 13rem;
 }
 
@@ -259,7 +270,7 @@
   position: absolute;
   top: 0;
   width: 100%;
-  height: 71rem;
+  height: 64rem;
   z-index: 20;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -601,7 +612,7 @@
   margin: 5rem auto;
 }
 
-.seatSelection .emtySeat {
+.seatSelection .emptySeat {
   background-color: #d6d6d6;
 }
 

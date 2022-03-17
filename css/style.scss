@@ -1,7 +1,14 @@
 // 공통 CSS
 @import url(./common.css);
-
+.storeSelectPage{
+  //임시
+  width: 70rem;
+  height: 90rem;
+  background-color: beige;
+}
 .wrapper {
+  display:none;
+  visibility: hidden;
   width: 70rem; // 700px
   height: 90rem; // 900px
   margin: auto;
@@ -24,16 +31,16 @@
       a.homeBtn {
         margin-right: 5px;
       }
-
-      a.replyBtn {
-        position: absolute;
-        right: 0;
-        // cursor: pointer;
-      }
-
       img {
         height: 3rem; // 30px
         // margin: 1rem; // 10px
+      }
+      .replyBtn {
+        width:7rem;
+        height:7rem;
+        position: absolute;
+        right: 0;
+        cursor: pointer;
       }
     }
 
@@ -57,7 +64,7 @@
     top: 19rem;
 
     //현재 상영표
-    .nowMovie {
+    section.nowMovie {
       // display: none; // 작업 중에 사용
       width: 70rem;
       height: 71rem;
@@ -79,7 +86,7 @@
         border-radius: 1rem; // 10px
         transition: 0.5s;
       }
-      .reben {
+      .reben{
         position: absolute;
         top: 50%;
         left: 0;
@@ -93,7 +100,7 @@
         background-color: #eee;
         transition: 0.5s;
       }
-      .Math {
+      .Math{
         position: absolute;
         top: 50%;
         left: 42rem;
@@ -275,11 +282,10 @@
       position: absolute;
       top: 0;
       width: 100%; // 700px
-      height: 71rem; // 640px
+      height: 64rem; // 640px
       z-index: 20;
       justify-content: center;
       align-self: center;
-      // background-color: rgba(255, 255, 255, 0.5);
 
       // 결제창
       .paymentWindow {
@@ -555,7 +561,7 @@
 // 좌석 상태
 .seatSelection {
   //예약 가능
-  .emtySeat {
+  .emptySeat {
     background-color: #d6d6d6;
   }
   // 선택 좌석
