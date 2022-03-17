@@ -1,19 +1,43 @@
 // 공통 CSS
 @import url(./common.css);
-.storeSelectPage{
+
+// 기본 화면
+.storeSelectPage {
   //임시
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 70rem;
-  height: 90rem;
-  background-color: beige;
+  // height: 90rem;
+  background-color: #eee;
+  margin: auto;
+
+  .cafeteriaStoreButton,
+  .ticketPublishButton {
+    display: block;
+    width: 28rem;
+    height: 42rem;
+    border-radius: 1.5rem;
+    border: 0;
+    background-color: #fff;
+    margin: 1rem;
+    font-size: 3rem;
+  }
+
+  .cafeteriaStoreButton {
+  }
+  .ticketPublishButton {
+  }
 }
+
 .wrapper {
-  display:none;
+  display: none;
   visibility: hidden;
   width: 70rem; // 700px
   height: 90rem; // 900px
   margin: auto;
-  // border: 1px solid red; // 작업 영역 표시
   background-color: #eee;
+  border: 1px solid red; // 작업 영역 표시
 
   //헤더 영역
   header {
@@ -36,8 +60,8 @@
         // margin: 1rem; // 10px
       }
       .replyBtn {
-        width:7rem;
-        height:7rem;
+        width: 3.8rem;
+        height: 3.8rem;
         position: absolute;
         right: 0;
         cursor: pointer;
@@ -64,7 +88,7 @@
     top: 19rem;
 
     //현재 상영표
-    section.nowMovie {
+    .nowMovie {
       // display: none; // 작업 중에 사용
       width: 70rem;
       height: 71rem;
@@ -86,7 +110,7 @@
         border-radius: 1rem; // 10px
         transition: 0.5s;
       }
-      .reben{
+      .reben {
         position: absolute;
         top: 50%;
         left: 0;
@@ -100,7 +124,7 @@
         background-color: #eee;
         transition: 0.5s;
       }
-      .Math{
+      .Math {
         position: absolute;
         top: 50%;
         left: 42rem;
