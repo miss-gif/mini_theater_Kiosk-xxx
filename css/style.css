@@ -57,10 +57,12 @@
 
 .wrapper main {
   position: relative;
-  top: 21rem;
+  top: 19rem;
 }
 
 .wrapper main section.nowMovie {
+  width: 70rem;
+  height: 71rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -68,10 +70,34 @@
       -ms-flex-pack: justify;
           justify-content: space-between;
   z-index: 10;
-  margin: 0 1.5rem;
 }
 
-.wrapper main section.nowMovie .mainContent {
+.wrapper main section.nowMovie .bat {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: 11;
+  width: 28rem;
+  height: 66rem;
+  -webkit-box-shadow: 0.5rem 0.5rem 3rem rgba(51, 51, 51, 0.4);
+          box-shadow: 0.5rem 0.5rem 3rem rgba(51, 51, 51, 0.4);
+  background-color: #eee;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 3rem;
+  border-radius: 1rem;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.wrapper main section.nowMovie .reben {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   padding: 3rem;
@@ -81,6 +107,27 @@
   -webkit-box-shadow: 0.5rem 0.5rem 3rem rgba(51, 51, 51, 0.4);
           box-shadow: 0.5rem 0.5rem 3rem rgba(51, 51, 51, 0.4);
   background-color: #eee;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.wrapper main section.nowMovie .Math {
+  position: absolute;
+  top: 50%;
+  left: 42rem;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 3rem;
+  border-radius: 1rem;
+  width: 28rem;
+  height: 64rem;
+  -webkit-box-shadow: 0.5rem 0.5rem 3rem rgba(51, 51, 51, 0.4);
+          box-shadow: 0.5rem 0.5rem 3rem rgba(51, 51, 51, 0.4);
+  background-color: #eee;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 .wrapper main section.nowMovie .mainContent img {
@@ -179,17 +226,6 @@
   width: 100%;
   height: 0.2rem;
   background-color: #cfcccc;
-}
-
-.wrapper main section.nowMovie .mainContent:first-child {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  z-index: 11;
-  width: 28rem;
-  height: 66rem;
 }
 
 .wrapper main section.nowMovie .mainContent:nth-child(2) {

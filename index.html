@@ -31,7 +31,7 @@
     <main>
       <!-- 현재상영표 -->
       <section id="nowMovie" class="nowMovie">
-        <div id="mainContent" class="mainContent">
+        <div class="mainContent bat">
           <img src="./img/theBatman.jpg" alt="더 배트맨" />
           <div id="movieInfo" class="movieInfo">
             <h3 id="infoTitle" class="infoTitle">더 배트맨</h3>
@@ -76,7 +76,7 @@
             </div>
           </div>
         </div>
-        <div id="mainContent" class="mainContent">
+        <div class="mainContent reben">
           <img src="./img/levenement.jpg" alt="레벤느망" />
           <div id="movieInfo" class="movieInfo">
             <h3 id="infoTitle" class="infoTitle">레벤느망</h3>
@@ -121,7 +121,7 @@
             </div>
           </div>
         </div>
-        <div id="mainContent" class="mainContent">
+        <div class="mainContent Math">
           <img src="./img/mathMan.jpg" alt="이상한나라의 수학자" />
           <div id="" class="movieInfo">
             <h3 id="" class="infoTitle">이상한나라의 수학자</h3>
@@ -201,13 +201,13 @@
             <div id="peopleAdult" class="peopleAdult">
               <p>성인</p>
               <button id="minusBtn" class="minusBtn">-</button>
-              <input id="" type="number" value="0" disabled>
+              <input id="peopleAdultCount" type="number" value="0" disabled>
               <button id="plusBtn" class="plusBtn">+</button>
             </div>
             <div id="peopleChildren" class="peopleChildren">
               <p>어린이</p>
               <button id="minusBtn" class="minusBtn">-</button>
-              <input id="" type="number" value="0" disabled>
+              <input id="peopleChildrenCount" type="number" value="0" disabled>
               <button id="plusBtn" class="plusBtn">+</button>
             </div>
           </div>
@@ -262,6 +262,8 @@
     </main>
   </div>
   <script src="./JS/main.js"></script>
+  <script src="./JS/mainControl.js"></script>
+  <script src="./JS/seatControl.js"></script>
 </body>
 
 </html>

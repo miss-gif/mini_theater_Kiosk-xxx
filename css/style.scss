@@ -53,17 +53,36 @@
   //메인 영역
   main {
     position: relative;
-    top: 21rem;
+    top: 19rem;
 
     //현재 상영표
     section.nowMovie {
       // display: none; // 작업 중에 사용
+      width: 70rem;
+      height: 71rem;
       display: flex;
       justify-content: space-between;
       z-index: 10;
-      margin: 0 1.5rem; //15px
-
-      .mainContent {
+      .bat {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 11;
+        width: 28rem; // 280px
+        height: 66rem; // 640px
+        box-shadow: 0.5rem 0.5rem 3rem rgba(51, 51, 51, 0.4); // 5px 5px 30px
+        background-color: #eee;
+        box-sizing: border-box;
+        padding: 3rem; // 30px
+        border-radius: 1rem; // 10px
+        transition: 0.5s;
+      }
+      .reben{
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translate(0, -50%);
         box-sizing: border-box;
         padding: 3rem; // 30px
         border-radius: 1rem; // 10px
@@ -71,6 +90,32 @@
         height: 64rem; // 640px
         box-shadow: 0.5rem 0.5rem 3rem rgba(51, 51, 51, 0.4); // 5px 5px 30px
         background-color: #eee;
+        transition: 0.5s;
+      }
+      .Math{
+        position: absolute;
+        top: 50%;
+        left: 42rem;
+        transform: translate(0, -50%);
+        box-sizing: border-box;
+        padding: 3rem; // 30px
+        border-radius: 1rem; // 10px
+        width: 28rem; // 280px
+        height: 64rem; // 640px
+        box-shadow: 0.5rem 0.5rem 3rem rgba(51, 51, 51, 0.4); // 5px 5px 30px
+        background-color: #eee;
+        transition: 0.5s;
+      }
+      .mainContent {
+        // position: absolute;
+        // top: 50%;
+        // box-sizing: border-box;
+        // padding: 3rem; // 30px
+        // border-radius: 1rem; // 10px
+        // width: 28rem; // 280px
+        // height: 64rem; // 640px
+        // box-shadow: 0.5rem 0.5rem 3rem rgba(51, 51, 51, 0.4); // 5px 5px 30px
+        // background-color: #eee;
 
         // border: 1px solid #808080; // 작업 중에 사용
         img {
@@ -166,15 +211,12 @@
         }
       }
 
-      .mainContent:first-child {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        z-index: 11;
-        width: 28rem; // 280px
-        height: 66rem; // 640px
-      }
+      // .mainContent:first-child {
+      //   transform: translate(-50%, -50%);
+      //   z-index: 11;
+      //   width: 28rem; // 280px
+      //   height: 66rem; // 640px
+      // }
 
       // .mainContent:first-child::before {
       //   position: absolute;
