@@ -25,9 +25,10 @@
         margin-right: 5px;
       }
 
-      a.replyBtn {
+      img.replyBtn {
         position: absolute;
         right: 0;
+        cursor: pointer;
       }
 
       img {
@@ -78,7 +79,7 @@
         border-radius: 1rem; // 10px
         transition: 0.5s;
       }
-      .reben{
+      .reben {
         position: absolute;
         top: 50%;
         left: 0;
@@ -92,7 +93,7 @@
         background-color: #eee;
         transition: 0.5s;
       }
-      .Math{
+      .Math {
         position: absolute;
         top: 50%;
         left: 42rem;

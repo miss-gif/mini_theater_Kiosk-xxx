@@ -28,9 +28,10 @@
   margin-right: 5px;
 }
 
-.wrapper header h1 a.replyBtn {
+.wrapper header h1 img.replyBtn {
   position: absolute;
   right: 0;
+  cursor: pointer;
 }
 
 .wrapper header h1 img {
