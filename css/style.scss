@@ -57,7 +57,7 @@
     top: 19rem;
 
     //현재 상영표
-    section.nowMovie {
+    .nowMovie {
       // display: none; // 작업 중에 사용
       width: 70rem;
       height: 71rem;
@@ -275,10 +275,11 @@
       position: absolute;
       top: 0;
       width: 100%; // 700px
-      height: 64rem; // 640px
+      height: 71rem; // 640px
       z-index: 20;
       justify-content: center;
       align-self: center;
+      // background-color: rgba(255, 255, 255, 0.5);
 
       // 결제창
       .paymentWindow {
