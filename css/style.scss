@@ -1,12 +1,3 @@
-// 공통 CSS
-@import url(./common.css);
-
-@mixin center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 // 0318 배치상 겹침으로 발생으로 임시 주석처리함.
 // .storeSelectPage {
 //   width: 70rem;
@@ -15,6 +6,75 @@
 //   transform: translate(-50%);
 //   left: 50%;
 // }
+
+// 공통 CSS
+@import url(./common.css);
+
+// 중앙정렬
+@mixin center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// 모달 window 제어
+@mixin pop_up {
+  @include center;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 58rem;
+  height: 46rem;
+  box-shadow: 0.5rem 0.5rem 3rem rgba(50, 50, 50, 0.2);
+  border-radius: 2rem;
+  background-color: #fff;
+  margin: 1rem 0;
+  padding: 1rem 0;
+  box-sizing: border-box;
+}
+
+// 확인 버튼
+@mixin pop_up_btn {
+  @include center;
+  width: 20rem;
+  height: 5.5rem;
+  border: 0;
+  border-radius: 1.5rem;
+  font-size: 3rem;
+  margin-top: 2rem;
+  color: #fff;
+  background-color: #ba1a0f;
+  cursor: pointer;
+}
+
+// 양자택일 yes 버튼
+@mixin pop_up_btn_Atype {
+  width: 16rem;
+  height: 5rem;
+  font-size: 2.4rem; // 24px
+  line-height: 4rem; // 시각보정
+  border-radius: 1.5rem; // 15px
+  font-weight: 500;
+  margin: 0 1.5rem; // 15px
+  background-color: #ba1a0f;
+  color: #fff;
+  cursor: pointer;
+}
+
+// 양자택일 no 버튼
+@mixin pop_up_btn_Btype {
+  width: 16rem;
+  height: 5rem;
+  font-size: 2.4rem; // 24px
+  line-height: 4rem; // 시각보정
+  border-radius: 1.5rem; // 15px
+  margin: 0 1.5rem; // 15px
+  font-weight: 500;
+  margin: 0 1.5rem; // 15px
+  background-color: #fff;
+  border: 0.3rem solid #595959;
+  color: 222;
+  cursor: pointer;
+}
 
 //헤더 영역
 header {
@@ -68,7 +128,6 @@ main {
 }
 
 // 현재 상영표
-
 section.nowMovie {
   width: 70rem;
   height: 71rem;
@@ -284,126 +343,6 @@ section.nowMovie {
   }
 }
 
-// 영화 선택창
-section.backgroundFilter {
-  // display: none;
-  display: flex; // 작업 시에 사용
-  position: absolute;
-  top: 0;
-  width: 100%; // 700px
-  height: 64rem; // 640px
-  z-index: 20;
-  justify-content: center;
-  align-self: center;
-
-  // 결제창
-  .paymentWindow {
-    display: flex;
-    justify-content: center;
-    align-self: center;
-    flex-direction: column;
-    width: 51rem; // 510px
-    height: 33rem; // 330px
-    border-radius: 2rem; // 20px
-    background-color: #fff;
-    box-shadow: 0.5rem 0.5rem 3rem rgba(50, 50, 50, 0.3); // 5px 5px 30px
-
-    .inner {
-      display: flex;
-      justify-content: center;
-      align-self: center;
-      flex-direction: column;
-
-      // 영화를 예매하시겠습니까?
-      .paymentWindowTitle {
-        font-size: 4rem; // 40px
-        text-align: center;
-      }
-
-      .paymentWindowMain {
-        margin: 2rem 0; // 20px
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-        .paymentWindowMovie {
-          img {
-            display: block;
-            width: 11rem; // 110px
-            height: 15.5rem; // 155px
-            background-color: #808080;
-          }
-        }
-
-        // 예매 상세 내용
-        .paymentWindowInfo {
-          .movieTitle {
-            box-sizing: border-box;
-            padding: 1rem; // 10px
-            font-size: 4rem; // 40px
-            line-height: 5.5rem; // 55px
-            width: 28rem; // 280px
-            height: 7rem; // 70px
-            background-color: #d8d8d8;
-            overflow: hidden;
-            white-space: nowrap;
-            text-overflow: ellipsis;
-          }
-
-          .movieFloor,
-          .movieTime {
-            box-sizing: border-box;
-            width: 28rem; // 280px
-            height: 4.25rem; // 42.5px
-            background-color: #b5b5b5;
-          }
-
-          .movieFloor {
-            padding: 1rem; // 10px
-            font-size: 2rem; // 20px
-            color: #9a1e16;
-          }
-
-          .movieTime {
-            padding: 0 1rem 1rem; // 0 10px 10px
-            font-size: 3rem; // 30px
-          }
-        }
-      }
-
-      .paymentWindowBtn {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-        button {
-          font-size: 2.4rem; // 24px
-          line-height: 4rem; // 시각보정
-          width: 15.5rem; // 155px
-          height: 4.5rem; // 45px
-          border-radius: 1.5rem; // 15px
-          margin: 0 1.5rem; // 15px
-          font-weight: 500;
-          background-color: #fff;
-          border: 0.3rem solid #595959;
-        }
-
-        button:hover {
-          background-color: var(--Color4);
-          color: #fff;
-          cursor: pointer;
-        }
-
-        .selectionBtn {
-          background-color: #ba1a0f;
-          color: #fff;
-          border: 0;
-        }
-      }
-    }
-  }
-}
-
 // 좌석 선택 화면
 section.seatSelection {
   display: block; // 작업 중에 사용
@@ -445,7 +384,7 @@ section.seatSelection {
       height: 3.2rem; // 32px
       border-radius: 0.5rem; // 5px
       margin: 0.75rem; // 7.5px
-      border: 1px solid rgba(0, 0, 0, 0.5);
+      border: 0.1rem solid rgba(0, 0, 0, 0.5);
     }
 
     .sideAreaA {
@@ -628,6 +567,7 @@ section.ticketingTicketInquiry {
       background-color: transparent;
       // border-bottom: 1px solid #222;
     }
+
     input::placeholder {
       color: #222;
     }
@@ -676,19 +616,299 @@ section.ticketingTicketInquiry {
   }
 }
 
-// 예매 티켓 조회 실패
-section.ticketingTicketInquiryFailure {
-  @include center;
-  height: 71rem;
-  .ticketingTicketInquiryFailureArea {
+// 예매 내역 확인창
+.advanceTicketConfirm {
+  @include center();
+  flex-direction: column;
+
+  .paymentArea {
+    width: 100%;
+    margin: 3rem 0;
+    padding: 2rem;
+    border-top: 0.5rem solid #9a1f1677;
+    border-bottom: 0.5rem solid #9a1f1677;
+    box-sizing: border-box;
     @include center();
-    width: 58rem;
-    height: 39rem;
-    flex-direction: column;
-    border-radius: 3rem;
-    background-color: #fff;
-    box-shadow: 0.5rem 0.5rem 3rem rgba(51, 51, 51, 0.2); // 5px 5px 30px
-    h3 {
+
+    p {
+      font-size: 3rem;
+      font-weight: 100;
+
+      span {
+        font-size: 4rem;
+        margin-left: 1rem;
+      }
+    }
+  }
+
+  .paymentContent {
+    @include center();
+
+    .paymentContentImg {
+      width: 24rem;
+      height: 33.5rem;
+      box-shadow: 0.5rem 0.5rem 3rem rgba(51, 51, 51, 0.3); // 5px 5px 30px
+
+      img {
+        width: 24rem;
+        height: 33.5rem;
+      }
+    }
+
+    .paymentContentInfo {
+      margin: 0 2.5rem;
+      width: 34.5rem;
+      height: 33.5rem;
+      position: relative;
+
+      h3 {
+        font-size: 3.8rem;
+        font-size: 100;
+        margin: 1rem 0;
+        margin-bottom: 1rem;
+        display: flex;
+        align-items: center;
+        .ageLimit {
+          width: 3.8rem;
+          height: 3.8rem;
+          font-size: 2rem;
+          color: #fff;
+          border-radius: 50%;
+          background-color: #c89135;
+          margin-right: 1rem;
+          @include center();
+        }
+      }
+
+      .paymentContentInfoTime {
+        p {
+          font-size: 2rem;
+          margin-bottom: 0.5rem;
+        }
+      }
+
+      .paymentContentInfoNumber {
+        position: absolute;
+        bottom: 0;
+
+        p {
+          font-size: 2rem;
+          margin-bottom: 0.5rem;
+        }
+      }
+    }
+  }
+
+  .paymentBtn {
+    @include center;
+    width: 20rem;
+    height: 5.5rem;
+    background-color: #ba1a0f;
+    border-radius: 1.5rem;
+    font-size: 3rem;
+    margin-top: 2rem;
+    color: #fff;
+    cursor: pointer;
+    border: 0;
+    margin-top: 8rem;
+  }
+}
+
+// 예매 내역 출력창
+.advanceTicketConfirm {
+  @include center();
+  flex-direction: column;
+
+  .paymentArea {
+    width: 100%;
+    margin: 3rem 0;
+    padding: 2rem;
+    border-top: 0.5rem solid #9a1f1677;
+    border-bottom: 0.5rem solid #9a1f1677;
+    box-sizing: border-box;
+    @include center();
+
+    p {
+      font-size: 3rem;
+      font-weight: 100;
+
+      span {
+        font-size: 4rem;
+        margin-left: 1rem;
+      }
+    }
+  }
+
+  .paymentContent {
+    @include center();
+
+    .paymentContentImg {
+      width: 24rem;
+      height: 33.5rem;
+      box-shadow: 0.5rem 0.5rem 3rem rgba(51, 51, 51, 0.3); // 5px 5px 30px
+
+      img {
+        width: 24rem;
+        height: 33.5rem;
+      }
+    }
+
+    .paymentContentInfo {
+      margin: 0 2.5rem;
+      width: 34.5rem;
+      height: 33.5rem;
+      position: relative;
+
+      h3 {
+        font-size: 3.8rem;
+        font-size: 100;
+        margin: 1rem 0;
+        margin-bottom: 1rem;
+        display: flex;
+        align-items: center;
+        .ageLimit {
+          width: 3.8rem;
+          height: 3.8rem;
+          font-size: 2rem;
+          color: #fff;
+          border-radius: 50%;
+          background-color: #c89135;
+          margin-right: 1rem;
+          @include center();
+        }
+      }
+
+      .paymentContentInfoTime {
+        p {
+          font-size: 2rem;
+          margin-bottom: 0.5rem;
+        }
+      }
+
+      .paymentContentInfoNumber {
+        position: absolute;
+        bottom: 0;
+
+        p {
+          font-size: 2rem;
+          margin-bottom: 0.5rem;
+        }
+      }
+    }
+  }
+
+  .printBtn {
+    @include center;
+    width: 20rem;
+    height: 5.5rem;
+    background-color: #ba1a0f;
+    border-radius: 1.5rem;
+    font-size: 3rem;
+    margin-top: 2rem;
+    color: #fff;
+    cursor: pointer;
+    border: 0;
+    margin-top: 8rem;
+  }
+}
+
+//------------------------------------------
+//------------ 모달창 모음 ------------------
+//------------------------------------------
+
+// 영화를 예매하시겠습니까?
+.movieSelectionWindow {
+  @include pop_up();
+  height: 33rem;
+
+  .movieSelectionTitleArea {
+    p {
+      font-size: 4rem; // 40px
+      text-align: center;
+    }
+  }
+  .movieSelectionContentsArea {
+    .paymentWindowMain {
+      display: flex;
+      .paymentWindowMovie {
+        img {
+          display: block;
+          width: 11rem; // 110px
+          height: 15.5rem; // 155px
+          background-color: #808080;
+        }
+      }
+      .paymentWindowInfo {
+        .movieTitle {
+          box-sizing: border-box;
+          padding: 1rem; // 10px
+          font-size: 4rem; // 40px
+          line-height: 5.5rem; // 55px
+          width: 28rem; // 280px
+          height: 7rem; // 70px
+          background-color: #d8d8d8;
+          overflow: hidden;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+        }
+
+        .movieFloor,
+        .movieTime {
+          box-sizing: border-box;
+          width: 28rem; // 280px
+          height: 4.25rem; // 42.5px
+          background-color: #b5b5b5;
+        }
+
+        .movieFloor {
+          padding: 1rem; // 10px
+          font-size: 2rem; // 20px
+          color: #9a1e16;
+        }
+
+        .movieTime {
+          padding: 0 1rem 1rem; // 0 10px 10px
+          font-size: 3rem; // 30px
+        }
+      }
+    }
+  }
+  .movieSelectionBtnArea {
+    @include center();
+
+    button {
+      font-size: 2.4rem; // 24px
+      line-height: 4rem; // 시각보정
+      width: 16rem; // 155px
+      height: 5rem; // 45px
+      border-radius: 1.5rem; // 15px
+      margin: 0 1.5rem; // 15px
+      font-weight: 500;
+      background-color: #fff;
+      border: 0.3rem solid #595959;
+    }
+
+    button:hover {
+      background-color: var(--Color4);
+      color: #fff;
+      cursor: pointer;
+    }
+
+    .selectionBtn {
+      background-color: #ba1a0f;
+      color: #fff;
+      border: 0;
+    }
+  }
+}
+
+// 예매 티켓 조회 실패
+.ticketLookupFailureWindow {
+  @include pop_up();
+  height: 30rem;
+
+  .ticketLookupFailureTitleArea {
+    p {
       font-size: 3.5rem;
       font-weight: 100;
       span {
@@ -697,12 +917,17 @@ section.ticketingTicketInquiryFailure {
         color: #ba1a0f;
       }
     }
+  }
+
+  .ticketLookupFailureContentsArea {
     p {
       text-align: center;
       font-size: 2.5rem;
-      margin: 3.5rem;
       font-weight: 100;
     }
+  }
+
+  .ticketLookupFailureBtnArea {
     button {
       @include center;
       width: 20rem;
@@ -714,6 +939,134 @@ section.ticketingTicketInquiryFailure {
       color: #fff;
       cursor: pointer;
       border: 0;
+    }
+  }
+}
+
+// 관람 인원수를 선택해주세요
+.seeNumberSelectionWindow {
+  @include pop_up();
+  height: 46rem;
+  text-align: center;
+  .seeNumberSelectionTitleArea {
+    margin: 2rem;
+    p {
+      font-size: 3rem;
+    }
+    span {
+      font-size: 2.5rem;
+      font-weight: 100;
+    }
+    .textContro2 {
+      font-size: 2.5rem;
+      color: #ba1a0f;
+    }
+  }
+
+  .seeNumberSelectionContentsArea {
+    .defaultPerson {
+      @include center();
+      position: relative;
+      border: 0.1rem;
+      padding: 1rem;
+      .defaultTextArea {
+        width: 12rem;
+        text-align: left;
+        margin-right: 4rem;
+        p {
+          font-size: 2.5rem;
+        }
+        span {
+          font-size: 1.5rem;
+        }
+      }
+      .defaultPersonNumber {
+        margin: 0 1rem;
+        font-size: 3rem;
+        cursor: pointer;
+      }
+      &::before {
+        position: absolute;
+        content: "";
+        bottom: 0;
+        width: 96%;
+        height: 0.4rem;
+        background-color: rgba(153, 153, 153, 0.5);
+      }
+      &:nth-child(4)::before {
+        position: absolute;
+        content: "";
+        width: 0;
+      }
+      .SelectionBtnStyle {
+        background-color: #feccbe;
+        padding: 0.5rem;
+        border-radius: 0.5rem;
+      }
+    }
+  }
+
+  .seeNumberSelectionBtnArea {
+    @include center();
+    .seePersonSelectionBtn {
+      @include center;
+      width: 15rem;
+      height: 4rem;
+      background-color: #ba1a0f;
+      border-radius: 1.5rem;
+      font-size: 2.5rem;
+      margin-top: 2rem;
+      color: #fff;
+      cursor: pointer;
+      border: 0;
+      margin: 0.5rem;
+      &:last-child {
+        background-color: #fff;
+        border: 0.1rem solid #222;
+        color: #222;
+      }
+    }
+  }
+}
+
+// 15세 이상 관람 가능 영화입니다
+.ageLimitGuidanceWindow {
+  @include pop_up();
+  flex-direction: column;
+  justify-content: space-around;
+
+  .ageLimitGuidanceTitleArea {
+    p {
+      font-size: 4rem;
+      font-weight: 100;
+      span {
+        font-size: 3.5rem;
+        font-weight: 100;
+        color: #ba1a0f;
+      }
+    }
+  }
+
+  .ageLimitGuidanceContentsArea {
+    p {
+      text-align: center;
+      font-size: 2.8rem;
+      font-weight: 100;
+      padding: 2rem;
+    }
+    span {
+      @include center();
+      text-align: center;
+      font-size: 2rem;
+      font-weight: 100;
+      color: #ba1a0f;
+      padding: 2rem;
+    }
+  }
+
+  .ageLimitGuidanceBtnArea {
+    button {
+      @include pop_up_btn();
     }
   }
 }

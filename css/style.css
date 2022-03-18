@@ -250,153 +250,6 @@ section.nowMovie .afterBtn {
   right: 13rem;
 }
 
-section.backgroundFilter {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  position: absolute;
-  top: 0;
-  width: 100%;
-  height: 64rem;
-  z-index: 20;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -ms-flex-item-align: center;
-      align-self: center;
-}
-
-section.backgroundFilter .paymentWindow {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -ms-flex-item-align: center;
-      align-self: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  width: 51rem;
-  height: 33rem;
-  border-radius: 2rem;
-  background-color: #fff;
-  -webkit-box-shadow: 0.5rem 0.5rem 3rem rgba(50, 50, 50, 0.3);
-          box-shadow: 0.5rem 0.5rem 3rem rgba(50, 50, 50, 0.3);
-}
-
-section.backgroundFilter .paymentWindow .inner {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -ms-flex-item-align: center;
-      align-self: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-section.backgroundFilter .paymentWindow .inner .paymentWindowTitle {
-  font-size: 4rem;
-  text-align: center;
-}
-
-section.backgroundFilter .paymentWindow .inner .paymentWindowMain {
-  margin: 2rem 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-section.backgroundFilter .paymentWindow .inner .paymentWindowMain .paymentWindowMovie img {
-  display: block;
-  width: 11rem;
-  height: 15.5rem;
-  background-color: #808080;
-}
-
-section.backgroundFilter .paymentWindow .inner .paymentWindowMain .paymentWindowInfo .movieTitle {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  padding: 1rem;
-  font-size: 4rem;
-  line-height: 5.5rem;
-  width: 28rem;
-  height: 7rem;
-  background-color: #d8d8d8;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-}
-
-section.backgroundFilter .paymentWindow .inner .paymentWindowMain .paymentWindowInfo .movieFloor,
-section.backgroundFilter .paymentWindow .inner .paymentWindowMain .paymentWindowInfo .movieTime {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  width: 28rem;
-  height: 4.25rem;
-  background-color: #b5b5b5;
-}
-
-section.backgroundFilter .paymentWindow .inner .paymentWindowMain .paymentWindowInfo .movieFloor {
-  padding: 1rem;
-  font-size: 2rem;
-  color: #9a1e16;
-}
-
-section.backgroundFilter .paymentWindow .inner .paymentWindowMain .paymentWindowInfo .movieTime {
-  padding: 0 1rem 1rem;
-  font-size: 3rem;
-}
-
-section.backgroundFilter .paymentWindow .inner .paymentWindowBtn {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-section.backgroundFilter .paymentWindow .inner .paymentWindowBtn button {
-  font-size: 2.4rem;
-  line-height: 4rem;
-  width: 15.5rem;
-  height: 4.5rem;
-  border-radius: 1.5rem;
-  margin: 0 1.5rem;
-  font-weight: 500;
-  background-color: #fff;
-  border: 0.3rem solid #595959;
-}
-
-section.backgroundFilter .paymentWindow .inner .paymentWindowBtn button:hover {
-  background-color: var(--Color4);
-  color: #fff;
-  cursor: pointer;
-}
-
-section.backgroundFilter .paymentWindow .inner .paymentWindowBtn .selectionBtn {
-  background-color: #ba1a0f;
-  color: #fff;
-  border: 0;
-}
-
 section.seatSelection {
   display: block;
   position: absolute;
@@ -447,7 +300,7 @@ section.seatSelection .seatArea .seatNumber {
   height: 3.2rem;
   border-radius: 0.5rem;
   margin: 0.75rem;
-  border: 1px solid rgba(0, 0, 0, 0.5);
+  border: 0.1rem solid rgba(0, 0, 0, 0.5);
 }
 
 section.seatSelection .seatArea .sideAreaA {
@@ -744,7 +597,7 @@ section.ticketingTicketInquiry .ticketingTicketInquiryBtn {
   cursor: pointer;
 }
 
-section.ticketingTicketInquiryFailure {
+.advanceTicketConfirm {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -754,50 +607,120 @@ section.ticketingTicketInquiryFailure {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 71rem;
-}
-
-section.ticketingTicketInquiryFailure .ticketingTicketInquiryFailureArea {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 58rem;
-  height: 39rem;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  border-radius: 3rem;
-  background-color: #fff;
-  -webkit-box-shadow: 0.5rem 0.5rem 3rem rgba(51, 51, 51, 0.2);
-          box-shadow: 0.5rem 0.5rem 3rem rgba(51, 51, 51, 0.2);
 }
 
-section.ticketingTicketInquiryFailure .ticketingTicketInquiryFailureArea h3 {
-  font-size: 3.5rem;
+.advanceTicketConfirm .paymentArea {
+  width: 100%;
+  margin: 3rem 0;
+  padding: 2rem;
+  border-top: 0.5rem solid #9a1f1677;
+  border-bottom: 0.5rem solid #9a1f1677;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.advanceTicketConfirm .paymentArea p {
+  font-size: 3rem;
   font-weight: 100;
 }
 
-section.ticketingTicketInquiryFailure .ticketingTicketInquiryFailureArea h3 span {
-  font-size: 3.5rem;
-  font-weight: 100;
-  color: #ba1a0f;
+.advanceTicketConfirm .paymentArea p span {
+  font-size: 4rem;
+  margin-left: 1rem;
 }
 
-section.ticketingTicketInquiryFailure .ticketingTicketInquiryFailureArea p {
-  text-align: center;
-  font-size: 2.5rem;
-  margin: 3.5rem;
-  font-weight: 100;
+.advanceTicketConfirm .paymentContent {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-section.ticketingTicketInquiryFailure .ticketingTicketInquiryFailureArea button {
+.advanceTicketConfirm .paymentContent .paymentContentImg {
+  width: 24rem;
+  height: 33.5rem;
+  -webkit-box-shadow: 0.5rem 0.5rem 3rem rgba(51, 51, 51, 0.3);
+          box-shadow: 0.5rem 0.5rem 3rem rgba(51, 51, 51, 0.3);
+}
+
+.advanceTicketConfirm .paymentContent .paymentContentImg img {
+  width: 24rem;
+  height: 33.5rem;
+}
+
+.advanceTicketConfirm .paymentContent .paymentContentInfo {
+  margin: 0 2.5rem;
+  width: 34.5rem;
+  height: 33.5rem;
+  position: relative;
+}
+
+.advanceTicketConfirm .paymentContent .paymentContentInfo h3 {
+  font-size: 3.8rem;
+  font-size: 100;
+  margin: 1rem 0;
+  margin-bottom: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.advanceTicketConfirm .paymentContent .paymentContentInfo h3 .ageLimit {
+  width: 3.8rem;
+  height: 3.8rem;
+  font-size: 2rem;
+  color: #fff;
+  border-radius: 50%;
+  background-color: #c89135;
+  margin-right: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.advanceTicketConfirm .paymentContent .paymentContentInfo .paymentContentInfoTime p {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.advanceTicketConfirm .paymentContent .paymentContentInfo .paymentContentInfoNumber {
+  position: absolute;
+  bottom: 0;
+}
+
+.advanceTicketConfirm .paymentContent .paymentContentInfo .paymentContentInfoNumber p {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.advanceTicketConfirm .paymentBtn {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -816,5 +739,565 @@ section.ticketingTicketInquiryFailure .ticketingTicketInquiryFailureArea button 
   color: #fff;
   cursor: pointer;
   border: 0;
+  margin-top: 8rem;
+}
+
+.advanceTicketConfirm {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.advanceTicketConfirm .paymentArea {
+  width: 100%;
+  margin: 3rem 0;
+  padding: 2rem;
+  border-top: 0.5rem solid #9a1f1677;
+  border-bottom: 0.5rem solid #9a1f1677;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.advanceTicketConfirm .paymentArea p {
+  font-size: 3rem;
+  font-weight: 100;
+}
+
+.advanceTicketConfirm .paymentArea p span {
+  font-size: 4rem;
+  margin-left: 1rem;
+}
+
+.advanceTicketConfirm .paymentContent {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.advanceTicketConfirm .paymentContent .paymentContentImg {
+  width: 24rem;
+  height: 33.5rem;
+  -webkit-box-shadow: 0.5rem 0.5rem 3rem rgba(51, 51, 51, 0.3);
+          box-shadow: 0.5rem 0.5rem 3rem rgba(51, 51, 51, 0.3);
+}
+
+.advanceTicketConfirm .paymentContent .paymentContentImg img {
+  width: 24rem;
+  height: 33.5rem;
+}
+
+.advanceTicketConfirm .paymentContent .paymentContentInfo {
+  margin: 0 2.5rem;
+  width: 34.5rem;
+  height: 33.5rem;
+  position: relative;
+}
+
+.advanceTicketConfirm .paymentContent .paymentContentInfo h3 {
+  font-size: 3.8rem;
+  font-size: 100;
+  margin: 1rem 0;
+  margin-bottom: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.advanceTicketConfirm .paymentContent .paymentContentInfo h3 .ageLimit {
+  width: 3.8rem;
+  height: 3.8rem;
+  font-size: 2rem;
+  color: #fff;
+  border-radius: 50%;
+  background-color: #c89135;
+  margin-right: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.advanceTicketConfirm .paymentContent .paymentContentInfo .paymentContentInfoTime p {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.advanceTicketConfirm .paymentContent .paymentContentInfo .paymentContentInfoNumber {
+  position: absolute;
+  bottom: 0;
+}
+
+.advanceTicketConfirm .paymentContent .paymentContentInfo .paymentContentInfoNumber p {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.advanceTicketConfirm .printBtn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 20rem;
+  height: 5.5rem;
+  background-color: #ba1a0f;
+  border-radius: 1.5rem;
+  font-size: 3rem;
+  margin-top: 2rem;
+  color: #fff;
+  cursor: pointer;
+  border: 0;
+  margin-top: 8rem;
+}
+
+.movieSelectionWindow {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 58rem;
+  height: 46rem;
+  -webkit-box-shadow: 0.5rem 0.5rem 3rem rgba(50, 50, 50, 0.2);
+          box-shadow: 0.5rem 0.5rem 3rem rgba(50, 50, 50, 0.2);
+  border-radius: 2rem;
+  background-color: #fff;
+  margin: 1rem 0;
+  padding: 1rem 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  height: 33rem;
+}
+
+.movieSelectionWindow .movieSelectionTitleArea p {
+  font-size: 4rem;
+  text-align: center;
+}
+
+.movieSelectionWindow .movieSelectionContentsArea .paymentWindowMain {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.movieSelectionWindow .movieSelectionContentsArea .paymentWindowMain .paymentWindowMovie img {
+  display: block;
+  width: 11rem;
+  height: 15.5rem;
+  background-color: #808080;
+}
+
+.movieSelectionWindow .movieSelectionContentsArea .paymentWindowMain .paymentWindowInfo .movieTitle {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 1rem;
+  font-size: 4rem;
+  line-height: 5.5rem;
+  width: 28rem;
+  height: 7rem;
+  background-color: #d8d8d8;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.movieSelectionWindow .movieSelectionContentsArea .paymentWindowMain .paymentWindowInfo .movieFloor,
+.movieSelectionWindow .movieSelectionContentsArea .paymentWindowMain .paymentWindowInfo .movieTime {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 28rem;
+  height: 4.25rem;
+  background-color: #b5b5b5;
+}
+
+.movieSelectionWindow .movieSelectionContentsArea .paymentWindowMain .paymentWindowInfo .movieFloor {
+  padding: 1rem;
+  font-size: 2rem;
+  color: #9a1e16;
+}
+
+.movieSelectionWindow .movieSelectionContentsArea .paymentWindowMain .paymentWindowInfo .movieTime {
+  padding: 0 1rem 1rem;
+  font-size: 3rem;
+}
+
+.movieSelectionWindow .movieSelectionBtnArea {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.movieSelectionWindow .movieSelectionBtnArea button {
+  font-size: 2.4rem;
+  line-height: 4rem;
+  width: 16rem;
+  height: 5rem;
+  border-radius: 1.5rem;
+  margin: 0 1.5rem;
+  font-weight: 500;
+  background-color: #fff;
+  border: 0.3rem solid #595959;
+}
+
+.movieSelectionWindow .movieSelectionBtnArea button:hover {
+  background-color: var(--Color4);
+  color: #fff;
+  cursor: pointer;
+}
+
+.movieSelectionWindow .movieSelectionBtnArea .selectionBtn {
+  background-color: #ba1a0f;
+  color: #fff;
+  border: 0;
+}
+
+.ticketLookupFailureWindow {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 58rem;
+  height: 46rem;
+  -webkit-box-shadow: 0.5rem 0.5rem 3rem rgba(50, 50, 50, 0.2);
+          box-shadow: 0.5rem 0.5rem 3rem rgba(50, 50, 50, 0.2);
+  border-radius: 2rem;
+  background-color: #fff;
+  margin: 1rem 0;
+  padding: 1rem 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  height: 30rem;
+}
+
+.ticketLookupFailureWindow .ticketLookupFailureTitleArea p {
+  font-size: 3.5rem;
+  font-weight: 100;
+}
+
+.ticketLookupFailureWindow .ticketLookupFailureTitleArea p span {
+  font-size: 3.5rem;
+  font-weight: 100;
+  color: #ba1a0f;
+}
+
+.ticketLookupFailureWindow .ticketLookupFailureContentsArea p {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 100;
+}
+
+.ticketLookupFailureWindow .ticketLookupFailureBtnArea button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 20rem;
+  height: 5.5rem;
+  background-color: #ba1a0f;
+  border-radius: 1.5rem;
+  font-size: 3rem;
+  margin-top: 2rem;
+  color: #fff;
+  cursor: pointer;
+  border: 0;
+}
+
+.seeNumberSelectionWindow {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 58rem;
+  height: 46rem;
+  -webkit-box-shadow: 0.5rem 0.5rem 3rem rgba(50, 50, 50, 0.2);
+          box-shadow: 0.5rem 0.5rem 3rem rgba(50, 50, 50, 0.2);
+  border-radius: 2rem;
+  background-color: #fff;
+  margin: 1rem 0;
+  padding: 1rem 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  height: 46rem;
+  text-align: center;
+}
+
+.seeNumberSelectionWindow .seeNumberSelectionTitleArea {
+  margin: 2rem;
+}
+
+.seeNumberSelectionWindow .seeNumberSelectionTitleArea p {
+  font-size: 3rem;
+}
+
+.seeNumberSelectionWindow .seeNumberSelectionTitleArea span {
+  font-size: 2.5rem;
+  font-weight: 100;
+}
+
+.seeNumberSelectionWindow .seeNumberSelectionTitleArea .textContro2 {
+  font-size: 2.5rem;
+  color: #ba1a0f;
+}
+
+.seeNumberSelectionWindow .seeNumberSelectionContentsArea .defaultPerson {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  border: 0.1rem;
+  padding: 1rem;
+}
+
+.seeNumberSelectionWindow .seeNumberSelectionContentsArea .defaultPerson .defaultTextArea {
+  width: 12rem;
+  text-align: left;
+  margin-right: 4rem;
+}
+
+.seeNumberSelectionWindow .seeNumberSelectionContentsArea .defaultPerson .defaultTextArea p {
+  font-size: 2.5rem;
+}
+
+.seeNumberSelectionWindow .seeNumberSelectionContentsArea .defaultPerson .defaultTextArea span {
+  font-size: 1.5rem;
+}
+
+.seeNumberSelectionWindow .seeNumberSelectionContentsArea .defaultPerson .defaultPersonNumber {
+  margin: 0 1rem;
+  font-size: 3rem;
+  cursor: pointer;
+}
+
+.seeNumberSelectionWindow .seeNumberSelectionContentsArea .defaultPerson::before {
+  position: absolute;
+  content: "";
+  bottom: 0;
+  width: 96%;
+  height: 0.4rem;
+  background-color: rgba(153, 153, 153, 0.5);
+}
+
+.seeNumberSelectionWindow .seeNumberSelectionContentsArea .defaultPerson:nth-child(4)::before {
+  position: absolute;
+  content: "";
+  width: 0;
+}
+
+.seeNumberSelectionWindow .seeNumberSelectionContentsArea .defaultPerson .SelectionBtnStyle {
+  background-color: #feccbe;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+}
+
+.seeNumberSelectionWindow .seeNumberSelectionBtnArea {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.seeNumberSelectionWindow .seeNumberSelectionBtnArea .seePersonSelectionBtn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 15rem;
+  height: 4rem;
+  background-color: #ba1a0f;
+  border-radius: 1.5rem;
+  font-size: 2.5rem;
+  margin-top: 2rem;
+  color: #fff;
+  cursor: pointer;
+  border: 0;
+  margin: 0.5rem;
+}
+
+.seeNumberSelectionWindow .seeNumberSelectionBtnArea .seePersonSelectionBtn:last-child {
+  background-color: #fff;
+  border: 0.1rem solid #222;
+  color: #222;
+}
+
+.ageLimitGuidanceWindow {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 58rem;
+  height: 46rem;
+  -webkit-box-shadow: 0.5rem 0.5rem 3rem rgba(50, 50, 50, 0.2);
+          box-shadow: 0.5rem 0.5rem 3rem rgba(50, 50, 50, 0.2);
+  border-radius: 2rem;
+  background-color: #fff;
+  margin: 1rem 0;
+  padding: 1rem 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.ageLimitGuidanceWindow .ageLimitGuidanceTitleArea p {
+  font-size: 4rem;
+  font-weight: 100;
+}
+
+.ageLimitGuidanceWindow .ageLimitGuidanceTitleArea p span {
+  font-size: 3.5rem;
+  font-weight: 100;
+  color: #ba1a0f;
+}
+
+.ageLimitGuidanceWindow .ageLimitGuidanceContentsArea p {
+  text-align: center;
+  font-size: 2.8rem;
+  font-weight: 100;
+  padding: 2rem;
+}
+
+.ageLimitGuidanceWindow .ageLimitGuidanceContentsArea span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 100;
+  color: #ba1a0f;
+  padding: 2rem;
+}
+
+.ageLimitGuidanceWindow .ageLimitGuidanceBtnArea button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 20rem;
+  height: 5.5rem;
+  border: 0;
+  border-radius: 1.5rem;
+  font-size: 3rem;
+  margin-top: 2rem;
+  color: #fff;
+  background-color: #ba1a0f;
+  cursor: pointer;
 }
 /*# sourceMappingURL=style.css.map */
