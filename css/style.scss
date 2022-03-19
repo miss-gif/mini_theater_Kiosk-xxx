@@ -1,5 +1,8 @@
+body {
+  display: flex;
+}
+
 .storeSelectPage {
-  
   width: 70rem;
   height: 90rem;
   //position: absolute;
@@ -30,7 +33,7 @@
   margin: 1rem 0;
   padding: 1rem 0;
   box-sizing: border-box;
-  z-index:99;
+  z-index: 99;
 }
 
 // 확인 버튼
@@ -128,25 +131,25 @@ main {
   // border: 3px solid blue;
 }
 // ticketPublishPage
-.ticketPublishPage{
-  
+.ticketPublishPage {
   display: inline-block;
-  width:70rem; height:90rem;
+  width: 70rem;
+  height: 90rem;
   background-color: beige;
-  .newTicketPurchase, .reservedTicketPrint{
+  .newTicketPurchase,
+  .reservedTicketPrint {
     display: inline-block;
-    float: left;;
-    margin:5rem;
-    width:25rem;
-    height:25rem;
-    outline:0;
-    border:none;
+    float: left;
+    margin: 5rem;
+    width: 25rem;
+    height: 25rem;
+    outline: 0;
+    border: none;
     background-color: red;
   }
 }
 // 현재 상영표
 section.nowMovie {
-  
   width: 70rem;
   height: 71rem;
   display: flex;
@@ -363,7 +366,6 @@ section.nowMovie {
 
 // 좌석 선택 화면
 .seatSelectionWindow {
-  
   display: block; // 작업 중에 사용
   // display: none;
   //position: absolute;
@@ -558,7 +560,6 @@ section.nowMovie {
 
 // 예매 티켓 조회
 section.ticketingTicketInquiry {
-  
   @include center;
   flex-direction: column;
   justify-content: space-around;
@@ -734,7 +735,6 @@ section.ticketingTicketInquiry {
 
 // 예매 내역 출력창
 .advanceTicketConfirm {
-  
   @include center();
   flex-direction: column;
 
@@ -830,8 +830,7 @@ section.ticketingTicketInquiry {
     margin-top: 8rem;
   }
 }
-.currentScreenings{
-  
+.currentScreenings {
 }
 //------------------------------------------
 //------------ 모달창 모음 ------------------
@@ -921,12 +920,10 @@ section.ticketingTicketInquiry {
       border: 0;
     }
   }
-  
 }
 
 // 예매 티켓 조회 실패
 .ticketLookupFailureWindow {
-  
   @include pop_up();
   height: 30rem;
 
@@ -964,7 +961,6 @@ section.ticketingTicketInquiry {
       border: 0;
     }
   }
-  
 }
 
 // 관람 인원수를 선택해주세요
@@ -1051,7 +1047,6 @@ section.ticketingTicketInquiry {
       }
     }
   }
-  
 }
 
 // 15세 이상 관람 가능 영화입니다
@@ -1093,5 +1088,77 @@ section.ticketingTicketInquiry {
     button {
       @include pop_up_btn();
     }
+  }
+}
+
+// 화면 제어 - 작업용
+body {
+  // 메인 화면
+  position: relative;
+  .storeSelectPage {
+    // display: none;
+    position: absolute;
+    z-index: 90;
+  }
+  // 티켓 선택 화면
+  .ticketPublishPage {
+    // display: none;
+    position: absolute;
+    z-index: 80;
+  }
+  // 현재 상영표
+  .currentScreenings {
+    // display: none;
+    position: absolute;
+    z-index: 70;
+  }
+  // 좌석 선택 화면
+  .seatSelectionWindow {
+    // display: none;
+    position: absolute;
+    z-index: 60;
+  }
+  // 예매 내역 확인창(티켓 구매 프로세스)
+  .advanceTicketConfirmWindow {
+    // display: none;
+    position: absolute;
+    z-index: 50;
+  }
+  // 예매 내역 출력창(기존 예매 티켓 프로세스) - 클래스명 중복, 사용 X
+  // .advanceTicketConfirmWindow {
+  //   // display: none; // 클래스명 중복
+  // }
+  // 유효하지 않는 번호입니다
+
+  //예매 티켓 조회
+  .advanceTicketInquiryWindow {
+    // display: none;
+    position: absolute;
+    z-index: 75;
+  }
+
+  // 관람 인원수를 선택해주세요
+  .seeNumberSelectionWindow {
+    // display: none;
+    position: absolute;
+    top: 0;
+    transform: translate(6rem, 22.3rem);
+    z-index: 61;
+  }
+  // 15세 이상 관람 가능 영화입니다
+  .ageLimitGuidanceWindow {
+    // display: none;
+    position: absolute;
+    top: 0;
+    transform: translate(6rem, 22.3rem);
+    z-index: 71;
+  }
+  // 유효하지 않는 번호입니다
+  .ticketLookupFailureWindow {
+    // display: none;
+    position: absolute;
+    top: 0;
+    transform: translate(6rem, 35.3rem);
+    z-index: 76;
   }
 }

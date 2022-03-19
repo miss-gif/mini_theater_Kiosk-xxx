@@ -1,4 +1,10 @@
 @import url(./common.css);
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .storeSelectPage {
   width: 70rem;
   height: 90rem;
@@ -68,7 +74,8 @@ main {
   background-color: beige;
 }
 
-.ticketPublishPage .newTicketPurchase, .ticketPublishPage .reservedTicketPrint {
+.ticketPublishPage .newTicketPurchase,
+.ticketPublishPage .reservedTicketPrint {
   display: inline-block;
   float: left;
   margin: 5rem;
@@ -1324,5 +1331,63 @@ section.ticketingTicketInquiry .ticketingTicketInquiryBtn {
   color: #fff;
   background-color: #ba1a0f;
   cursor: pointer;
+}
+
+body {
+  position: relative;
+}
+
+body .storeSelectPage {
+  position: absolute;
+  z-index: 90;
+}
+
+body .ticketPublishPage {
+  position: absolute;
+  z-index: 80;
+}
+
+body .currentScreenings {
+  position: absolute;
+  z-index: 70;
+}
+
+body .seatSelectionWindow {
+  position: absolute;
+  z-index: 60;
+}
+
+body .advanceTicketConfirmWindow {
+  position: absolute;
+  z-index: 50;
+}
+
+body .advanceTicketInquiryWindow {
+  position: absolute;
+  z-index: 75;
+}
+
+body .seeNumberSelectionWindow {
+  position: absolute;
+  top: 0;
+  -webkit-transform: translate(6rem, 22.3rem);
+          transform: translate(6rem, 22.3rem);
+  z-index: 61;
+}
+
+body .ageLimitGuidanceWindow {
+  position: absolute;
+  top: 0;
+  -webkit-transform: translate(6rem, 22.3rem);
+          transform: translate(6rem, 22.3rem);
+  z-index: 71;
+}
+
+body .ticketLookupFailureWindow {
+  position: absolute;
+  top: 0;
+  -webkit-transform: translate(6rem, 35.3rem);
+          transform: translate(6rem, 35.3rem);
+  z-index: 76;
 }
 /*# sourceMappingURL=style.css.map */
