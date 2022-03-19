@@ -1,0 +1,71 @@
+< 각 화면과 모달 이름 >
+storeSelectePage : 티켓과 매점중 선택하는 화면
+ticketPublishPage : 티켓 발행 방식 선택 화면
+movieSelectPage : 영화 상영표 화면
+ageNoticeModal : 연령 고지 모달
+personSelectModal : 인원 선택 모달
+seatSelectPage : 좌석 선택화면
+reserveConfirmPage : 예매 내용 확인 화면
+reservedTicketSearchPage : 예매된 티켓 검색 화면 
+availableTicketPage : 유효함, 예매된 티켓 정보 표시
+unavailableTicketModal : 유효하지 않은 티켓 모달
+
+< 영화예매 프로세스 전체 >
+nowPage : 현재 보고있는 화면을 저장함
+homeButton : 가장 최초 화면으로 가는 홈버튼
+replyButton : 뒤로가기 버튼
+
+< 티켓 발행 방식 선택 화면 >
+newTicketPurchase : 새로운 구매
+reservedTicketPrint : 예약된 표 출력
+
+< 영화 상영표 화면 >
+previousBtn : 좌측 영화로 넘기는 버튼
+afterBtn : 우측 영화로 넘기는 버튼
+timeBox : 상영 시작 시간 버튼
+cancelBtn : 예매하려던 영화 취소하는 버튼
+
+< 제한 연령 고지 모달 >
+예매 확인 버튼
+예매 취소 버튼
+선택된 영화 이름
+선택된 영화 이미지 url
+선택된 영화 상영관
+선택된 영화 시작시간
+
+< 관람 인원수 선택 모달 >
+countAdult : 선택된 성인 수
+countChild : 선택된 어린이 수
+countSenior : 선택된 노인 수
+countDisable : 선택된 장애인 수
+priceAdult : 성인 요금
+priceChild : 어린이 요금
+priceSenior : 노인 요금
+priceDisable : 장애인 요금
+personSelectCompleteButton : 인원 선택 완료 버튼
+personSelectCancelButton : 인원 선택 취소버튼
+numberSelectArrayAdult : 성인 0-7 선택 버튼 배열
+numberSelectArrayChild : 어린이 0-7 선택 버튼 배열
+numberSelectArraySenior : 노인 0-7 선택 버튼 배열
+numberSelectArrayDisable : 장애인 0-7 선택 버튼 배열
+
+movieTotalPrice : 티켓 금액 합계
+movieTotalPeopleCount : 계산된 선택 가능 인원수
+
+< 좌석 선택 화면 >
+seatNumber : 좌석 번호
+maxSelectableCount : 최대 선택 가능한 좌석 수
+selectedSeatCount : 선택된 좌석 수
+
+< 예매 내역 확인 화면 >
+예매 결제 총액 
+예매하려는 영화 이미지
+예매하려는 영화 이름
+예매하려는 영화 상영관
+예매하려는 영화 상영시간 정보
+예매 인원수 표시 영역
+선택완료 버튼
+
+
+< 예매 티켓 조회 화면 >
+< 유효하지 않음 모달 >

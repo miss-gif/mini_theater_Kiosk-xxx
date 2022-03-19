@@ -1,4 +1,9 @@
 @import url(./common.css);
+.storeSelectPage {
+  width: 70rem;
+  height: 90rem;
+}
+
 header {
   width: 70rem;
   height: 19rem;
@@ -54,6 +59,24 @@ main {
   width: 70rem;
   height: 71rem;
   position: relative;
+}
+
+.ticketPublishPage {
+  display: inline-block;
+  width: 70rem;
+  height: 90rem;
+  background-color: beige;
+}
+
+.ticketPublishPage .newTicketPurchase, .ticketPublishPage .reservedTicketPrint {
+  display: inline-block;
+  float: left;
+  margin: 5rem;
+  width: 25rem;
+  height: 25rem;
+  outline: 0;
+  border: none;
+  background-color: red;
 }
 
 section.nowMovie {
@@ -250,16 +273,14 @@ section.nowMovie .afterBtn {
   right: 13rem;
 }
 
-section.seatSelection {
+.seatSelectionWindow {
   display: block;
-  position: absolute;
   top: 0;
-  width: 100%;
   background-color: #eee;
   z-index: 30;
 }
 
-section.seatSelection .screenBox {
+.seatSelectionWindow .screenBox {
   text-align: center;
   width: 55rem;
   height: 4.5rem;
@@ -272,7 +293,7 @@ section.seatSelection .screenBox {
   font-weight: 100;
 }
 
-section.seatSelection .seatArea {
+.seatSelectionWindow .seatArea {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -289,13 +310,13 @@ section.seatSelection .seatArea {
   margin: 2rem 0;
 }
 
-section.seatSelection .seatArea .matrixGW {
+.seatSelectionWindow .seatArea .matrixGW {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-section.seatSelection .seatArea .seatNumber {
+.seatSelectionWindow .seatArea .seatNumber {
   width: 3.2rem;
   height: 3.2rem;
   border-radius: 0.5rem;
@@ -303,15 +324,15 @@ section.seatSelection .seatArea .seatNumber {
   border: 0.1rem solid rgba(0, 0, 0, 0.5);
 }
 
-section.seatSelection .seatArea .sideAreaA {
+.seatSelectionWindow .seatArea .sideAreaA {
   margin-right: 3rem;
 }
 
-section.seatSelection .seatArea .sideAreaB {
+.seatSelectionWindow .seatArea .sideAreaB {
   margin-left: 3rem;
 }
 
-section.seatSelection .paymentArea {
+.seatSelectionWindow .paymentArea {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -324,7 +345,7 @@ section.seatSelection .paymentArea {
   margin-top: 2.5rem;
 }
 
-section.seatSelection .paymentArea .paymentPeople {
+.seatSelectionWindow .paymentArea .paymentPeople {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -345,7 +366,7 @@ section.seatSelection .paymentArea .paymentPeople {
   margin-right: 3rem;
 }
 
-section.seatSelection .paymentArea .paymentPeople .peopleAdult {
+.seatSelectionWindow .paymentArea .paymentPeople .peopleAdult {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -358,7 +379,7 @@ section.seatSelection .paymentArea .paymentPeople .peopleAdult {
   white-space: nowrap;
 }
 
-section.seatSelection .paymentArea .paymentPeople .peopleAdult p {
+.seatSelectionWindow .paymentArea .paymentPeople .peopleAdult p {
   width: 30rem;
   display: block;
   text-align: justify;
@@ -368,7 +389,7 @@ section.seatSelection .paymentArea .paymentPeople .peopleAdult p {
   letter-spacing: 4.8rem;
 }
 
-section.seatSelection .paymentArea .paymentPeople .peopleAdult button {
+.seatSelectionWindow .paymentArea .paymentPeople .peopleAdult button {
   width: 1.8rem;
   height: 1.8rem;
   background-color: #797979;
@@ -377,7 +398,7 @@ section.seatSelection .paymentArea .paymentPeople .peopleAdult button {
   border-radius: 0.2rem;
 }
 
-section.seatSelection .paymentArea .paymentPeople .peopleAdult input {
+.seatSelectionWindow .paymentArea .paymentPeople .peopleAdult input {
   margin: 0 1rem;
   width: 9rem;
   height: 3rem;
@@ -391,7 +412,7 @@ section.seatSelection .paymentArea .paymentPeople .peopleAdult input {
   border-radius: 0.5rem;
 }
 
-section.seatSelection .paymentArea .paymentPeople .peopleChildren {
+.seatSelectionWindow .paymentArea .paymentPeople .peopleChildren {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -403,13 +424,13 @@ section.seatSelection .paymentArea .paymentPeople .peopleChildren {
           align-items: center;
 }
 
-section.seatSelection .paymentArea .paymentPeople .peopleChildren p {
+.seatSelectionWindow .paymentArea .paymentPeople .peopleChildren p {
   width: 12rem;
   font-size: 3rem;
   letter-spacing: 1rem;
 }
 
-section.seatSelection .paymentArea .paymentPeople .peopleChildren button {
+.seatSelectionWindow .paymentArea .paymentPeople .peopleChildren button {
   width: 1.8rem;
   height: 1.8rem;
   background-color: #797979;
@@ -418,7 +439,7 @@ section.seatSelection .paymentArea .paymentPeople .peopleChildren button {
   border-radius: 0.2rem;
 }
 
-section.seatSelection .paymentArea .paymentPeople .peopleChildren input {
+.seatSelectionWindow .paymentArea .paymentPeople .peopleChildren input {
   margin: 0 1rem;
   width: 9rem;
   height: 3rem;
@@ -432,7 +453,7 @@ section.seatSelection .paymentArea .paymentPeople .peopleChildren input {
   border-radius: 0.5rem;
 }
 
-section.seatSelection .paymentBtn {
+.seatSelectionWindow .paymentBtn {
   font-size: 3rem;
   color: #fff;
   display: -webkit-box;
@@ -451,20 +472,20 @@ section.seatSelection .paymentBtn {
   margin: 5rem auto;
 }
 
-section.seatSelection .seatSelection .emptySeat {
+.seatSelectionWindow .seatSelection .emptySeat {
   background-color: #d6d6d6;
 }
 
-section.seatSelection .seatSelection .SelectedSeat {
+.seatSelectionWindow .seatSelection .SelectedSeat {
   background-color: #f44336;
 }
 
-section.seatSelection .seatSelection .BookedSeat {
+.seatSelectionWindow .seatSelection .BookedSeat {
   position: relative;
   background-color: #343234;
 }
 
-section.seatSelection .seatSelection .BookedSeat::before {
+.seatSelectionWindow .seatSelection .BookedSeat::before {
   position: absolute;
   font-size: 3rem;
   line-height: 3rem;
@@ -519,19 +540,19 @@ section.ticketingTicketInquiry .inputReservationNumber input {
 }
 
 section.ticketingTicketInquiry .inputReservationNumber input::-webkit-input-placeholder {
-  color: #222;
+  color: #aaa;
 }
 
 section.ticketingTicketInquiry .inputReservationNumber input:-ms-input-placeholder {
-  color: #222;
+  color: #aaa;
 }
 
 section.ticketingTicketInquiry .inputReservationNumber input::-ms-input-placeholder {
-  color: #222;
+  color: #aaa;
 }
 
 section.ticketingTicketInquiry .inputReservationNumber input::placeholder {
-  color: #222;
+  color: #aaa;
 }
 
 section.ticketingTicketInquiry .ticketingTicketBtn {
@@ -913,6 +934,7 @@ section.ticketingTicketInquiry .ticketingTicketInquiryBtn {
   padding: 1rem 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  z-index: 99;
   height: 33rem;
 }
 
@@ -1030,6 +1052,7 @@ section.ticketingTicketInquiry .ticketingTicketInquiryBtn {
   padding: 1rem 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  z-index: 99;
   height: 30rem;
 }
 
@@ -1097,6 +1120,7 @@ section.ticketingTicketInquiry .ticketingTicketInquiryBtn {
   padding: 1rem 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  z-index: 99;
   height: 46rem;
   text-align: center;
 }
@@ -1241,6 +1265,7 @@ section.ticketingTicketInquiry .ticketingTicketInquiryBtn {
   padding: 1rem 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  z-index: 99;
   flex-direction: column;
   justify-content: space-around;
 }

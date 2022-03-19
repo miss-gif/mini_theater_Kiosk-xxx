@@ -47,7 +47,11 @@
         </footer>
       </div>
     </div>
-
+    <!-- (임시) ticketPublishPage-->
+    <div id="ticketPublishPage" class="ticketPublishPage">
+      <button id="newTicketPurchase" class="newTicketPurchase">티켓구매</button>
+      <button id="reservedTicketPrint" class="reservedTicketPrint">예매티켓<br>출력</button>
+    </div>
     <!-- 현재 상영표 -->
     <div id="currentScreeningsWindow" class="currentScreenings">
       <header>
@@ -201,8 +205,7 @@
         </section>
       </main>
     </div>
-
-    <!-- 좌석 선택 -->
+    <!-- 좌석 선택 화면 -->
     <div id="seatSelectionWindow" class="seatSelectionWindow">
       <header>
         <h1 class="headerLogo">
@@ -281,7 +284,6 @@
         </div>
       </main>
     </div>
-
     <!-- 예매 티켓 조회 -->
     <div id="advanceTicketInquiryWindow" class="advanceTicketInquiryWindow">
       <header>
@@ -297,7 +299,7 @@
         <section id="ticketingTicketInquiry" class="ticketingTicketInquiry">
           <p>예매번호 <span>8자리</span>를 눌러주세요</p>
           <div id="inputReservationNumber" class="inputReservationNumber">
-            <input id="inputReservationNumberWindow" class="inputReservationNumberWindow" type="text" placeholder="1234 - 5678" disabled />
+            <input id="inputReservationNumberWindow" class="inputReservationNumberWindow" type="text" placeholder="0000-0000" disabled />
           </div>
           <!-- 예매번호 누르는 키패드 -->
           <div id="ticketingTicketBtn" class="ticketingTicketBtn">
@@ -310,17 +312,16 @@
             <div id="ticketingTicketNumber" class="ticketingTicketNumber">7</div>
             <div id="ticketingTicketNumber" class="ticketingTicketNumber">8</div>
             <div id="ticketingTicketNumber" class="ticketingTicketNumber">9</div>
-            <div id="ticketingTicketNumber" class="ticketingTicketNumber"><i class="fas fa-redo-alt"></i></div>
+            <div id="ticketingTicketClearButton" class="ticketingTicketNumber"><i class="fas fa-redo-alt"></i></div>
             <div id="ticketingTicketNumber" class="ticketingTicketNumber">0</div>
-            <div id="ticketingTicketNumber" class="ticketingTicketNumber"><i class="fas fa-backspace"></i></div>
+            <div id="ticketingTicketBackspaceButton" class="ticketingTicketNumber"><i class="fas fa-backspace"></i></div>
           </div>
           <div id="ticketingTicketInquiryBtn" class="ticketingTicketInquiryBtn">조 회</div>
         </section>
       </main>
     </div>
-
-    <!-- 예매 내역 확인창 -->
-    <div class="advanceTicketConfirmWindow">
+    <!-- 예매 내역 확인창(티켓 구매 프로세스) -->
+    <div id="reserveConfirmPage" class="advanceTicketConfirmWindow">
       <header>
         <h1 class="headerLogo">
           <a class="homeBtn" href="javascript:void(0)"><i class="xi-home-o xi-5x"></i></a>
@@ -359,9 +360,8 @@
         </section>
       </main>
     </div>
-
-    <!-- 예매 내역 출력창 -->
-    <div class="advanceTicketConfirmWindow">
+    <!-- 예매 내역 출력창(기존 예매 티켓 프로세스) -->
+    <div id="availableTicketPage" class="advanceTicketConfirmWindow">
       <header>
         <h1 class="headerLogo">
           <a class="homeBtn" href="javascript:void(0)"><i class="xi-home-o xi-5x"></i></a>
@@ -400,10 +400,9 @@
         </section>
       </main>
     </div>
-
     <!-- 모달창 모음 -->
-
-    <!-- 영화를 예매하시겠습니까? -->
+    <!-- 영화를 예매하시겠습니까? (주석처리) -->
+    <!--
     <div id="movieSelectionWindow" class="movieSelectionWindow">
       <div id="movieSelectionTitleArea" class="movieSelectionTitleArea">
         <p id="paymentWindowTitle" class="paymentWindowTitle">영화를 예매하시겠습니까?</p>
@@ -411,7 +410,6 @@
       <div id="movieSelectionContentsArea" class="movieSelectionContentsArea">
         <div id="paymentWindowMain" class="paymentWindowMain">
           <div id="paymentWindowMovie" class="paymentWindowMovie">
-            <!-- <img src="./img/theBatman.jpg" alt="예매 영화이미지" /> -->
             <img id="paymentImg" src="./img/theBatman.jpg" alt="예매 영화이미지" />
           </div>
           <div id="paymentWindowInfo" class="paymentWindowInfo">
@@ -426,7 +424,7 @@
         <button id="cancelBtn" class="cancelBtn">취소</button>
       </div>
     </div>
-
+  -->
     <!-- 유효하지 않는 번호입니다 -->
     <div id="ticketLookupFailureWindow" class="ticketLookupFailureWindow">
       <div id="ticketLookupFailureTitleArea" class="ticketLookupFailureTitleArea">
@@ -450,66 +448,66 @@
         <span class="textContro">최대 <span class="textContro2"> 7매</span>까지 가능합니다</span>
       </div>
       <div id="seeNumberSelectionContentsArea" class="seeNumberSelectionContentsArea">
-        <div id="defaultPerson" class="defaultPerson">
-          <div id="defaultTextArea" class="defaultTextArea">
+        <div id="adultPerson" class="defaultPerson">
+          <div id="adultTextArea" class="defaultTextArea">
             <p id="ticketRankA">일반</p>
             <span id="ticketPrice"> 10,000</span>
           </div>
-          <div id="defaultPersonNumber" class="defaultPersonNumber SelectionBtnStyle">0</div>
-          <div id="defaultPersonNumber" class="defaultPersonNumber">1</div>
-          <div id="defaultPersonNumber" class="defaultPersonNumber">2</div>
-          <div id="defaultPersonNumber" class="defaultPersonNumber">3</div>
-          <div id="defaultPersonNumber" class="defaultPersonNumber">4</div>
-          <div id="defaultPersonNumber" class="defaultPersonNumber">5</div>
-          <div id="defaultPersonNumber" class="defaultPersonNumber">6</div>
-          <div id="defaultPersonNumber" class="defaultPersonNumber">7</div>
+          <div id="adultPersonNumber" class="defaultPersonNumber SelectionBtnStyle">0</div>
+          <div id="adultPersonNumber" class="defaultPersonNumber">1</div>
+          <div id="adultPersonNumber" class="defaultPersonNumber">2</div>
+          <div id="adultPersonNumber" class="defaultPersonNumber">3</div>
+          <div id="adultPersonNumber" class="defaultPersonNumber">4</div>
+          <div id="adultPersonNumber" class="defaultPersonNumber">5</div>
+          <div id="adultPersonNumber" class="defaultPersonNumber">6</div>
+          <div id="adultPersonNumber" class="defaultPersonNumber">7</div>
         </div>
-        <div id="defaultPerson" class="defaultPerson">
-          <div id="defaultTextArea" class="defaultTextArea">
+        <div id="childPerson" class="defaultPerson">
+          <div id="childTextArea" class="defaultTextArea">
             <p id="ticketRankB">청소년</p>
             <span id="ticketPrice"> 8,000</span>
           </div>
-          <div id="defaultPersonNumber" class="defaultPersonNumber SelectionBtnStyle">0</div>
-          <div id="defaultPersonNumber" class="defaultPersonNumber">1</div>
-          <div id="defaultPersonNumber" class="defaultPersonNumber">2</div>
-          <div id="defaultPersonNumber" class="defaultPersonNumber">3</div>
-          <div id="defaultPersonNumber" class="defaultPersonNumber">4</div>
-          <div id="defaultPersonNumber" class="defaultPersonNumber">5</div>
-          <div id="defaultPersonNumber" class="defaultPersonNumber">6</div>
-          <div id="defaultPersonNumber" class="defaultPersonNumber">7</div>
+          <div id="childPersonNumber" class="defaultPersonNumber SelectionBtnStyle">0</div>
+          <div id="childPersonNumber" class="defaultPersonNumber">1</div>
+          <div id="childPersonNumber" class="defaultPersonNumber">2</div>
+          <div id="childPersonNumber" class="defaultPersonNumber">3</div>
+          <div id="childPersonNumber" class="defaultPersonNumber">4</div>
+          <div id="childPersonNumber" class="defaultPersonNumber">5</div>
+          <div id="childPersonNumber" class="defaultPersonNumber">6</div>
+          <div id="childPersonNumber" class="defaultPersonNumber">7</div>
         </div>
-        <div id="defaultPerson" class="defaultPerson">
-          <div id="defaultTextArea" class="defaultTextArea">
+        <div id="disablePerson" class="defaultPerson">
+          <div id="disableTextArea" class="defaultTextArea">
             <p id="ticketRankC">장애인</p>
             <span id="ticketPrice"> 6,000</span>
           </div>
-          <div id="defaultPersonNumber" class="defaultPersonNumber SelectionBtnStyle">0</div>
-          <div id="defaultPersonNumber" class="defaultPersonNumber">1</div>
-          <div id="defaultPersonNumber" class="defaultPersonNumber">2</div>
-          <div id="defaultPersonNumber" class="defaultPersonNumber">3</div>
-          <div id="defaultPersonNumber" class="defaultPersonNumber">4</div>
-          <div id="defaultPersonNumber" class="defaultPersonNumber">5</div>
-          <div id="defaultPersonNumber" class="defaultPersonNumber">6</div>
-          <div id="defaultPersonNumber" class="defaultPersonNumber">7</div>
+          <div id="disablePersonNumber" class="defaultPersonNumber SelectionBtnStyle">0</div>
+          <div id="disablePersonNumber" class="defaultPersonNumber">1</div>
+          <div id="disablePersonNumber" class="defaultPersonNumber">2</div>
+          <div id="disablePersonNumber" class="defaultPersonNumber">3</div>
+          <div id="disablePersonNumber" class="defaultPersonNumber">4</div>
+          <div id="disablePersonNumber" class="defaultPersonNumber">5</div>
+          <div id="disablePersonNumber" class="defaultPersonNumber">6</div>
+          <div id="disablePersonNumber" class="defaultPersonNumber">7</div>
         </div>
-        <div id="defaultPerson" class="defaultPerson">
-          <div id="defaultTextArea" class="defaultTextArea">
+        <div id="seniorPerson" class="defaultPerson">
+          <div id="seniorTextArea" class="defaultTextArea">
             <p id="ticketRankD">경로우대</p>
             <span id="ticketPrice"> 6,000</span>
           </div>
-          <div id="defaultPersonNumber" class="defaultPersonNumber SelectionBtnStyle">0</div>
-          <div id="defaultPersonNumber" class="defaultPersonNumber">1</div>
-          <div id="defaultPersonNumber" class="defaultPersonNumber">2</div>
-          <div id="defaultPersonNumber" class="defaultPersonNumber">3</div>
-          <div id="defaultPersonNumber" class="defaultPersonNumber">4</div>
-          <div id="defaultPersonNumber" class="defaultPersonNumber">5</div>
-          <div id="defaultPersonNumber" class="defaultPersonNumber">6</div>
-          <div id="defaultPersonNumber" class="defaultPersonNumber">7</div>
+          <div id="seniorPersonNumber" class="defaultPersonNumber SelectionBtnStyle">0</div>
+          <div id="seniorPersonNumber" class="defaultPersonNumber">1</div>
+          <div id="seniorPersonNumber" class="defaultPersonNumber">2</div>
+          <div id="seniorPersonNumber" class="defaultPersonNumber">3</div>
+          <div id="seniorPersonNumber" class="defaultPersonNumber">4</div>
+          <div id="seniorPersonNumber" class="defaultPersonNumber">5</div>
+          <div id="seniorPersonNumber" class="defaultPersonNumber">6</div>
+          <div id="seniorPersonNumber" class="defaultPersonNumber">7</div>
         </div>
       </div>
       <div id="seeNumberSelectionBtnArea" class="seeNumberSelectionBtnArea">
-        <button id="seePersonSelectionBtn" class="seePersonSelectionBtn">완료</button>
-        <button id="seePersonSelectionBtn" class="seePersonSelectionBtn">취소</button>
+        <button id="personSelectCompleteButton" class="seePersonSelectionBtn">완료</button>
+        <button id="personSelectCancelButton" class="seePersonSelectionBtn">취소</button>
       </div>
     </div>
 
@@ -530,7 +528,21 @@
       </div>
       <div id="ageLimitGuidanceBtnArea" class="ageLimitGuidanceBtnArea">
         <button id="ageLimitGuidanceBtn" class="ageLimitGuidanceBtn">확인</button>
+        <button id="ageNoticeNO" class="ageNoticeNO">취소</button>
       </div>
     </div>
+    <script src="./JS/windowOnload.js"></script>
+    <script src="./JS/ageNoticeModal.js"></script>
+    <script src="./JS/availableTicketPage.js"></script>
+    <script src="./JS/movieCommun.js"></script>
+    <script src="./JS/movieSelectPage.js"></script>
+    <script src="./JS/personSelectModal.js"></script>
+    <script src="./JS/reserveConfirmPage.js"></script>
+    <script src="./JS/reservedTicketCheckPage.js"></script>
+    <script src="./JS/seatSelectPage.js"></script>
+    <script src="./JS/showPageFuncs.js"></script>
+    <script src="./JS/storeSelectPage.js"></script>
+    <script src="./JS/ticketPublishPage.js"></script>
+    <script src="./JS/unavailableTicketModal.js"></script>
   </body>
 </html>

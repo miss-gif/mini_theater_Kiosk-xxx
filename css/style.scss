@@ -1,11 +1,11 @@
-// 0318 배치상 겹침으로 발생으로 임시 주석처리함.
-// .storeSelectPage {
-//   width: 70rem;
-//   height: 90rem;
-//   position: absolute;
-//   transform: translate(-50%);
-//   left: 50%;
-// }
+.storeSelectPage {
+  
+  width: 70rem;
+  height: 90rem;
+  //position: absolute;
+  //transform: translate(-50%);
+  //left: 50%;
+}
 
 // 공통 CSS
 @import url(./common.css);
@@ -30,6 +30,7 @@
   margin: 1rem 0;
   padding: 1rem 0;
   box-sizing: border-box;
+  z-index:99;
 }
 
 // 확인 버튼
@@ -126,9 +127,26 @@ main {
   position: relative;
   // border: 3px solid blue;
 }
-
+// ticketPublishPage
+.ticketPublishPage{
+  
+  display: inline-block;
+  width:70rem; height:90rem;
+  background-color: beige;
+  .newTicketPurchase, .reservedTicketPrint{
+    display: inline-block;
+    float: left;;
+    margin:5rem;
+    width:25rem;
+    height:25rem;
+    outline:0;
+    border:none;
+    background-color: red;
+  }
+}
 // 현재 상영표
 section.nowMovie {
+  
   width: 70rem;
   height: 71rem;
   display: flex;
@@ -344,12 +362,12 @@ section.nowMovie {
 }
 
 // 좌석 선택 화면
-section.seatSelection {
+.seatSelectionWindow {
+  
   display: block; // 작업 중에 사용
   // display: none;
-  position: absolute;
+  //position: absolute;
   top: 0;
-  width: 100%;
   background-color: #eee;
   z-index: 30;
 
@@ -540,6 +558,7 @@ section.seatSelection {
 
 // 예매 티켓 조회
 section.ticketingTicketInquiry {
+  
   @include center;
   flex-direction: column;
   justify-content: space-around;
@@ -569,7 +588,7 @@ section.ticketingTicketInquiry {
     }
 
     input::placeholder {
-      color: #222;
+      color: #aaa;
     }
   }
 
@@ -643,7 +662,6 @@ section.ticketingTicketInquiry {
 
   .paymentContent {
     @include center();
-
     .paymentContentImg {
       width: 24rem;
       height: 33.5rem;
@@ -716,6 +734,7 @@ section.ticketingTicketInquiry {
 
 // 예매 내역 출력창
 .advanceTicketConfirm {
+  
   @include center();
   flex-direction: column;
 
@@ -811,7 +830,9 @@ section.ticketingTicketInquiry {
     margin-top: 8rem;
   }
 }
-
+.currentScreenings{
+  
+}
 //------------------------------------------
 //------------ 모달창 모음 ------------------
 //------------------------------------------
@@ -900,10 +921,12 @@ section.ticketingTicketInquiry {
       border: 0;
     }
   }
+  
 }
 
 // 예매 티켓 조회 실패
 .ticketLookupFailureWindow {
+  
   @include pop_up();
   height: 30rem;
 
@@ -941,6 +964,7 @@ section.ticketingTicketInquiry {
       border: 0;
     }
   }
+  
 }
 
 // 관람 인원수를 선택해주세요
@@ -1027,6 +1051,7 @@ section.ticketingTicketInquiry {
       }
     }
   }
+  
 }
 
 // 15세 이상 관람 가능 영화입니다
