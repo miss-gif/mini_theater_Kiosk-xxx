@@ -24,7 +24,7 @@ header h1 {
       -ms-flex-align: center;
           align-items: center;
   height: 9rem;
-  background-color: #eee;
+  background-color: var(--background);
 }
 
 header h1 a.homeBtn {
@@ -109,7 +109,7 @@ section.nowMovie .bat {
   height: 66rem;
   -webkit-box-shadow: 0.5rem 0.5rem 3rem rgba(51, 51, 51, 0.4);
           box-shadow: 0.5rem 0.5rem 3rem rgba(51, 51, 51, 0.4);
-  background-color: #eee;
+  background-color: var(--background);
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   padding: 3rem;
@@ -132,7 +132,7 @@ section.nowMovie .reben {
   height: 64rem;
   -webkit-box-shadow: 0.5rem 0.5rem 3rem rgba(51, 51, 51, 0.4);
           box-shadow: 0.5rem 0.5rem 3rem rgba(51, 51, 51, 0.4);
-  background-color: #eee;
+  background-color: var(--background);
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
@@ -151,7 +151,7 @@ section.nowMovie .Math {
   height: 64rem;
   -webkit-box-shadow: 0.5rem 0.5rem 3rem rgba(51, 51, 51, 0.4);
           box-shadow: 0.5rem 0.5rem 3rem rgba(51, 51, 51, 0.4);
-  background-color: #eee;
+  background-color: var(--background);
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
@@ -283,7 +283,7 @@ section.nowMovie .afterBtn {
 .seatSelectionWindow {
   display: block;
   top: 0;
-  background-color: #eee;
+  background-color: var(--background);
   z-index: 30;
 }
 
@@ -503,7 +503,7 @@ section.nowMovie .afterBtn {
   content: "\58";
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
-  color: #eee;
+  color: var(--background);
 }
 
 section.ticketingTicketInquiry {
@@ -524,7 +524,7 @@ section.ticketingTicketInquiry {
       justify-content: space-around;
   width: 70rem;
   height: 71rem;
-  background-color: #eee;
+  background-color: var(--background);
 }
 
 section.ticketingTicketInquiry p {

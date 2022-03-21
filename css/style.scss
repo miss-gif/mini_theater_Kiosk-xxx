@@ -91,7 +91,7 @@ header {
     display: flex;
     align-items: center;
     height: 9rem; // 90px
-    background-color: #eee;
+    background-color: var(--background);
 
     a.homeBtn {
       margin-right: 5px;
@@ -165,7 +165,7 @@ section.nowMovie {
     width: 28rem; // 280px
     height: 66rem; // 640px
     box-shadow: 0.5rem 0.5rem 3rem rgba(51, 51, 51, 0.4); // 5px 5px 30px
-    background-color: #eee;
+    background-color: var(--background);
     box-sizing: border-box;
     padding: 3rem; // 30px
     border-radius: 1rem; // 10px
@@ -183,7 +183,7 @@ section.nowMovie {
     width: 28rem; // 280px
     height: 64rem; // 640px
     box-shadow: 0.5rem 0.5rem 3rem rgba(51, 51, 51, 0.4); // 5px 5px 30px
-    background-color: #eee;
+    background-color: var(--background);
     transition: 0.5s;
   }
 
@@ -198,7 +198,7 @@ section.nowMovie {
     width: 28rem; // 280px
     height: 64rem; // 640px
     box-shadow: 0.5rem 0.5rem 3rem rgba(51, 51, 51, 0.4); // 5px 5px 30px
-    background-color: #eee;
+    background-color: var(--background);
     transition: 0.5s;
   }
 
@@ -211,7 +211,7 @@ section.nowMovie {
     // width: 28rem; // 280px
     // height: 64rem; // 640px
     // box-shadow: 0.5rem 0.5rem 3rem rgba(51, 51, 51, 0.4); // 5px 5px 30px
-    // background-color: #eee;
+    // background-color: var(--background);
 
     // border: 1px solid #808080; // 작업 중에 사용
     img {
@@ -370,7 +370,7 @@ section.nowMovie {
   // display: none;
   //position: absolute;
   top: 0;
-  background-color: #eee;
+  background-color: var(--background);
   z-index: 30;
 
   // 영화 스크린 영역
@@ -553,7 +553,7 @@ section.nowMovie {
       content: "\58";
       font-family: "Font Awesome 5 Free";
       font-weight: 900;
-      color: #eee;
+      color: var(--background);
     }
   }
 }
@@ -565,7 +565,7 @@ section.ticketingTicketInquiry {
   justify-content: space-around;
   width: 70rem;
   height: 71rem;
-  background-color: #eee;
+  background-color: var(--background);
 
   p {
     font-size: 4rem;

@@ -5,7 +5,7 @@
 }
 
 body {
-  background-color: #eee;
+  background-color: var(--background);
 }
 
 /* 색상 등록 */
