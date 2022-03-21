@@ -11,6 +11,19 @@ let selectedMovieImageUrl = ""; // 선택된 영화 URL
 let selectedMoviePlace = ""; // 선택된 영화 상영장소
 let selectedMovieStartTime = ""; // 선택된 영화 시작시간
 
+// 입력받은 배열들의 style.transition = "0.5s";
+function transitionChangeHalfSeceond(paramArray){
+  paramArray.map(function(elem, index, array){
+    elem.style.transition = "0.5s";
+  });
+}
+// 입력받은 배열들의 style.transition = "0s";
+function transitionChangeZeroSecond(paramArray){
+  paramArray.map(function(elem, index, array){
+    elem.style.transition = "0s";
+  });
+}
+
 // 영화목록 왼쪽으로 버튼
 previousBtn.addEventListener('click',function(){
   className.unshift(className.pop());

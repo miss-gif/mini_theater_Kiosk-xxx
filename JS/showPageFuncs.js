@@ -89,7 +89,7 @@ function showCafeteriaStorePage(){
 function showTicketPublishPage(){
   reservedTicketSearchPage.style.visibility = "hidden";
   storeSelectPage.style.visibility = "hidden";  // 티켓매점선택화면 숨김
-  movieSelectPage.style.visibility = "hidden";
+  movieSelectPage.style.visibility = "hidden";  // 영화선택화면 숨김
   ticketPublishPage.style.visibility = "visible"; // 티켓 발행 방식 선택 화면 표시
   nowPage = "ticketPublishPage";
 }
@@ -98,13 +98,15 @@ function showMovieSelectPage(){
   movieSelectPage.style.opacity = '1'; // 영화 선택 화면 뚜렷하게
   hideAllPages();
   ticketPublishPage.style.visibility = "hidden";  // 티켓 발행 방식 선택 화면 숨김
-  movieSelectPage.style.visibility = "visible"; // 영화 선택 화면 표시
   ageNoticeModal.style.visibility = "hidden"; // 연령 고지 모달 숨김
+  movieSelectPage.style.visibility = "visible"; // 영화 선택 화면 표시
+  transitionChangeHalfSeceond(className); // 영화상영표 트랜지션 0.5s설정
   
   nowPage = "movieSelectPage";
 }
 // 연령 고지 모달 출력 함수
 function showAgeNoticeModal(){
+  transitionChangeZeroSecond(className);
   movieSelectPage.style.opacity = '0.6'; // 영화 선택 화면 흐리게
   ageNoticeModal.style.visibility = "visible"; // 연령 고지 모달 표시
   nowPage = "ageNoticeModal";
