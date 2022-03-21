@@ -1,0 +1,1164 @@
+body {
+  display: flex;
+}
+
+.storeSelectPage {
+  width: 70rem;
+  height: 90rem;
+  //position: absolute;
+  //transform: translate(-50%);
+  //left: 50%;
+}
+
+// 공통 CSS
+@import url(./common.css);
+
+// 중앙정렬
+@mixin center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// 모달 window 제어
+@mixin pop_up {
+  @include center;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 58rem;
+  height: 46rem;
+  box-shadow: 0.5rem 0.5rem 3rem rgba(50, 50, 50, 0.2);
+  border-radius: 2rem;
+  background-color: #fff;
+  margin: 1rem 0;
+  padding: 1rem 0;
+  box-sizing: border-box;
+  z-index: 99;
+}
+
+// 확인 버튼
+@mixin pop_up_btn {
+  @include center;
+  width: 20rem;
+  height: 5.5rem;
+  border: 0;
+  border-radius: 1.5rem;
+  font-size: 3rem;
+  margin-top: 2rem;
+  color: #fff;
+  background-color: #ba1a0f;
+  cursor: pointer;
+}
+
+// 양자택일 yes 버튼
+@mixin pop_up_btn_Atype {
+  width: 16rem;
+  height: 5rem;
+  font-size: 2.4rem; // 24px
+  line-height: 4rem; // 시각보정
+  border-radius: 1.5rem; // 15px
+  font-weight: 500;
+  margin: 0 1.5rem; // 15px
+  background-color: #ba1a0f;
+  color: #fff;
+  cursor: pointer;
+}
+
+// 양자택일 no 버튼
+@mixin pop_up_btn_Btype {
+  width: 16rem;
+  height: 5rem;
+  font-size: 2.4rem; // 24px
+  line-height: 4rem; // 시각보정
+  border-radius: 1.5rem; // 15px
+  margin: 0 1.5rem; // 15px
+  font-weight: 500;
+  margin: 0 1.5rem; // 15px
+  background-color: #fff;
+  border: 0.3rem solid #595959;
+  color: 222;
+  cursor: pointer;
+}
+
+//헤더 영역
+header {
+  width: 70rem; // 700px
+  height: 19rem;
+  // border: 3px solid red;
+
+  h1 {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 9rem; // 90px
+    background-color: #eee;
+
+    a.homeBtn {
+      margin-right: 5px;
+    }
+
+    img {
+      height: 3rem; // 30px
+    }
+
+    .replyBtn {
+      width: 3.8rem;
+      height: 3.8rem;
+      position: absolute;
+      right: 0;
+      cursor: pointer;
+    }
+  }
+
+  .headerTitle {
+    // letter-spacing: -0.5rem;
+    font-weight: 300;
+    color: #fff;
+    font-size: 7rem; // 70px
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 10rem; // 100px
+    background-color: #9a1e16;
+  }
+}
+
+main {
+  width: 70rem;
+  height: 71rem;
+  position: relative;
+  // border: 3px solid blue;
+}
+// ticketPublishPage
+.ticketPublishPage {
+  display: inline-block;
+  width: 70rem;
+  height: 90rem;
+  background-color: beige;
+  .newTicketPurchase,
+  .reservedTicketPrint {
+    display: inline-block;
+    float: left;
+    margin: 5rem;
+    width: 25rem;
+    height: 25rem;
+    outline: 0;
+    border: none;
+    background-color: red;
+  }
+}
+// 현재 상영표
+section.nowMovie {
+  width: 70rem;
+  height: 71rem;
+  display: flex;
+  justify-content: space-between;
+  z-index: 10;
+
+  .bat {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 11;
+    width: 28rem; // 280px
+    height: 66rem; // 640px
+    box-shadow: 0.5rem 0.5rem 3rem rgba(51, 51, 51, 0.4); // 5px 5px 30px
+    background-color: #eee;
+    box-sizing: border-box;
+    padding: 3rem; // 30px
+    border-radius: 1rem; // 10px
+    transition: 0.5s;
+  }
+
+  .reben {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(0, -50%);
+    box-sizing: border-box;
+    padding: 3rem; // 30px
+    border-radius: 1rem; // 10px
+    width: 28rem; // 280px
+    height: 64rem; // 640px
+    box-shadow: 0.5rem 0.5rem 3rem rgba(51, 51, 51, 0.4); // 5px 5px 30px
+    background-color: #eee;
+    transition: 0.5s;
+  }
+
+  .Math {
+    position: absolute;
+    top: 50%;
+    left: 42rem;
+    transform: translate(0, -50%);
+    box-sizing: border-box;
+    padding: 3rem; // 30px
+    border-radius: 1rem; // 10px
+    width: 28rem; // 280px
+    height: 64rem; // 640px
+    box-shadow: 0.5rem 0.5rem 3rem rgba(51, 51, 51, 0.4); // 5px 5px 30px
+    background-color: #eee;
+    transition: 0.5s;
+  }
+
+  .mainContent {
+    // position: absolute;
+    // top: 50%;
+    // box-sizing: border-box;
+    // padding: 3rem; // 30px
+    // border-radius: 1rem; // 10px
+    // width: 28rem; // 280px
+    // height: 64rem; // 640px
+    // box-shadow: 0.5rem 0.5rem 3rem rgba(51, 51, 51, 0.4); // 5px 5px 30px
+    // background-color: #eee;
+
+    // border: 1px solid #808080; // 작업 중에 사용
+    img {
+      width: 22rem; // 220px
+      box-shadow: 0.5rem 0.5rem 3rem rgba(51, 51, 51, 0.4); // 5px 5px 30px
+      margin-bottom: 1.5rem; // 15px
+    }
+
+    .movieInfo {
+      padding: 1rem 0; // 10px
+
+      //영화 제목
+      .infoTitle {
+        position: relative;
+        width: 100%;
+        font-size: 2.4rem; // 24px
+        white-space: nowrap;
+        // letter-spacing: -0.5rem; // 미사용
+      }
+
+      .infoTitle::before {
+        position: absolute;
+        bottom: -1rem; // 10px
+        content: "";
+        width: 100%;
+        height: 0.3rem; // 3px
+        background-color: rgb(207, 204, 204);
+      }
+
+      // 상영관 정보
+      .infoTheater {
+        margin: 2rem 0; // 20px
+
+        .infoTheaterLocation {
+          display: flex;
+          margin-bottom: 1rem; //10px
+
+          .infoLocation {
+            font-weight: 900;
+            color: #9a1e16;
+            margin-right: 0.5rem;
+            font-size: 1rem; // 14px
+          }
+
+          .infoFloor {
+            font-size: 1rem; // 14px
+          }
+        }
+
+        .showTime {
+          position: relative;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+
+          .timeBox {
+            width: 6.5rem; // 65px
+            padding: 0.5rem 0; // 5px
+            text-align: center;
+            font-size: 1.6rem; // 16px
+            font-weight: 100;
+            background-color: #808080;
+            border-radius: 0.3rem; // 3px
+            color: #fff;
+            box-sizing: border-box;
+            // white-space: nowrap; // 미사용
+          }
+
+          .timeBox:hover {
+            background-color: var(--Color2);
+            cursor: pointer;
+          }
+
+          .timeSeat {
+            text-align: center;
+            display: block;
+            width: 4rem; // 40px
+            font-size: 1.2rem; // 14px
+            font-weight: 300;
+            color: #82a67d;
+          }
+        }
+
+        .lineGW:before {
+          position: absolute;
+          bottom: -1rem; // 10px
+          content: "";
+          width: 100%;
+          height: 0.2rem; // 2px
+          background-color: #cfcccc;
+        }
+      }
+    }
+  }
+
+  // .mainContent:first-child {
+  //   transform: translate(-50%, -50%);
+  //   z-index: 11;
+  //   width: 28rem; // 280px
+  //   height: 66rem; // 640px
+  // }
+
+  // .mainContent:first-child::before {
+  //   position: absolute;
+  //   font-size: 6rem;
+  //   top: 50%;
+  //   left: -60px;
+  //   transform: translate(0, -50%);
+  //   content: "\f053";
+  //   font-family: "Font Awesome 5 Free";
+  //   font-weight: 900;
+  //   // background-color: red;
+  // }
+
+  // .mainContent:first-child::after {
+  //   position: absolute;
+  //   font-size: 6rem;
+  //   top: 50%;
+  //   right: -60px;
+  //   transform: translate(0, -50%);
+  //   content: "\f054";
+  //   font-family: "Font Awesome 5 Free";
+  //   font-weight: 900;
+  //   // background-color: red;
+  // }
+
+  .mainContent:nth-child(2) {
+    opacity: 0.4;
+  }
+
+  .mainContent:nth-child(3) {
+    opacity: 0.4;
+  }
+
+  .previousBtn,
+  .afterBtn {
+    position: absolute;
+    font-size: 3rem;
+    top: 50%;
+    transform: translate(0, -50%);
+    cursor: pointer;
+  }
+
+  .previousBtn {
+    left: 13rem;
+  }
+
+  .afterBtn {
+    right: 13rem;
+  }
+}
+
+// 좌석 선택 화면
+.seatSelectionWindow {
+  display: block; // 작업 중에 사용
+  // display: none;
+  //position: absolute;
+  top: 0;
+  background-color: #eee;
+  z-index: 30;
+
+  // 영화 스크린 영역
+  .screenBox {
+    text-align: center;
+    width: 55rem; // 550px
+    height: 4.5rem; // 45px
+    background-color: #424242;
+    margin: 3rem auto;
+    font-size: 3rem; // 30px
+    line-height: 5rem; // 시각보정 50px
+    color: #fff;
+    letter-spacing: 3rem; // 30px
+    font-weight: 100;
+  }
+
+  // 영화관 내 좌석 영역
+  .seatArea {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem 0; // 20px 0
+
+    .matrixGW {
+      display: flex;
+    }
+
+    .seatNumber {
+      width: 3.2rem; // 32px
+      height: 3.2rem; // 32px
+      border-radius: 0.5rem; // 5px
+      margin: 0.75rem; // 7.5px
+      border: 0.1rem solid rgba(0, 0, 0, 0.5);
+    }
+
+    .sideAreaA {
+      margin-right: 3rem; // 30px
+    }
+
+    .sideAreaB {
+      margin-left: 3rem; // 30px
+    }
+  }
+
+  // 결제 인원 영역
+  .paymentArea {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2.5rem;
+
+    .paymentPeople {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 33rem; // 330px
+      height: 10rem; // 100px
+      background-color: #fff;
+      border-radius: 1.5rem; // 15px
+      margin-right: 3rem; // 30px
+
+      .peopleAdult {
+        display: flex;
+        justify-content: left;
+        align-items: center;
+        white-space: nowrap;
+
+        p {
+          width: 30rem; // 300px
+          display: block;
+          text-align: justify;
+          width: 12rem; // 120px
+          font-size: 3rem; // 30px
+          font-weight: 100;
+          letter-spacing: 4.8rem; // 48px
+        }
+
+        button {
+          width: 1.8rem; // 18px
+          height: 1.8rem; // 18px
+          background-color: #797979;
+          border: 0;
+          color: #fff;
+          border-radius: 0.2rem;
+        }
+
+        input {
+          margin: 0 1rem; // 0 10px
+          width: 9rem; // 90px
+          height: 3rem; // 30px
+          border-radius: 0.5rem; // 5px
+          border: 0;
+          background-color: #fddedb;
+          text-align: center;
+          font-size: 2rem; // 20px
+          font-weight: 100;
+          outline: none;
+          border-radius: 0.5rem; //5px
+        }
+      }
+
+      .peopleChildren {
+        display: flex;
+        justify-content: left;
+        align-items: center;
+
+        p {
+          width: 12rem; // 120px
+          font-size: 3rem; // 30px
+          letter-spacing: 1rem; // 10px
+        }
+
+        button {
+          width: 1.8rem; // 18px
+          height: 1.8rem; // 18px
+          background-color: #797979;
+          color: #fff;
+          border: 0;
+          border-radius: 0.2rem; // 2px
+        }
+
+        input {
+          margin: 0 1rem; // 0 10px
+          width: 9rem; // 90px
+          height: 3rem; // 30px
+          border-radius: 0.5rem; // 5px
+          border: 0;
+          background-color: #fddedb;
+          text-align: center;
+          font-size: 2rem; // 20px
+          font-weight: 100;
+          outline: none;
+          border-radius: 0.5rem; //5px
+        }
+      }
+    }
+  }
+
+  //결제하기 버튼
+  .paymentBtn {
+    font-size: 3rem; // 30px
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 18rem; // 180px
+    height: 10rem; // 100px
+    background-color: #ba1a0f;
+    border-radius: 2rem; // 20px
+    margin: 5rem auto;
+  }
+
+  // 좌석 상태
+  .seatSelection {
+    //예약 가능
+    .emptySeat {
+      background-color: #d6d6d6;
+    }
+
+    // 선택 좌석
+    .SelectedSeat {
+      background-color: #f44336;
+    }
+
+    // 예약 불가
+    .BookedSeat {
+      position: relative;
+      background-color: #343234;
+    }
+
+    .BookedSeat::before {
+      position: absolute;
+      font-size: 3rem;
+      line-height: 3rem;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      content: "\58";
+      font-family: "Font Awesome 5 Free";
+      font-weight: 900;
+      color: #eee;
+    }
+  }
+}
+
+// 예매 티켓 조회
+section.ticketingTicketInquiry {
+  @include center;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 70rem;
+  height: 71rem;
+  background-color: #eee;
+
+  p {
+    font-size: 4rem;
+  }
+
+  span {
+    color: #ba1a0f;
+    font-size: 4rem;
+  }
+
+  .inputReservationNumber {
+    input {
+      outline: none;
+      font-size: 5rem;
+      text-align: center;
+      width: 50rem;
+      height: 8rem;
+      border: 0;
+      background-color: transparent;
+      // border-bottom: 1px solid #222;
+    }
+
+    input::placeholder {
+      color: #aaa;
+    }
+  }
+
+  .ticketingTicketBtn {
+    @include center();
+    width: 33rem;
+    height: 42.5rem;
+    // background-color: #156;
+    flex-wrap: wrap;
+
+    // 예매번호 누르는 키패드
+    .ticketingTicketNumber {
+      @include center;
+      font-size: 3rem;
+      font-weight: 600;
+      width: 7rem;
+      height: 7rem;
+      border-radius: 50%;
+      background-color: #c2c2c2;
+      box-sizing: border-box;
+      margin: 1.5rem;
+      cursor: pointer;
+    }
+
+    .ticketingTicketNumber:nth-child(10),
+    .ticketingTicketNumber:nth-child(12) {
+      // display: none;
+      i {
+        font-size: 3rem;
+      }
+    }
+  }
+
+  .ticketingTicketInquiryBtn {
+    @include center;
+    width: 20rem;
+    height: 5.5rem;
+    background-color: #ba1a0f;
+    border-radius: 1.5rem;
+    margin: 1rem;
+    font-size: 3rem;
+    color: #fff;
+    cursor: pointer;
+  }
+}
+
+// 예매 내역 확인창
+.advanceTicketConfirm {
+  @include center();
+  flex-direction: column;
+
+  .paymentArea {
+    width: 100%;
+    margin: 3rem 0;
+    padding: 2rem;
+    border-top: 0.5rem solid #9a1f1677;
+    border-bottom: 0.5rem solid #9a1f1677;
+    box-sizing: border-box;
+    @include center();
+
+    p {
+      font-size: 3rem;
+      font-weight: 100;
+
+      span {
+        font-size: 4rem;
+        margin-left: 1rem;
+      }
+    }
+  }
+
+  .paymentContent {
+    @include center();
+    .paymentContentImg {
+      width: 24rem;
+      height: 33.5rem;
+      box-shadow: 0.5rem 0.5rem 3rem rgba(51, 51, 51, 0.3); // 5px 5px 30px
+
+      img {
+        width: 24rem;
+        height: 33.5rem;
+      }
+    }
+
+    .paymentContentInfo {
+      margin: 0 2.5rem;
+      width: 34.5rem;
+      height: 33.5rem;
+      position: relative;
+
+      h3 {
+        font-size: 3.8rem;
+        font-size: 100;
+        margin: 1rem 0;
+        margin-bottom: 1rem;
+        display: flex;
+        align-items: center;
+        .ageLimit {
+          width: 3.8rem;
+          height: 3.8rem;
+          font-size: 2rem;
+          color: #fff;
+          border-radius: 50%;
+          background-color: #c89135;
+          margin-right: 1rem;
+          @include center();
+        }
+      }
+
+      .paymentContentInfoTime {
+        p {
+          font-size: 2rem;
+          margin-bottom: 0.5rem;
+        }
+      }
+
+      .paymentContentInfoNumber {
+        position: absolute;
+        bottom: 0;
+
+        p {
+          font-size: 2rem;
+          margin-bottom: 0.5rem;
+        }
+      }
+    }
+  }
+
+  .paymentBtn {
+    @include center;
+    width: 20rem;
+    height: 5.5rem;
+    background-color: #ba1a0f;
+    border-radius: 1.5rem;
+    font-size: 3rem;
+    margin-top: 2rem;
+    color: #fff;
+    cursor: pointer;
+    border: 0;
+    margin-top: 8rem;
+  }
+}
+
+// 예매 내역 출력창
+.advanceTicketConfirm {
+  @include center();
+  flex-direction: column;
+
+  .paymentArea {
+    width: 100%;
+    margin: 3rem 0;
+    padding: 2rem;
+    border-top: 0.5rem solid #9a1f1677;
+    border-bottom: 0.5rem solid #9a1f1677;
+    box-sizing: border-box;
+    @include center();
+
+    p {
+      font-size: 3rem;
+      font-weight: 100;
+
+      span {
+        font-size: 4rem;
+        margin-left: 1rem;
+      }
+    }
+  }
+
+  .paymentContent {
+    @include center();
+
+    .paymentContentImg {
+      width: 24rem;
+      height: 33.5rem;
+      box-shadow: 0.5rem 0.5rem 3rem rgba(51, 51, 51, 0.3); // 5px 5px 30px
+
+      img {
+        width: 24rem;
+        height: 33.5rem;
+      }
+    }
+
+    .paymentContentInfo {
+      margin: 0 2.5rem;
+      width: 34.5rem;
+      height: 33.5rem;
+      position: relative;
+
+      h3 {
+        font-size: 3.8rem;
+        font-size: 100;
+        margin: 1rem 0;
+        margin-bottom: 1rem;
+        display: flex;
+        align-items: center;
+        .ageLimit {
+          width: 3.8rem;
+          height: 3.8rem;
+          font-size: 2rem;
+          color: #fff;
+          border-radius: 50%;
+          background-color: #c89135;
+          margin-right: 1rem;
+          @include center();
+        }
+      }
+
+      .paymentContentInfoTime {
+        p {
+          font-size: 2rem;
+          margin-bottom: 0.5rem;
+        }
+      }
+
+      .paymentContentInfoNumber {
+        position: absolute;
+        bottom: 0;
+
+        p {
+          font-size: 2rem;
+          margin-bottom: 0.5rem;
+        }
+      }
+    }
+  }
+
+  .printBtn {
+    @include center;
+    width: 20rem;
+    height: 5.5rem;
+    background-color: #ba1a0f;
+    border-radius: 1.5rem;
+    font-size: 3rem;
+    margin-top: 2rem;
+    color: #fff;
+    cursor: pointer;
+    border: 0;
+    margin-top: 8rem;
+  }
+}
+.currentScreenings {
+}
+//------------------------------------------
+//------------ 모달창 모음 ------------------
+//------------------------------------------
+
+// 영화를 예매하시겠습니까?
+.movieSelectionWindow {
+  @include pop_up();
+  height: 33rem;
+
+  .movieSelectionTitleArea {
+    p {
+      font-size: 4rem; // 40px
+      text-align: center;
+    }
+  }
+  .movieSelectionContentsArea {
+    .paymentWindowMain {
+      display: flex;
+      .paymentWindowMovie {
+        img {
+          display: block;
+          width: 11rem; // 110px
+          height: 15.5rem; // 155px
+          background-color: #808080;
+        }
+      }
+      .paymentWindowInfo {
+        .movieTitle {
+          box-sizing: border-box;
+          padding: 1rem; // 10px
+          font-size: 4rem; // 40px
+          line-height: 5.5rem; // 55px
+          width: 28rem; // 280px
+          height: 7rem; // 70px
+          background-color: #d8d8d8;
+          overflow: hidden;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+        }
+
+        .movieFloor,
+        .movieTime {
+          box-sizing: border-box;
+          width: 28rem; // 280px
+          height: 4.25rem; // 42.5px
+          background-color: #b5b5b5;
+        }
+
+        .movieFloor {
+          padding: 1rem; // 10px
+          font-size: 2rem; // 20px
+          color: #9a1e16;
+        }
+
+        .movieTime {
+          padding: 0 1rem 1rem; // 0 10px 10px
+          font-size: 3rem; // 30px
+        }
+      }
+    }
+  }
+  .movieSelectionBtnArea {
+    @include center();
+
+    button {
+      font-size: 2.4rem; // 24px
+      line-height: 4rem; // 시각보정
+      width: 16rem; // 155px
+      height: 5rem; // 45px
+      border-radius: 1.5rem; // 15px
+      margin: 0 1.5rem; // 15px
+      font-weight: 500;
+      background-color: #fff;
+      border: 0.3rem solid #595959;
+    }
+
+    button:hover {
+      background-color: var(--Color4);
+      color: #fff;
+      cursor: pointer;
+    }
+
+    .selectionBtn {
+      background-color: #ba1a0f;
+      color: #fff;
+      border: 0;
+    }
+  }
+}
+
+// 예매 티켓 조회 실패
+.ticketLookupFailureWindow {
+  @include pop_up();
+  height: 30rem;
+
+  .ticketLookupFailureTitleArea {
+    p {
+      font-size: 3.5rem;
+      font-weight: 100;
+      span {
+        font-size: 3.5rem;
+        font-weight: 100;
+        color: #ba1a0f;
+      }
+    }
+  }
+
+  .ticketLookupFailureContentsArea {
+    p {
+      text-align: center;
+      font-size: 2.5rem;
+      font-weight: 100;
+    }
+  }
+
+  .ticketLookupFailureBtnArea {
+    button {
+      @include center;
+      width: 20rem;
+      height: 5.5rem;
+      background-color: #ba1a0f;
+      border-radius: 1.5rem;
+      font-size: 3rem;
+      margin-top: 2rem;
+      color: #fff;
+      cursor: pointer;
+      border: 0;
+    }
+  }
+}
+
+// 관람 인원수를 선택해주세요
+.seeNumberSelectionWindow {
+  @include pop_up();
+  height: 46rem;
+  text-align: center;
+  .seeNumberSelectionTitleArea {
+    margin: 2rem;
+    p {
+      font-size: 3rem;
+    }
+    span {
+      font-size: 2.5rem;
+      font-weight: 100;
+    }
+    .textContro2 {
+      font-size: 2.5rem;
+      color: #ba1a0f;
+    }
+  }
+
+  .seeNumberSelectionContentsArea {
+    .defaultPerson {
+      @include center();
+      position: relative;
+      border: 0.1rem;
+      padding: 1rem;
+      .defaultTextArea {
+        width: 12rem;
+        text-align: left;
+        margin-right: 4rem;
+        p {
+          font-size: 2.5rem;
+        }
+        span {
+          font-size: 1.5rem;
+        }
+      }
+      .defaultPersonNumber {
+        margin: 0 1rem;
+        font-size: 3rem;
+        cursor: pointer;
+      }
+      &::before {
+        position: absolute;
+        content: "";
+        bottom: 0;
+        width: 96%;
+        height: 0.4rem;
+        background-color: rgba(153, 153, 153, 0.5);
+      }
+      &:nth-child(4)::before {
+        position: absolute;
+        content: "";
+        width: 0;
+      }
+      .SelectionBtnStyle {
+        background-color: #feccbe;
+        padding: 0.5rem;
+        border-radius: 0.5rem;
+      }
+    }
+  }
+
+  .seeNumberSelectionBtnArea {
+    @include center();
+    .seePersonSelectionBtn {
+      @include center;
+      width: 15rem;
+      height: 4rem;
+      background-color: #ba1a0f;
+      border-radius: 1.5rem;
+      font-size: 2.5rem;
+      margin-top: 2rem;
+      color: #fff;
+      cursor: pointer;
+      border: 0;
+      margin: 0.5rem;
+      &:last-child {
+        background-color: #fff;
+        border: 0.1rem solid #222;
+        color: #222;
+      }
+    }
+  }
+}
+
+// 15세 이상 관람 가능 영화입니다
+.ageLimitGuidanceWindow {
+  @include pop_up();
+  flex-direction: column;
+  justify-content: space-around;
+
+  .ageLimitGuidanceTitleArea {
+    p {
+      font-size: 4rem;
+      font-weight: 100;
+      span {
+        font-size: 3.5rem;
+        font-weight: 100;
+        color: #ba1a0f;
+      }
+    }
+  }
+
+  .ageLimitGuidanceContentsArea {
+    p {
+      text-align: center;
+      font-size: 2.8rem;
+      font-weight: 100;
+      padding: 2rem;
+    }
+    span {
+      @include center();
+      text-align: center;
+      font-size: 2rem;
+      font-weight: 100;
+      color: #ba1a0f;
+      padding: 2rem;
+    }
+  }
+
+  .ageLimitGuidanceBtnArea {
+    button {
+      @include pop_up_btn();
+    }
+  }
+}
+
+// 화면 제어 - 작업용
+body {
+  // 메인 화면
+  position: relative;
+  .storeSelectPage {
+    // display: none;
+    position: absolute;
+    z-index: 90;
+  }
+  // 티켓 선택 화면
+  .ticketPublishPage {
+    // display: none;
+    position: absolute;
+    z-index: 80;
+  }
+  // 현재 상영표
+  .currentScreenings {
+    // display: none;
+    position: absolute;
+    z-index: 70;
+  }
+  // 좌석 선택 화면
+  .seatSelectionWindow {
+    // display: none;
+    position: absolute;
+    z-index: 60;
+  }
+  // 예매 내역 확인창(티켓 구매 프로세스)
+  .advanceTicketConfirmWindow {
+    // display: none;
+    position: absolute;
+    z-index: 50;
+  }
+  // 예매 내역 출력창(기존 예매 티켓 프로세스) - 클래스명 중복, 사용 X
+  // .advanceTicketConfirmWindow {
+  //   // display: none; // 클래스명 중복
+  // }
+  // 유효하지 않는 번호입니다
+
+  //예매 티켓 조회
+  .advanceTicketInquiryWindow {
+    // display: none;
+    position: absolute;
+    z-index: 75;
+  }
+
+  // 관람 인원수를 선택해주세요
+  .seeNumberSelectionWindow {
+    // display: none;
+    position: absolute;
+    top: 0;
+    transform: translate(6rem, 22.3rem);
+    z-index: 61;
+  }
+  // 15세 이상 관람 가능 영화입니다
+  .ageLimitGuidanceWindow {
+    // display: none;
+    position: absolute;
+    top: 0;
+    transform: translate(6rem, 22.3rem);
+    z-index: 71;
+  }
+  // 유효하지 않는 번호입니다
+  .ticketLookupFailureWindow {
+    // display: none;
+    position: absolute;
+    top: 0;
+    transform: translate(6rem, 35.3rem);
+    z-index: 76;
+  }
+}
