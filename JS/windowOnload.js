@@ -2,4 +2,6 @@
 
 window.addEventListener('load',function(){
   //showStoreSelectPage();
+  hideAllPages();
+  showMovieSelectPage();
 });

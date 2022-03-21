@@ -83,18 +83,29 @@ numberSelectArrayDisable.forEach(function(v,i,a){
 
 // 인원 선택 완료 버튼 클릭시
 personSelectCompleteButton.addEventListener('click',function(){
-  console.log("인원 선택 완료");
-  seatNumber.forEach(function (v, i, a) {
-    if(a[i].classList.contains("SelectedSeat")){
-      a[i].classList.remove("SelectedSeat");
-      a[i].classList.add("emptySeat");
-    }
-  });
-  movieTotalPeopleCount = selectableSeat(countAdult, countChild, countSenior, countDisable); // 총 인원수
-  movieTotalPrice = priceTotal(countAdult, countChild, countSenior, countDisable); // 티켓 금액 합계
-  maxSelectableCount = movieTotalPeopleCount;
-  showSeatSelectPage(); // 좌석 선택 화면으로 이동
-  // 좌석 선택상태 초기화
+  movieTotalPeopleCount = selectableSeat(countAdult, countChild, countSenior, countDisable); // 총 인원수 계산
+  movieTotalPrice = priceTotal(countAdult, countChild, countSenior, countDisable); // 티켓 금액 합계 계산
+  // 7매 이하로 클릭했을때
+  console.log("인원 선택 완료 클릭");
+  // 7매 이하로 클릭했을때
+  if(movieTotalPeopleCount <= 7){
+    // 좌석 선택상태 초기화
+    seatNumber.forEach(function (v, i, a) {
+      if(a[i].classList.contains("SelectedSeat")){
+        a[i].classList.remove("SelectedSeat");
+        a[i].classList.add("emptySeat");
+      } 
+    });
+    maxSelectableCount = movieTotalPeopleCount;
+    showSeatSelectPage(); // 좌석 선택 화면으로 이동
+  } else {
+    alert("잘못된 인원수 설정");
+    showPersonSelectModal();
+  }
+  
+  
+  
+  
   console.log(nowPage);
 });
 

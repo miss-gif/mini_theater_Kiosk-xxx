@@ -95,7 +95,7 @@ function showTicketPublishPage(){
 }
 // 영화 상영표 화면으로 전환하는 함수
 function showMovieSelectPage(){
-  // 영화 선택 화면 뚜렷하게
+  movieSelectPage.style.opacity = '1'; // 영화 선택 화면 뚜렷하게
   hideAllPages();
   ticketPublishPage.style.visibility = "hidden";  // 티켓 발행 방식 선택 화면 숨김
   movieSelectPage.style.visibility = "visible"; // 영화 선택 화면 표시
@@ -105,25 +105,33 @@ function showMovieSelectPage(){
 }
 // 연령 고지 모달 출력 함수
 function showAgeNoticeModal(){
-  // 영화 선택 화면 흐리게
+  movieSelectPage.style.opacity = '0.6'; // 영화 선택 화면 흐리게
   ageNoticeModal.style.visibility = "visible"; // 연령 고지 모달 표시
   nowPage = "ageNoticeModal";
 }
 // 인원 선택 모달 출력 함수
 function showPersonSelectModal(){
+  seatSelectPage.style.opacity = '0.6'; // 좌석 선택 화면 흐리게
   ageNoticeModal.style.visibility = "hidden"; // 연령 고지 모달 숨김
   movieSelectPage.style.visibility = "hidden"; // 영화 선택 화면 숨김
-  seatSelectPage.style.visibility = "visible"; // 좌석 선택 화면 표시
-  // 좌석 선택 화면 흐리게
+  // 인원 선택 상태 0으로 초기화 //
+  numberSelectArrayAdult[0].click();
+  numberSelectArrayChild[0].click();
+  numberSelectArraySenior[0].click();
+  numberSelectArrayDisable[0].click();
+  // 인원 선택 상태 0으로 초기화 //
   personSelectModal.style.visibility = "visible"; // 인원 선택 모달 표시
+  seatSelectPage.style.visibility = "visible"; // 좌석 선택 화면 표시
   nowPage = "personSelectModal";
 }
 // 좌석 선택 페이지로 전환하는 함수
 function showSeatSelectPage(){
+  seatSelectPage.style.opacity = "1"; // 좌석 선택 화면 선명하게
+  resetSeatStatus(); // 좌석 선택 상태 초기화
   personSelectModal.style.visibility = "hidden";  // 인원 선택 모달 숨김
   reserveConfirmPage.style.visibility = "hidden"; // 예매 내역 확인 페이지 숨김
   seatSelectPage.style.visibility = "visible";
-  // 좌석 선택 화면 선명하게
+  
   nowPage = "seatSelectPage";
   
 }

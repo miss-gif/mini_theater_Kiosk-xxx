@@ -11,6 +11,7 @@ let selectedMovieImageUrl = ""; // 선택된 영화 URL
 let selectedMoviePlace = ""; // 선택된 영화 상영장소
 let selectedMovieStartTime = ""; // 선택된 영화 시작시간
 
+// 영화목록 왼쪽으로 버튼
 previousBtn.addEventListener('click',function(){
   className.unshift(className.pop());
   className[0].style.left = "50%";
@@ -30,6 +31,7 @@ previousBtn.addEventListener('click',function(){
   className[2].style.opacity = "0.4";
 });
 
+// 영화목록 오른쪽으로 버튼
 afterBtn.addEventListener('click',function(){
   className.push(className.shift());
   className[0].style.left = "50%";
@@ -50,7 +52,16 @@ afterBtn.addEventListener('click',function(){
 });
 
 timeBox.forEach(function(v,i,a){
-  v.addEventListener('click',function(){
+  v.addEventListener('click',function(e){
+    selectedMovieName = e.target.parentNode.parentNode.parentNode.querySelector("#infoTitle").innerHTML;
+    selectedMovieImageUrl = e.target.parentNode.parentNode.parentNode.parentNode.querySelector('img').src;
+    selectedMoviePlace = e.target.parentNode.parentNode.querySelector('#infoFloor').innerHTML;
+    selectedMovieStartTime = e.target.innerHTML;
+
+    console.log(selectedMovieName);
+    console.log(selectedMovieImageUrl);
+    console.log(selectedMoviePlace);
+    console.log(selectedMovieStartTime);
     showAgeNoticeModal();
     console.log(nowPage);
   })
