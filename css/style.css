@@ -58,7 +58,7 @@ header .headerTitle {
           align-items: center;
   width: 100%;
   height: 10rem;
-  background-color: #9a1e16;
+  background-color: var(--boxRed);
 }
 
 main {
@@ -196,7 +196,7 @@ section.nowMovie .mainContent .movieInfo .infoTheater .infoTheaterLocation {
 
 section.nowMovie .mainContent .movieInfo .infoTheater .infoTheaterLocation .infoLocation {
   font-weight: 900;
-  color: #9a1e16;
+  color: var(--textRed);
   margin-right: 0.5rem;
   font-size: 1rem;
 }
@@ -474,7 +474,7 @@ section.nowMovie .afterBtn {
           align-items: center;
   width: 18rem;
   height: 10rem;
-  background-color: #ba1a0f;
+  background-color: var(--boxRed);
   border-radius: 2rem;
   margin: 5rem auto;
 }
@@ -532,7 +532,7 @@ section.ticketingTicketInquiry p {
 }
 
 section.ticketingTicketInquiry span {
-  color: #ba1a0f;
+  color: var(--textRed);
   font-size: 4rem;
 }
 
@@ -617,7 +617,7 @@ section.ticketingTicketInquiry .ticketingTicketInquiryBtn {
           align-items: center;
   width: 20rem;
   height: 5.5rem;
-  background-color: #ba1a0f;
+  background-color: var(--boxRed);
   border-radius: 1.5rem;
   margin: 1rem;
   font-size: 3rem;
@@ -760,7 +760,7 @@ section.ticketingTicketInquiry .ticketingTicketInquiryBtn {
           align-items: center;
   width: 20rem;
   height: 5.5rem;
-  background-color: #ba1a0f;
+  background-color: var(--textRed);
   border-radius: 1.5rem;
   font-size: 3rem;
   margin-top: 2rem;
@@ -905,7 +905,7 @@ section.ticketingTicketInquiry .ticketingTicketInquiryBtn {
           align-items: center;
   width: 20rem;
   height: 5.5rem;
-  background-color: #ba1a0f;
+  background-color: var(--boxRed);
   border-radius: 1.5rem;
   font-size: 3rem;
   margin-top: 2rem;
@@ -1147,7 +1147,7 @@ section.ticketingTicketInquiry .ticketingTicketInquiryBtn {
 
 .seeNumberSelectionWindow .seeNumberSelectionTitleArea .textContro2 {
   font-size: 2.5rem;
-  color: #ba1a0f;
+  color: var(--textRed);
 }
 
 .seeNumberSelectionWindow .seeNumberSelectionContentsArea .defaultPerson {
@@ -1230,7 +1230,7 @@ section.ticketingTicketInquiry .ticketingTicketInquiryBtn {
           align-items: center;
   width: 15rem;
   height: 4rem;
-  background-color: #ba1a0f;
+  background-color: var(--boxRed);
   border-radius: 1.5rem;
   font-size: 2.5rem;
   margin-top: 2rem;
@@ -1285,7 +1285,7 @@ section.ticketingTicketInquiry .ticketingTicketInquiryBtn {
 .ageLimitGuidanceWindow .ageLimitGuidanceTitleArea p span {
   font-size: 3.5rem;
   font-weight: 100;
-  color: #ba1a0f;
+  color: var(--textRed);
 }
 
 .ageLimitGuidanceWindow .ageLimitGuidanceContentsArea p {
@@ -1308,8 +1308,14 @@ section.ticketingTicketInquiry .ticketingTicketInquiryBtn {
   text-align: center;
   font-size: 2rem;
   font-weight: 100;
-  color: #ba1a0f;
+  color: var(--textRed);
   padding: 2rem;
+}
+
+.ageLimitGuidanceWindow .ageLimitGuidanceBtnArea {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .ageLimitGuidanceWindow .ageLimitGuidanceBtnArea button {
@@ -1329,8 +1335,9 @@ section.ticketingTicketInquiry .ticketingTicketInquiryBtn {
   font-size: 3rem;
   margin-top: 2rem;
   color: #fff;
-  background-color: #ba1a0f;
+  background-color: var(--boxRed);
   cursor: pointer;
+  margin: 0.5rem;
 }
 
 body {
