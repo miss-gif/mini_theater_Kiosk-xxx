@@ -22,7 +22,9 @@ body {
 
 // 모달 window 제어
 @mixin pop_up {
-  @include center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   flex-direction: column;
   justify-content: space-around;
   width: 58rem;
@@ -38,7 +40,9 @@ body {
 
 // 확인 버튼
 @mixin pop_up_btn {
-  @include center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 20rem;
   height: 5.5rem;
   border: 0;
@@ -130,12 +134,14 @@ main {
   position: relative;
   // border: 3px solid blue;
 }
+
 // ticketPublishPage
 .ticketPublishPage {
   display: inline-block;
   width: 70rem;
   height: 90rem;
   background-color: beige;
+
   .newTicketPurchase,
   .reservedTicketPrint {
     display: inline-block;
@@ -148,6 +154,7 @@ main {
     background-color: red;
   }
 }
+
 // 현재 상영표
 section.nowMovie {
   width: 70rem;
@@ -663,6 +670,7 @@ section.ticketingTicketInquiry {
 
   .paymentContent {
     @include center();
+
     .paymentContentImg {
       width: 24rem;
       height: 33.5rem;
@@ -687,6 +695,7 @@ section.ticketingTicketInquiry {
         margin-bottom: 1rem;
         display: flex;
         align-items: center;
+
         .ageLimit {
           width: 3.8rem;
           height: 3.8rem;
@@ -785,6 +794,7 @@ section.ticketingTicketInquiry {
         margin-bottom: 1rem;
         display: flex;
         align-items: center;
+
         .ageLimit {
           width: 3.8rem;
           height: 3.8rem;
@@ -830,8 +840,10 @@ section.ticketingTicketInquiry {
     margin-top: 8rem;
   }
 }
+
 .currentScreenings {
 }
+
 //------------------------------------------
 //------------ 모달창 모음 ------------------
 //------------------------------------------
@@ -847,9 +859,11 @@ section.ticketingTicketInquiry {
       text-align: center;
     }
   }
+
   .movieSelectionContentsArea {
     .paymentWindowMain {
       display: flex;
+
       .paymentWindowMovie {
         img {
           display: block;
@@ -858,6 +872,7 @@ section.ticketingTicketInquiry {
           background-color: #808080;
         }
       }
+
       .paymentWindowInfo {
         .movieTitle {
           box-sizing: border-box;
@@ -893,6 +908,7 @@ section.ticketingTicketInquiry {
       }
     }
   }
+
   .movieSelectionBtnArea {
     @include center();
 
@@ -931,6 +947,7 @@ section.ticketingTicketInquiry {
     p {
       font-size: 3.5rem;
       font-weight: 100;
+
       span {
         font-size: 3.5rem;
         font-weight: 100;
@@ -968,15 +985,19 @@ section.ticketingTicketInquiry {
   @include pop_up();
   height: 46rem;
   text-align: center;
+
   .seeNumberSelectionTitleArea {
     margin: 2rem;
+
     p {
       font-size: 3rem;
     }
+
     span {
       font-size: 2.5rem;
       font-weight: 100;
     }
+
     .textContro2 {
       font-size: 2.5rem;
       color: var(--textRed);
@@ -989,22 +1010,27 @@ section.ticketingTicketInquiry {
       position: relative;
       border: 0.1rem;
       padding: 1rem;
+
       .defaultTextArea {
         width: 12rem;
         text-align: left;
         margin-right: 4rem;
+
         p {
           font-size: 2.5rem;
         }
+
         span {
           font-size: 1.5rem;
         }
       }
+
       .defaultPersonNumber {
         margin: 0 1rem;
         font-size: 3rem;
         cursor: pointer;
       }
+
       &::before {
         position: absolute;
         content: "";
@@ -1013,11 +1039,13 @@ section.ticketingTicketInquiry {
         height: 0.4rem;
         background-color: rgba(153, 153, 153, 0.5);
       }
+
       &:nth-child(4)::before {
         position: absolute;
         content: "";
         width: 0;
       }
+
       .SelectionBtnStyle {
         background-color: #feccbe;
         padding: 0.5rem;
@@ -1028,6 +1056,7 @@ section.ticketingTicketInquiry {
 
   .seeNumberSelectionBtnArea {
     @include center();
+
     .seePersonSelectionBtn {
       @include center;
       width: 15rem;
@@ -1040,6 +1069,7 @@ section.ticketingTicketInquiry {
       cursor: pointer;
       border: 0;
       margin: 0.5rem;
+
       &:last-child {
         background-color: #fff;
         border: 0.1rem solid #222;
@@ -1059,6 +1089,7 @@ section.ticketingTicketInquiry {
     p {
       font-size: 4rem;
       font-weight: 100;
+
       span {
         font-size: 3.5rem;
         font-weight: 100;
@@ -1074,6 +1105,7 @@ section.ticketingTicketInquiry {
       font-weight: 100;
       padding: 2rem;
     }
+
     span {
       @include center();
       text-align: center;
@@ -1086,6 +1118,7 @@ section.ticketingTicketInquiry {
 
   .ageLimitGuidanceBtnArea {
     display: flex;
+
     button {
       @include pop_up_btn();
       margin: 0.5rem;
@@ -1097,35 +1130,41 @@ section.ticketingTicketInquiry {
 body {
   // 메인 화면
   position: relative;
+
   .storeSelectPage {
     // display: none;
     position: absolute;
     z-index: 90;
   }
+
   // 티켓 선택 화면
   .ticketPublishPage {
     // display: none;
     position: absolute;
     z-index: 80;
   }
+
   // 현재 상영표
   .currentScreenings {
     // display: none;
     position: absolute;
     z-index: 70;
   }
+
   // 좌석 선택 화면
   .seatSelectionWindow {
     // display: none;
     position: absolute;
     z-index: 60;
   }
+
   // 예매 내역 확인창(티켓 구매 프로세스)
   .advanceTicketConfirmWindow {
     // display: none;
     position: absolute;
     z-index: 50;
   }
+
   // 예매 내역 출력창(기존 예매 티켓 프로세스) - 클래스명 중복, 사용 X
   // .advanceTicketConfirmWindow {
   //   // display: none; // 클래스명 중복
@@ -1147,6 +1186,7 @@ body {
     transform: translate(6rem, 22.3rem);
     z-index: 61;
   }
+
   // 15세 이상 관람 가능 영화입니다
   .ageLimitGuidanceWindow {
     // display: none;
@@ -1155,6 +1195,7 @@ body {
     transform: translate(6rem, 22.3rem);
     z-index: 71;
   }
+
   // 유효하지 않는 번호입니다
   .ticketLookupFailureWindow {
     // display: none;
