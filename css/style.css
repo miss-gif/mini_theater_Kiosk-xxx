@@ -185,6 +185,7 @@ section.nowMovie .mainContent .movieInfo .infoTitle::before {
 
 section.nowMovie .mainContent .movieInfo .infoTheater {
   margin: 2rem 0;
+  overflow: scroll;
 }
 
 section.nowMovie .mainContent .movieInfo .infoTheater .infoTheaterLocation {
@@ -210,6 +211,7 @@ section.nowMovie .mainContent .movieInfo .infoTheater .showTime {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  width: 440px;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -252,6 +254,10 @@ section.nowMovie .mainContent .movieInfo .infoTheater .lineGW:before {
   width: 100%;
   height: 0.2rem;
   background-color: #cfcccc;
+}
+
+section.nowMovie .mainContent .movieInfo .infoTheater:nth-child(4) {
+  display: none;
 }
 
 section.nowMovie .mainContent:nth-child(2) {
