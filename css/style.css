@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url(./common.css);
 body {
   display: -webkit-box;
@@ -28,7 +29,7 @@ header h1 {
 }
 
 header h1 a.homeBtn {
-  margin-right: 5px;
+  margin-right: 0.5rem;
 }
 
 header h1 img {
@@ -185,7 +186,7 @@ section.nowMovie .mainContent .movieInfo .infoTitle::before {
 
 section.nowMovie .mainContent .movieInfo .infoTheater {
   margin: 2rem 0;
-  overflow: scroll;
+  width: 24.7rem;
 }
 
 section.nowMovie .mainContent .movieInfo .infoTheater .infoTheaterLocation {
@@ -211,13 +212,38 @@ section.nowMovie .mainContent .movieInfo .infoTheater .showTime {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 440px;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  overflow-y: scroll;
+  width: 24.7rem;
+  height: 3rem;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  align-items: center;
+  /* 스크롤바 설정*/
+  /* 스크롤바 막대 설정*/
+  /* 스크롤바 뒷 배경 설정*/
+}
+
+section.nowMovie .mainContent .movieInfo .infoTheater .showTime::-webkit-scrollbar {
+  width: 0.6rem;
+}
+
+section.nowMovie .mainContent .movieInfo .infoTheater .showTime::-webkit-scrollbar-thumb {
+  height: 17%;
+  background-color: #218585;
+  border-radius: 1rem;
+}
+
+section.nowMovie .mainContent .movieInfo .infoTheater .showTime::-webkit-scrollbar-track {
+  background-color: rgba(33, 133, 133, 0.33);
 }
 
 section.nowMovie .mainContent .movieInfo .infoTheater .showTime .timeBox {
@@ -245,15 +271,6 @@ section.nowMovie .mainContent .movieInfo .infoTheater .showTime .timeSeat {
   font-size: 1.2rem;
   font-weight: 300;
   color: #82a67d;
-}
-
-section.nowMovie .mainContent .movieInfo .infoTheater .lineGW:before {
-  position: absolute;
-  bottom: -1rem;
-  content: "";
-  width: 100%;
-  height: 0.2rem;
-  background-color: #cfcccc;
 }
 
 section.nowMovie .mainContent .movieInfo .infoTheater:nth-child(4) {
@@ -291,6 +308,48 @@ section.nowMovie .afterBtn {
   top: 0;
   background-color: var(--background);
   z-index: 30;
+}
+
+.seatSelectionWindow .ticketingArea {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-top: 0.5rem solid #9a1f1677;
+  border-bottom: 0.5rem solid #9a1f1677;
+  padding: 1rem 0;
+  margin: 3rem 0;
+}
+
+.seatSelectionWindow .ticketingArea .ticketingHistory {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 38rem;
+}
+
+.seatSelectionWindow .ticketingArea .ticketingHistory .ticketRank {
+  width: 10rem;
+  font-size: 2.5rem;
+}
+
+.seatSelectionWindow .ticketingArea .ticketingHistory .ticketNumber {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 5.5rem;
+  font-size: 2.5rem;
+  margin: 0 0.5rem;
+}
+
+.seatSelectionWindow .ticketingArea .TicketingPrice {
+  font-size: 3.8rem;
 }
 
 .seatSelectionWindow .screenBox {
@@ -1138,6 +1197,16 @@ section.ticketingTicketInquiry .ticketingTicketInquiryBtn {
   text-align: center;
 }
 
+.seeNumberSelectionWindow p {
+  font-size: 2.5rem;
+}
+
+.seeNumberSelectionWindow p span {
+  font-size: 2.5rem;
+  font-weight: 100;
+  color: var(--textRed);
+}
+
 .seeNumberSelectionWindow .seeNumberSelectionTitleArea {
   margin: 2rem;
 }
@@ -1375,6 +1444,10 @@ body .advanceTicketConfirmWindow {
   z-index: 50;
 }
 
+body .advanceTicketConfirmWindow .advanceTicketConfirm2 {
+  margin-top: 5rem;
+}
+
 body .advanceTicketInquiryWindow {
   position: absolute;
   z-index: 75;
@@ -1383,24 +1456,24 @@ body .advanceTicketInquiryWindow {
 body .seeNumberSelectionWindow {
   position: absolute;
   top: 0;
-  -webkit-transform: translate(6rem, 22.3rem);
-          transform: translate(6rem, 22.3rem);
+  -webkit-transform: translate(0, 60%);
+          transform: translate(0, 60%);
   z-index: 61;
 }
 
 body .ageLimitGuidanceWindow {
   position: absolute;
   top: 0;
-  -webkit-transform: translate(6rem, 22.3rem);
-          transform: translate(6rem, 22.3rem);
+  -webkit-transform: translate(0, 60%);
+          transform: translate(0, 60%);
   z-index: 71;
 }
 
 body .ticketLookupFailureWindow {
   position: absolute;
   top: 0;
-  -webkit-transform: translate(6rem, 35.3rem);
-          transform: translate(6rem, 35.3rem);
+  -webkit-transform: translate(0, 110%);
+          transform: translate(0, 110%);
   z-index: 76;
 }
 /*# sourceMappingURL=style.css.map */

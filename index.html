@@ -251,9 +251,9 @@
         <div id="좌석을선택하는페이지" class="좌석을선택하는페이지">
           <!-- 좌석선택 화면 -->
           <section id="seatSelection" class="seatSelection">
-            <!-- 결제 인원 -->
-            <div id="paymentArea" class="paymentArea">
-              <!-- <div id="paymentPeople" class="paymentPeople">
+            <!-- 결제 인원 (미사용)-->
+            <!-- <div id="paymentArea" class="paymentArea">
+              <div id="paymentPeople" class="paymentPeople">
                 <div id="peopleAdult" class="peopleAdult">
                   <p>성인</p>
                   <button id="minusBtn" class="minusBtn">-</button>
@@ -266,8 +266,24 @@
                   <input id="peopleChildrenCount" type="number" value="0" disabled />
                   <button id="plusBtn" class="plusBtn">+</button>
                 </div>
-              </div> -->
+              </div>
+            </div> -->
+
+            <!-- 결제 인원 & 가격 -->
+            <div class="ticketingArea">
+              <div class="ticketingHistory">
+                <div class="ticketRankA ticketRank">일반</div>
+                <div class="ticketRankANumber ticketNumber">0매</div>
+                <div class="ticketRankB ticketRank">청소년</div>
+                <div class="ticketRankBNumber ticketNumber">0매</div>
+                <div class="ticketRankC ticketRank">장애인</div>
+                <div class="ticketRankCNumber ticketNumber">0매</div>
+                <div class="ticketRankD ticketRank">경로우대</div>
+                <div class="ticketRankDNumber ticketNumber">0매</div>
+              </div>
+              <div class="TicketingPrice">28,000원</div>
             </div>
+
             <div id="screenBox" class="screenBox">SCREEN</div>
             <div id="seatArea" class="seatArea">
               <div id="seatRowA" class="matrixGW seatRowA">
@@ -403,10 +419,10 @@
         <h2 class="headerTitle">예매 내역을 확인하세요</h2>
       </header>
       <main>
-        <section id="advanceTicketConfirm" class="advanceTicketConfirm">
-          <div id="paymentArea" class="paymentArea">
+        <section id="advanceTicketConfirm" class="advanceTicketConfirm advanceTicketConfirm2">
+          <!-- <div id="paymentArea" class="paymentArea">
             <p>결제 금액<span id="paymentPrice"> 38,000원</span></p>
-          </div>
+          </div> -->
           <div id="paymentContent" class="paymentContent">
             <div id="paymentContentImg" class="paymentContentImg">
               <img src="./img/levenement.jpg" alt="img" />
@@ -537,6 +553,7 @@
           <div id="seniorPersonNumber" class="defaultPersonNumber">7</div>
         </div>
       </div>
+      <p><span>최대 7매</span>까지 가능합니다 <span>다시 선택해주세요</span></p>
       <div id="seeNumberSelectionBtnArea" class="seeNumberSelectionBtnArea">
         <button id="personSelectCompleteButton" class="seePersonSelectionBtn">완료</button>
         <button id="personSelectCancelButton" class="seePersonSelectionBtn">취소</button>

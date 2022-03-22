@@ -6,6 +6,8 @@
 
 body {
   background-color: var(--background);
+  display: flex;
+  justify-content: center;
 }
 
 /* 색상 등록 */
