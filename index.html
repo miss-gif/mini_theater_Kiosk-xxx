@@ -9,7 +9,6 @@
     <!-- 임시 파비콘 -->
     <link rel="icon" href="./favicon.png" />
     <!-- 아이콘 -->
-    <!-- <link rel="stylesheet" href="http://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css" /> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" />
     <!-- 리셋 CSS -->
     <link rel="stylesheet" href="./CSS/reset.css" />
@@ -269,7 +268,7 @@
               </div>
             </div> -->
 
-            <!-- 결제 인원 & 가격 -->
+            <!-- 좌석 선택 -->
             <div class="ticketingArea">
               <div class="ticketingHistory">
                 <div class="ticketRankA ticketRank">일반</div>
@@ -378,7 +377,6 @@
         </section>
       </main>
     </div>
-
     <!-- 예매 내역 출력창(기존 예매 티켓 프로세스) -->
     <div id="availableTicketPage" class="advanceTicketConfirmWindow">
       <header>
@@ -419,31 +417,6 @@
         </section>
       </main>
     </div>
-    <!-- 모달창 모음 -->
-    <!-- 영화를 예매하시겠습니까? (주석처리) -->
-    <!--
-    <div id="movieSelectionWindow" class="movieSelectionWindow">
-      <div id="movieSelectionTitleArea" class="movieSelectionTitleArea">
-        <p id="paymentWindowTitle" class="paymentWindowTitle">영화를 예매하시겠습니까?</p>
-      </div>
-      <div id="movieSelectionContentsArea" class="movieSelectionContentsArea">
-        <div id="paymentWindowMain" class="paymentWindowMain">
-          <div id="paymentWindowMovie" class="paymentWindowMovie">
-            <img id="paymentImg" src="./img/theBatman.jpg" alt="예매 영화이미지" />
-          </div>
-          <div id="paymentWindowInfo" class="paymentWindowInfo">
-            <p id="movieTitle" class="movieTitle">더 배트맨</p>
-            <p id="movieFloor" class="movieFloor">2D 3관[Laser]</p>
-            <p id="movieTime" class="movieTime">12 : 05</p>
-          </div>
-        </div>
-      </div>
-      <div id="movieSelectionBtnArea" class="movieSelectionBtnArea">
-        <button id="selectionBtn" class="selectionBtn">좌석 선택</button>
-        <button id="cancelBtn" class="cancelBtn">취소</button>
-      </div>
-    </div>
-  -->
     <!-- 유효하지 않는 번호입니다 -->
     <div id="ticketLookupFailureWindow" class="ticketLookupFailureWindow">
       <div id="ticketLookupFailureTitleArea" class="ticketLookupFailureTitleArea">
@@ -459,7 +432,6 @@
         <button id="ticketLookupFailureBtn" class="ticketLookupFailureBtn">확인</button>
       </div>
     </div>
-
     <!-- 관람 인원수를 선택해주세요 -->
     <div id="seeNumberSelectionWindow" class="seeNumberSelectionWindow">
       <div id="seeNumberSelectionTitleArea" class="seeNumberSelectionTitleArea">
@@ -530,7 +502,6 @@
         <!-- <button id="personSelectCancelButton" class="seePersonSelectionBtn">취소</button> -->
       </div>
     </div>
-
     <!-- 15세 이상 관람 가능 영화입니다 -->
     <div id="ageLimitGuidanceWindow" class="ageLimitGuidanceWindow">
       <div id="ageLimitGuidanceTitleArea" class="ageLimitGuidanceTitleArea">
@@ -552,45 +523,7 @@
       </div>
     </div>
 
-    <!-- 포인트 조회 -->
-    <div class="pointLookupWindow">
-      <div class="pointLookupTitleArea">
-        <p>포인트 조회</p>
-        <p>핸드폰 번호를 눌러주세요</p>
-        <input type="number" placeholder="010-1234-5678" disabled />
-      </div>
-      <div class="pointLookupContentArea">
-        <div class="pointLookupNumberBtnGroup">
-          <div class="pointLookupNumberBtn">0</div>
-          <div class="pointLookupNumberBtn">1</div>
-          <div class="pointLookupNumberBtn">2</div>
-          <div class="pointLookupNumberBtn">3</div>
-          <div class="pointLookupNumberBtn">4</div>
-          <div class="pointLookupNumberBtn">x</div>
-          <div class="pointLookupNumberBtn">5</div>
-          <div class="pointLookupNumberBtn">6</div>
-          <div class="pointLookupNumberBtn">7</div>
-          <div class="pointLookupNumberBtn">8</div>
-          <div class="pointLookupNumberBtn">9</div>
-          <div class="pointLookupNumberBtn">x</div>
-        </div>
-        <div class="pointLookupInputBtn">입력</div>
-      </div>
-      <div class="pointLookupSubContentArea">
-        <p>가용 포인트 <input type="number" placeholder="0" disabled /></p>
-        <p>사용 포인트 <input type="number" placeholder="0" disabled /></p>
-        <p>남은 포인트 <input type="number" placeholder="0" disabled /></p>
-        <div class="pointPlusMinusBtn">
-          <div class="pointMinusBtn">-</div>
-          <div class="pointPlusBtn">+</div>
-        </div>
-      </div>
-      <div class="pointLookupBtnArea">
-        <button class="pointLookupBtnLeft">적립</button>
-        <button class="pointLookupBtnRight">사용하기</button>
-      </div>
-    </div>
-    <!-- <script src="./JS/windowOnload.js"></script>
+    <script src="./JS/windowOnload.js"></script>
     <script src="./JS/ageNoticeModal.js"></script>
     <script src="./JS/availableTicketPage.js"></script>
     <script src="./JS/movieCommun.js"></script>
@@ -602,6 +535,6 @@
     <script src="./JS/showPageFuncs.js"></script>
     <script src="./JS/storeSelectPage.js"></script>
     <script src="./JS/ticketPublishPage.js"></script>
-    <script src="./JS/unavailableTicketModal.js"></script> -->
+    <script src="./JS/unavailableTicketModal.js"></script>
   </body>
 </html>

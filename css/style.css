@@ -84,7 +84,8 @@ main {
   height: 25rem;
   outline: 0;
   border: none;
-  background-color: red;
+  font-size: 6rem;
+  background-color: orange;
 }
 
 section.nowMovie {
@@ -185,7 +186,7 @@ section.nowMovie .mainContent .movieInfo .infoTitle::before {
 }
 
 section.nowMovie .mainContent .movieInfo .infoTheater {
-  margin: 44px 0;
+  margin: 4.4rem 0;
   width: 24.7rem;
 }
 
@@ -200,11 +201,11 @@ section.nowMovie .mainContent .movieInfo .infoTheater .infoTheaterLocation .info
   font-weight: 900;
   color: var(--textRed);
   margin-right: 0.5rem;
-  font-size: 1rem;
+  font-size: 1.4rem;
 }
 
 section.nowMovie .mainContent .movieInfo .infoTheater .infoTheaterLocation .infoFloor {
-  font-size: 1rem;
+  font-size: 1.4rem;
 }
 
 section.nowMovie .mainContent .movieInfo .infoTheater .showTime {
@@ -212,12 +213,12 @@ section.nowMovie .mainContent .movieInfo .infoTheater .showTime {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   overflow-y: scroll;
@@ -226,7 +227,6 @@ section.nowMovie .mainContent .movieInfo .infoTheater .showTime {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  align-items: center;
   /* 스크롤바 설정*/
   /* 스크롤바 막대 설정*/
   /* 스크롤바 뒷 배경 설정*/
@@ -364,23 +364,23 @@ section.nowMovie .afterBtn {
   line-height: 5rem;
   color: #fff;
   font-weight: 100;
-  word-spacing: 22px;
+  word-spacing: 2.2rem;
 }
 
 .seatSelectionWindow .seatArea {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   margin: 2rem 0;
 }
 
@@ -423,16 +423,16 @@ section.nowMovie .afterBtn {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   width: 33rem;
   height: 10rem;
   background-color: #fff;
@@ -444,9 +444,9 @@ section.nowMovie .afterBtn {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: left;
-      -ms-flex-pack: left;
-          justify-content: left;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -490,12 +490,15 @@ section.nowMovie .afterBtn {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: left;
-      -ms-flex-pack: left;
-          justify-content: left;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
 }
 
 .seatSelectionWindow .paymentArea .paymentPeople .peopleChildren p {
@@ -602,9 +605,13 @@ section.ticketingTicketInquiry {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: start;
-  margin-top: 30px;
   width: 70rem;
   height: 71rem;
+  box-sizing: border-box;
+}
+
+section.ticketingTicketInquiry .ticketingTicketInquiryTitleArea {
+  padding: 2rem;
 }
 
 section.ticketingTicketInquiry .ticketingTicketInquiryTitleArea p {
@@ -686,7 +693,7 @@ section.ticketingTicketInquiry .ticketingTicketBtn .ticketingTicketNumber:nth-ch
 }
 
 section.ticketingTicketInquiry .ticketingTicketInquiryBtn {
-  margin-top: 30px;
+  margin-top: 3rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -705,6 +712,8 @@ section.ticketingTicketInquiry .ticketingTicketInquiryBtn {
   position: absolute;
   bottom: 0;
   border: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .advanceTicketConfirm {
@@ -762,9 +771,9 @@ section.ticketingTicketInquiry .ticketingTicketInquiryBtn {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-top: 30px;
+  margin-top: 3rem;
   position: relative;
-  margin-bottom: 30px;
+  margin-bottom: 3rem;
 }
 
 .advanceTicketConfirm .paymentContentA::before {
@@ -772,8 +781,8 @@ section.ticketingTicketInquiry .ticketingTicketInquiryBtn {
   bottom: 0;
   content: "";
   width: 100%;
-  height: 3px;
-  bottom: -30px;
+  height: 0.3rem;
+  bottom: -3rem;
   background-color: rgba(51, 51, 51, 0.4);
 }
 
@@ -846,18 +855,18 @@ section.ticketingTicketInquiry .ticketingTicketInquiryBtn {
 .advanceTicketConfirm .paymentContentBottom {
   width: 70%;
   position: relative;
-  margin-top: 15px;
+  margin-top: 1.5rem;
 }
 
 .advanceTicketConfirm .paymentContentBottom p {
-  font-size: 30px;
+  font-size: 3rem;
   display: block;
-  margin: 20px 0;
+  margin: 2rem 0;
 }
 
 .advanceTicketConfirm .paymentContentBottom span {
   position: absolute;
-  font-size: 30px;
+  font-size: 3rem;
   text-align: right;
   right: 0;
   color: var(--textRed);
@@ -882,7 +891,7 @@ section.ticketingTicketInquiry .ticketingTicketInquiryBtn {
   bottom: 0;
   left: 0;
   border: 0;
-  font-size: 40px;
+  font-size: 4rem;
 }
 
 .advanceTicketConfirm .paymentBtnArea .paymentBtn {
@@ -904,7 +913,7 @@ section.ticketingTicketInquiry .ticketingTicketInquiryBtn {
   bottom: 0;
   right: 0;
   border: 0;
-  font-size: 40px;
+  font-size: 4rem;
 }
 
 .advanceTicketConfirm {
@@ -962,7 +971,7 @@ section.ticketingTicketInquiry .ticketingTicketInquiryBtn {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-top: 80px;
+  margin-top: 8rem;
 }
 
 .advanceTicketConfirm .paymentContentB .paymentContentImg {
@@ -1314,7 +1323,7 @@ section.ticketingTicketInquiry .ticketingTicketInquiryBtn {
 }
 
 .seeNumberSelectionWindow .seeNumberSelectionContentsArea .defaultPerson .defaultTextArea {
-  width: 12rem;
+  width: 10rem;
   text-align: left;
   margin-right: 4rem;
 }
@@ -1328,10 +1337,12 @@ section.ticketingTicketInquiry .ticketingTicketInquiryBtn {
 }
 
 .seeNumberSelectionWindow .seeNumberSelectionContentsArea .defaultPerson .defaultPersonNumber {
-  width: 2.2rem;
+  width: 3rem;
   margin: 0 1rem;
   font-size: 3rem;
   cursor: pointer;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .seeNumberSelectionWindow .seeNumberSelectionContentsArea .defaultPerson::before {
@@ -1353,6 +1364,8 @@ section.ticketingTicketInquiry .ticketingTicketInquiryBtn {
   background-color: #feccbe;
   padding: 0.5rem;
   border-radius: 0.5rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .seeNumberSelectionWindow .seeNumberSelectionBtnArea {
@@ -1387,12 +1400,6 @@ section.ticketingTicketInquiry .ticketingTicketInquiryBtn {
   cursor: pointer;
   border: 0;
   margin: 0.5rem;
-}
-
-.seeNumberSelectionWindow .seeNumberSelectionBtnArea .seePersonSelectionBtn:last-child {
-  background-color: #fff;
-  border: 0.1rem solid #222;
-  color: #222;
 }
 
 .ageLimitGuidanceWindow {
@@ -1492,207 +1499,6 @@ section.ticketingTicketInquiry .ticketingTicketInquiryBtn {
   margin: 0.5rem;
 }
 
-.pointLookupWindow {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  width: 58rem;
-  height: 46rem;
-  -webkit-box-shadow: 0.5rem 0.5rem 3rem rgba(50, 50, 50, 0.2);
-          box-shadow: 0.5rem 0.5rem 3rem rgba(50, 50, 50, 0.2);
-  border-radius: 2rem;
-  background-color: #fff;
-  margin: 1rem 0;
-  padding: 2.5rem 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  z-index: 99;
-  width: 700px;
-  height: 775px;
-  position: relative;
-  background-color: var(--backgrund);
-}
-
-.pointLookupWindow .pointLookupTitleArea {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-.pointLookupWindow .pointLookupTitleArea p {
-  font-size: 30px;
-}
-
-.pointLookupWindow .pointLookupTitleArea input {
-  text-align: center;
-  font-size: 30px;
-}
-
-.pointLookupWindow .pointLookupContentArea {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 580px;
-  position: relative;
-}
-
-.pointLookupWindow .pointLookupContentArea .pointLookupNumberBtnGroup {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-}
-
-.pointLookupWindow .pointLookupContentArea .pointLookupNumberBtnGroup .pointLookupNumberBtn {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 74px;
-  height: 74px;
-  background-color: #888;
-  padding: 10px;
-  margin: 5px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
-.pointLookupWindow .pointLookupContentArea .pointLookupInputBtn {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  position: absolute;
-  width: 75px;
-  height: 160px;
-  background-color: #888;
-  right: 0;
-  margin: 5px 0px 5px 10px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
-.pointLookupWindow .pointLookupSubContentArea {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-.pointLookupWindow .pointLookupSubContentArea p {
-  text-align: center;
-  width: 400px;
-  font-size: 30px;
-  margin: 10px;
-}
-
-.pointLookupWindow .pointLookupSubContentArea p input {
-  text-align: right;
-  font-size: 30px;
-  width: 50%;
-}
-
-.pointLookupWindow .pointLookupSubContentArea .pointPlusMinusBtn {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  position: absolute;
-}
-
-.pointLookupWindow .pointLookupSubContentArea .pointPlusMinusBtn .pointMinusBtn {
-  font-size: 50px;
-}
-
-.pointLookupWindow .pointLookupSubContentArea .pointPlusMinusBtn .pointPlusBtn {
-  font-size: 50px;
-}
-
-.pointLookupWindow .pointLookupBtnArea .pointLookupBtnLeft {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 40%;
-  height: 10rem;
-  background-color: #fff;
-  color: #111;
-  cursor: pointer;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  border: 0;
-  font-size: 40px;
-}
-
-.pointLookupWindow .pointLookupBtnArea .pointLookupBtnRight {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 60%;
-  height: 10rem;
-  background-color: var(--boxRed);
-  color: #fff;
-  cursor: pointer;
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  border: 0;
-  font-size: 40px;
-}
-
 body {
   position: relative;
 }
@@ -1753,66 +1559,5 @@ body .ticketLookupFailureWindow {
   -webkit-transform: translate(0, 75%);
           transform: translate(0, 75%);
   z-index: 76;
-}
-
-body {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-body main {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  border: 1px solid red;
-}
-
-body .storeSelectPage {
-  position: relative;
-  display: none;
-}
-
-body .ticketPublishPage {
-  position: relative;
-  display: none;
-}
-
-body .currentScreenings {
-  position: relative;
-  display: none;
-}
-
-body .seatSelectionWindow {
-  position: relative;
-  display: none;
-}
-
-body .advanceTicketInquiryWindow {
-  position: relative;
-  display: none;
-}
-
-body .advanceTicketConfirmWindow {
-  position: relative;
-  display: none;
-}
-
-body .ticketLookupFailureWindow {
-  position: relative;
-  display: none;
-}
-
-body .seeNumberSelectionWindow {
-  position: relative;
-  display: none;
-}
-
-body .ageLimitGuidanceWindow {
-  position: relative;
-  display: none;
 }
 /*# sourceMappingURL=style.css.map */
