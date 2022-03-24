@@ -12,10 +12,10 @@ body {
 
 /* 색상 등록 */
 :root {
-  --textRed: #ba1a0f;
-  --boxRed: #cf0c00;
-  --menuRed: #9a1e16;
-  --background: #f1f1f1;
+  --textRed: #ba1a0f; /* 글자 빨강 */
+  --boxRed: #cf0c00; /* 박스 빨강 */
+  --menuRed: #cf0c00; /* 메뉴 빨강 */
+  --background: #f1f1f1; /* 배경색 */
   --Color1: #ba1a0f;
   --Color2: #9a1e16;
   --Color3: #eee;
@@ -50,4 +50,8 @@ i {
 .previousBtn i,
 .afterBtn i {
   font-size: 7rem;
+}
+
+input {
+  border: 0;
 }

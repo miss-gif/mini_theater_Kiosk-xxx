@@ -33,7 +33,7 @@ body {
   border-radius: 2rem;
   background-color: #fff;
   margin: 1rem 0;
-  padding: 1rem 0;
+  padding: 2.5rem 0;
   box-sizing: border-box;
   z-index: 99;
 }
@@ -84,6 +84,56 @@ body {
   cursor: pointer;
 }
 
+// 하단의 바 형태의 버튼
+@mixin bottom_bar_btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 10rem;
+  background-color: var(--boxRed);
+  color: #fff;
+  cursor: pointer;
+  font-size: 4rem;
+  position: absolute;
+  bottom: 0;
+  border: 0;
+}
+
+// 하단의 바 형태의 왼쪽 버튼
+@mixin bottom_bar_btn_left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40%;
+  height: 10rem;
+  background-color: #fff;
+  color: #111;
+  cursor: pointer;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  border: 0;
+  font-size: 40px;
+}
+
+// 하단의 바 형태의 오른쪽 버튼
+@mixin bottom_bar_btn_right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60%;
+  height: 10rem;
+  background-color: var(--boxRed);
+  color: #fff;
+  cursor: pointer;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  border: 0;
+  font-size: 40px;
+}
+
 //헤더 영역
 header {
   width: 70rem; // 700
@@ -118,7 +168,7 @@ header {
     // letter-spacing: -0.5rem;
     font-weight: 300;
     color: #fff;
-    font-size: 7rem; // 70
+    font-size: 6rem; // 70
     display: flex;
     justify-content: center;
     align-items: center;
@@ -250,7 +300,7 @@ section.nowMovie {
 
       // 상영관 정보
       .infoTheater {
-        margin: 2rem 0; // 20
+        margin: 44px 0; // 20
         // overflow: hidden;
         width: 24.7rem;
         // overflow-y: scroll;
@@ -326,8 +376,8 @@ section.nowMovie {
             // margin-bottom: 20;
             text-align: center;
             display: block;
-            width: 4rem; // 40
-            font-size: 1.2rem; // 14
+            width: 5rem; // 40
+            font-size: 1.55rem; // 14
             font-weight: 300;
             color: #82a67d;
             &:nth-child(3) {
@@ -432,11 +482,13 @@ section.nowMovie {
       width: 38rem;
 
       .ticketRank {
+        margin: 0 1rem;
         width: 10rem;
         font-size: 2.5rem;
       }
       .ticketNumber {
         box-sizing: border-box;
+        text-align: right;
         width: 5.5rem;
         font-size: 2.5rem;
         margin: 0 0.5rem;
@@ -457,8 +509,9 @@ section.nowMovie {
     font-size: 3rem; // 30
     line-height: 5rem; // 시각보정 50
     color: #fff;
-    letter-spacing: 3rem; // 30
+    // letter-spacing: 3rem; // 30
     font-weight: 100;
+    word-spacing: 22px;
   }
 
   // 영화관 내 좌석 영역
@@ -587,16 +640,7 @@ section.nowMovie {
 
   //결제하기 버튼
   .paymentBtn {
-    font-size: 3rem; // 30
-    color: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 18rem; // 180
-    height: 10rem; // 100
-    background-color: var(--boxRed);
-    border-radius: 2rem; // 20
-    margin: 5rem auto;
+    @include bottom_bar_btn();
   }
 
   // 좌석 상태
@@ -604,26 +648,26 @@ section.nowMovie {
     //예약 가능
     .emptySeat {
       background-color: #d6d6d6;
-      cursor:pointer;
+      cursor: pointer;
     }
 
     // 선택 불가
     .disabledSeat {
       background-color: "#343434";
-      cursor:default;
+      cursor: default;
     }
 
     // 선택 좌석
     .SelectedSeat {
       background-color: #f44336;
-      cursor:pointer;
+      cursor: pointer;
     }
 
     // 예약 불가
     .BookedSeat {
       position: relative;
       background-color: #343234;
-      cursor:default;
+      cursor: default;
     }
 
     .BookedSeat::before {
@@ -641,22 +685,25 @@ section.nowMovie {
   }
 }
 
-// 예매 티켓 조회
+// 예매티켓 조회
 section.ticketingTicketInquiry {
   @include center;
+  box-sizing: border-box;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: start;
+  margin-top: 30px;
   width: 70rem;
   height: 71rem;
-  background-color: var(--background);
 
-  p {
-    font-size: 4rem;
-  }
-
-  span {
-    color: var(--textRed);
-    font-size: 4rem;
+  .ticketingTicketInquiryTitleArea {
+    // margin-top: 3rem;
+    p {
+      font-size: 4rem;
+    }
+    span {
+      color: var(--textRed);
+      font-size: 4rem;
+    }
   }
 
   .inputReservationNumber {
@@ -706,16 +753,10 @@ section.ticketingTicketInquiry {
     }
   }
 
+  // 조회하기 버튼
   .ticketingTicketInquiryBtn {
-    @include center;
-    width: 20rem;
-    height: 5.5rem;
-    background-color: var(--boxRed);
-    border-radius: 1.5rem;
-    margin: 1rem;
-    font-size: 3rem;
-    color: #fff;
-    cursor: pointer;
+    margin-top: 30px;
+    @include bottom_bar_btn();
   }
 }
 
@@ -744,8 +785,21 @@ section.ticketingTicketInquiry {
     }
   }
 
-  .paymentContent {
+  .paymentContentA {
     @include center();
+    margin-top: 30px;
+    position: relative;
+    margin-bottom: 30px;
+
+    &::before {
+      position: absolute;
+      bottom: 0;
+      content: "";
+      width: 100%;
+      height: 3px;
+      bottom: -30px;
+      background-color: rgba(51, 51, 51, 0.4);
+    }
 
     .paymentContentImg {
       width: 24rem;
@@ -803,18 +857,32 @@ section.ticketingTicketInquiry {
     }
   }
 
-  .paymentBtn {
-    @include center;
-    width: 20rem;
-    height: 5.5rem;
-    background-color: var(--textRed);
-    border-radius: 1.5rem;
-    font-size: 3rem;
-    margin-top: 2rem;
-    color: #fff;
-    cursor: pointer;
-    border: 0;
-    margin-top: 8rem;
+  .paymentContentBottom {
+    width: 70%;
+    position: relative;
+    margin-top: 15px;
+    // @include center();
+    p {
+      font-size: 30px;
+      display: block;
+      margin: 20px 0;
+    }
+    span {
+      position: absolute;
+      font-size: 30px;
+      text-align: right;
+      right: 0;
+      color: var(--textRed);
+    }
+  }
+
+  .paymentBtnArea {
+    .paymentBtnPoint {
+      @include bottom_bar_btn_left();
+    }
+    .paymentBtn {
+      @include bottom_bar_btn_right();
+    }
   }
 }
 
@@ -843,8 +911,10 @@ section.ticketingTicketInquiry {
     }
   }
 
-  .paymentContent {
+  .paymentContentB {
     @include center();
+    margin-top: 80px;
+    // background-color: #156;
 
     .paymentContentImg {
       width: 24rem;
@@ -903,17 +973,7 @@ section.ticketingTicketInquiry {
   }
 
   .printBtn {
-    @include center;
-    width: 20rem;
-    height: 5.5rem;
-    background-color: var(--boxRed);
-    border-radius: 1.5rem;
-    font-size: 3rem;
-    margin-top: 2rem;
-    color: #fff;
-    cursor: pointer;
-    border: 0;
-    margin-top: 8rem;
+    @include bottom_bar_btn();
   }
 }
 
@@ -1017,7 +1077,8 @@ section.ticketingTicketInquiry {
 // 예매 티켓 조회 실패
 .ticketLookupFailureWindow {
   @include pop_up();
-  height: 30rem;
+  height: 40rem;
+  box-sizing: border-box;
 
   .ticketLookupFailureTitleArea {
     p {
@@ -1059,7 +1120,7 @@ section.ticketingTicketInquiry {
 // 관람 인원수를 선택해주세요
 .seeNumberSelectionWindow {
   @include pop_up();
-  height: 46rem;
+  height: 55rem;
   text-align: center;
   p {
     font-size: 2.5rem;
@@ -1110,6 +1171,7 @@ section.ticketingTicketInquiry {
       }
 
       .defaultPersonNumber {
+        width: 2.2rem;
         margin: 0 1rem;
         font-size: 3rem;
         cursor: pointer;
@@ -1167,7 +1229,8 @@ section.ticketingTicketInquiry {
 .ageLimitGuidanceWindow {
   @include pop_up();
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-between;
+  padding: 7rem 0;
 
   .ageLimitGuidanceTitleArea {
     p {
@@ -1175,7 +1238,7 @@ section.ticketingTicketInquiry {
       font-weight: 100;
 
       span {
-        font-size: 3.5rem;
+        font-size: 4rem;
         font-weight: 100;
         color: var(--textRed);
       }
@@ -1185,18 +1248,20 @@ section.ticketingTicketInquiry {
   .ageLimitGuidanceContentsArea {
     p {
       text-align: center;
-      font-size: 2.8rem;
+      font-size: 3.3rem;
       font-weight: 100;
-      padding: 2rem;
+      margin-bottom: 2rem;
+      // padding: 2rem;
     }
 
     span {
       @include center();
       text-align: center;
-      font-size: 2rem;
+      font-size: 2.5rem;
       font-weight: 100;
       color: var(--textRed);
-      padding: 2rem;
+      opacity: 0.5;
+      // padding: 2rem;
     }
   }
 
@@ -1206,6 +1271,95 @@ section.ticketingTicketInquiry {
     button {
       @include pop_up_btn();
       margin: 0.5rem;
+    }
+  }
+}
+
+// 포인트 조회
+.pointLookupWindow {
+  @include pop_up();
+  width: 700px;
+  height: 775px;
+  position: relative;
+  background-color: var(--backgrund);
+
+  .pointLookupTitleArea {
+    @include center();
+    flex-direction: column;
+    p {
+      font-size: 30px;
+    }
+    input {
+      text-align: center;
+      font-size: 30px;
+    }
+  }
+  .pointLookupContentArea {
+    display: flex;
+    width: 580px;
+    position: relative;
+    .pointLookupNumberBtnGroup {
+      // width: 80%;
+      display: flex;
+      flex-wrap: wrap;
+      .pointLookupNumberBtn {
+        @include center();
+        width: 74px;
+        height: 74px;
+        background-color: #888;
+        padding: 10px;
+        margin: 5px;
+        box-sizing: border-box;
+      }
+      .pointLookupInputBtn {
+      }
+    }
+    .pointLookupInputBtn {
+      @include center();
+      // width: 20%;
+      position: absolute;
+      width: 75px;
+      height: 160px;
+      background-color: #888;
+      right: 0;
+      // padding: 10px;
+      margin: 5px 0px 5px 10px;
+      box-sizing: border-box;
+    }
+  }
+  .pointLookupSubContentArea {
+    @include center();
+    flex-direction: column;
+    p {
+      text-align: center;
+      width: 400px;
+      font-size: 30px;
+      margin: 10px;
+      input {
+        text-align: right;
+        font-size: 30px;
+        width: 50%;
+        // background-color: #156;
+      }
+    }
+    .pointPlusMinusBtn {
+      display: flex;
+      position: absolute;
+      .pointMinusBtn {
+        font-size: 50px;
+      }
+      .pointPlusBtn {
+        font-size: 50px;
+      }
+    }
+  }
+
+  .pointLookupBtnArea {
+    .pointLookupBtnLeft {
+      @include bottom_bar_btn_left();
+    }
+    .pointLookupBtnRight {
+      @include bottom_bar_btn_right();
     }
   }
 }
@@ -1271,7 +1425,7 @@ body {
     // display: none;
     position: absolute;
     top: 0;
-    transform: translate(0, 60%);
+    transform: translate(0, 41%);
     z-index: 61;
   }
 
@@ -1289,7 +1443,55 @@ body {
     // display: none;
     position: absolute;
     top: 0;
-    transform: translate(0, 110%);
+    transform: translate(0, 75%);
     z-index: 76;
+  }
+}
+
+// 작업모드
+body {
+  display: flex;
+  flex-direction: column;
+  main {
+    box-sizing: border-box;
+    border: 1px solid red;
+  }
+  .storeSelectPage {
+    position: relative;
+    display: none;
+  }
+  .ticketPublishPage {
+    position: relative;
+    display: none;
+  }
+  .currentScreenings {
+    position: relative;
+    display: none;
+  }
+  .seatSelectionWindow {
+    position: relative;
+    display: none;
+  }
+  .advanceTicketInquiryWindow {
+    position: relative;
+    display: none;
+  }
+  .advanceTicketConfirmWindow {
+    position: relative;
+    display: none;
+  }
+  .ticketLookupFailureWindow {
+    position: relative;
+    display: none;
+  }
+  .seeNumberSelectionWindow {
+    position: relative;
+    display: none;
+  }
+  .ageLimitGuidanceWindow {
+    position: relative;
+    display: none;
+  }
+  .pointLookupWindow {
   }
 }

@@ -284,9 +284,9 @@
               <div id="TicketingPrice" class="TicketingPrice"></div>
             </div>
 
-            <div id="screenBox" class="screenBox">SCREEN</div>
+            <div id="screenBox" class="screenBox">S C R E E N</div>
             <div id="seatArea" class="seatArea"></div>
-            <div id="paymentBtn" class="paymentBtn">결제하기</div>
+            <div id="paymentBtn" class="paymentBtn">선택완료</div>
           </section>
         </div>
       </main>
@@ -302,9 +302,12 @@
         <h2 class="headerTitle">예매티켓 조회</h2>
       </header>
       <main>
-        <!-- 예매 티켓 조회 -->
+        <!-- 예매티켓 조회 -->
         <section id="ticketingTicketInquiry" class="ticketingTicketInquiry">
-          <p>예매번호 <span>8자리</span>를 눌러주세요</p>
+          <div class="ticketingTicketInquiryTitleArea">
+            <p>예매번호 <span>8자리</span>를 눌러주세요</p>
+          </div>
+
           <div id="inputReservationNumber" class="inputReservationNumber">
             <input id="inputReservationNumberWindow" class="inputReservationNumberWindow" type="text" placeholder="0000-0000" disabled />
           </div>
@@ -323,7 +326,7 @@
             <div id="ticketingTicketNumber" class="ticketingTicketNumber">0</div>
             <div id="ticketingTicketBackspaceButton" class="ticketingTicketNumber"><i class="fas fa-backspace"></i></div>
           </div>
-          <div id="ticketingTicketInquiryBtn" class="ticketingTicketInquiryBtn">조 회</div>
+          <div id="ticketingTicketInquiryBtn" class="ticketingTicketInquiryBtn">조회하기</div>
         </section>
       </main>
     </div>
@@ -339,10 +342,10 @@
       </header>
       <main>
         <section id="advanceTicketConfirm" class="advanceTicketConfirm">
-          <div id="paymentArea" class="paymentArea">
-            <p>결제 금액<span id="paymentPrice"> 38,000원</span></p>
-          </div>
-          <div id="paymentContent" class="paymentContent">
+          <!-- <div id="paymentArea" class="paymentArea"> -->
+          <!-- <p>결제 금액<span id="paymentPrice"> 38,000원</span></p> -->
+          <!-- </div> -->
+          <div id="paymentContent" class="paymentContent paymentContentA">
             <div id="paymentContentImg" class="paymentContentImg">
               <img src="./img/levenement.jpg" alt="img" />
             </div>
@@ -363,10 +366,19 @@
               </div>
             </div>
           </div>
-          <button id="paymentBtn" class="paymentBtn">선택완료</button>
+          <div class="paymentContentBottom">
+            <p>총 주문 금액<span>38,000원</span></p>
+            <p>할인 금액<span>0원</span></p>
+            <p>총 주문 금액<span>33,000원</span></p>
+          </div>
+          <div class="paymentBtnArea">
+            <button id="paymentBtn" class="paymentBtnPoint">포인트 결제</button>
+            <button id="paymentBtn" class="paymentBtn">바로 결제</button>
+          </div>
         </section>
       </main>
     </div>
+
     <!-- 예매 내역 출력창(기존 예매 티켓 프로세스) -->
     <div id="availableTicketPage" class="advanceTicketConfirmWindow">
       <header>
@@ -382,7 +394,7 @@
           <!-- <div id="paymentArea" class="paymentArea">
             <p>결제 금액<span id="paymentPrice"> 38,000원</span></p>
           </div> -->
-          <div id="paymentContent" class="paymentContent">
+          <div id="paymentContent" class="paymentContent paymentContentB">
             <div id="paymentContentImg" class="paymentContentImg">
               <img src="./img/levenement.jpg" alt="img" />
             </div>
@@ -515,7 +527,7 @@
       <p id="personSelectModalAlertMessage"><span>최대 7매</span>까지 가능합니다 <span>다시 선택해주세요</span></p>
       <div id="seeNumberSelectionBtnArea" class="seeNumberSelectionBtnArea">
         <button id="personSelectCompleteButton" class="seePersonSelectionBtn">완료</button>
-        <button id="personSelectCancelButton" class="seePersonSelectionBtn">취소</button>
+        <!-- <button id="personSelectCancelButton" class="seePersonSelectionBtn">취소</button> -->
       </div>
     </div>
 
@@ -536,10 +548,49 @@
       </div>
       <div id="ageLimitGuidanceBtnArea" class="ageLimitGuidanceBtnArea">
         <button id="ageLimitGuidanceBtn" class="ageLimitGuidanceBtn">확인</button>
-        <button id="ageNoticeNO" class="ageNoticeNO">취소</button>
+        <!-- <button id="ageNoticeNO" class="ageNoticeNO">취소</button> -->
       </div>
     </div>
-    <script src="./JS/windowOnload.js"></script>
+
+    <!-- 포인트 조회 -->
+    <div class="pointLookupWindow">
+      <div class="pointLookupTitleArea">
+        <p>포인트 조회</p>
+        <p>핸드폰 번호를 눌러주세요</p>
+        <input type="number" placeholder="010-1234-5678" disabled />
+      </div>
+      <div class="pointLookupContentArea">
+        <div class="pointLookupNumberBtnGroup">
+          <div class="pointLookupNumberBtn">0</div>
+          <div class="pointLookupNumberBtn">1</div>
+          <div class="pointLookupNumberBtn">2</div>
+          <div class="pointLookupNumberBtn">3</div>
+          <div class="pointLookupNumberBtn">4</div>
+          <div class="pointLookupNumberBtn">x</div>
+          <div class="pointLookupNumberBtn">5</div>
+          <div class="pointLookupNumberBtn">6</div>
+          <div class="pointLookupNumberBtn">7</div>
+          <div class="pointLookupNumberBtn">8</div>
+          <div class="pointLookupNumberBtn">9</div>
+          <div class="pointLookupNumberBtn">x</div>
+        </div>
+        <div class="pointLookupInputBtn">입력</div>
+      </div>
+      <div class="pointLookupSubContentArea">
+        <p>가용 포인트 <input type="number" placeholder="0" disabled /></p>
+        <p>사용 포인트 <input type="number" placeholder="0" disabled /></p>
+        <p>남은 포인트 <input type="number" placeholder="0" disabled /></p>
+        <div class="pointPlusMinusBtn">
+          <div class="pointMinusBtn">-</div>
+          <div class="pointPlusBtn">+</div>
+        </div>
+      </div>
+      <div class="pointLookupBtnArea">
+        <button class="pointLookupBtnLeft">적립</button>
+        <button class="pointLookupBtnRight">사용하기</button>
+      </div>
+    </div>
+    <!-- <script src="./JS/windowOnload.js"></script>
     <script src="./JS/ageNoticeModal.js"></script>
     <script src="./JS/availableTicketPage.js"></script>
     <script src="./JS/movieCommun.js"></script>
@@ -551,6 +602,6 @@
     <script src="./JS/showPageFuncs.js"></script>
     <script src="./JS/storeSelectPage.js"></script>
     <script src="./JS/ticketPublishPage.js"></script>
-    <script src="./JS/unavailableTicketModal.js"></script>
+    <script src="./JS/unavailableTicketModal.js"></script> -->
   </body>
 </html>
