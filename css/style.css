@@ -546,15 +546,23 @@ section.nowMovie .afterBtn {
 
 .seatSelectionWindow .seatSelection .emptySeat {
   background-color: #d6d6d6;
+  cursor: pointer;
+}
+
+.seatSelectionWindow .seatSelection .disabledSeat {
+  background-color: "#343434";
+  cursor: default;
 }
 
 .seatSelectionWindow .seatSelection .SelectedSeat {
   background-color: #f44336;
+  cursor: pointer;
 }
 
 .seatSelectionWindow .seatSelection .BookedSeat {
   position: relative;
   background-color: #343234;
+  cursor: default;
 }
 
 .seatSelectionWindow .seatSelection .BookedSeat::before {

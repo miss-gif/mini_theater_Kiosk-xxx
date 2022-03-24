@@ -2,4 +2,5 @@
 
 window.addEventListener('load',function(){
   showStoreSelectPage();
+
 });

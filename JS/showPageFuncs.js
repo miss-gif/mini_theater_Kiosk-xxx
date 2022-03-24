@@ -113,6 +113,8 @@ function showAgeNoticeModal(){
 }
 // 인원 선택 모달 출력 함수
 function showPersonSelectModal(){
+  resetSeatStatus();
+  document.querySelector("#personSelectModalAlertMessage").innerHTML = "";
   seatSelectPage.style.opacity = '0.6'; // 좌석 선택 화면 흐리게
   ageNoticeModal.style.visibility = "hidden"; // 연령 고지 모달 숨김
   movieSelectPage.style.visibility = "hidden"; // 영화 선택 화면 숨김
@@ -121,18 +123,35 @@ function showPersonSelectModal(){
   numberSelectArrayChild[0].click();
   numberSelectArraySenior[0].click();
   numberSelectArrayDisable[0].click();
-  // 인원 선택 상태 0으로 초기화 //
+  // 좌석 선택 가능 수 초기화
+  ticketCountAdult.innerHTML = "0매";
+  ticketCountChild.innerHTML = "0매";
+  ticketCountSenior.innerHTML = "0매";
+  ticketCountDisable.innerHTML = "0매";
+  document.querySelector("#TicketingPrice").innerHTML = '0원'; 
   personSelectModal.style.visibility = "visible"; // 인원 선택 모달 표시
   seatSelectPage.style.visibility = "visible"; // 좌석 선택 화면 표시
   nowPage = "personSelectModal";
 }
 // 좌석 선택 페이지로 전환하는 함수
 function showSeatSelectPage(){
+  // 인원 선택을 마치면 각 좌석에 클릭했을때 이벤트 부여
+  resetSeatAll();
+  resetSeatStatus();  // 좌석 선택 상태 초기화
+  seatNumber.forEach(function seatClickEvent(v){
+    if(!v.classList.contains("BookedSeat")){
+      v.addEventListener("click",function seatEvent(e){
+        seatStatusChange(e.target);
+        console.log("좌석클릭");
+      });
+    }
+  });
+  seatSelectComplete.style.backgroundColor = "#D6D6D6";
   seatSelectPage.style.opacity = "1"; // 좌석 선택 화면 선명하게
-  resetSeatStatus(); // 좌석 선택 상태 초기화
   personSelectModal.style.visibility = "hidden";  // 인원 선택 모달 숨김
   reserveConfirmPage.style.visibility = "hidden"; // 예매 내역 확인 페이지 숨김
   seatSelectPage.style.visibility = "visible";
+  
   
   nowPage = "seatSelectPage";
   

@@ -4,6 +4,59 @@ let seatSelectComplete = document.querySelector("#paymentBtn");
 let maxSelectableCount = 0; // 최대 선택가능한 좌석수
 let selectedSeatCount = 0;  // 현재 선택한 좌석수
 
+let ticketCountAdult = document.querySelector("#ticketAdultCount"); // 일반 n매
+let ticketCountChild = document.querySelector("#ticketChildCount"); // 청소년 n매
+let ticketCountSenior = document.querySelector("#ticketSeniorCount"); // 노인 n매
+let ticketCountDisable = document.querySelector("#ticketDisableCount"); // 장애인 n매
+
+// 좌석 초기화 함수
+let resetSeatAll = function(){
+  document.querySelector("#seatArea").innerHTML = `
+  <div id="seatRowA" class="matrixGW seatRowA">
+  <div id="seatNumber" class="seatNumber emptySeat"></div>
+  <div id="seatNumber" class="seatNumber emptySeat"></div>
+  <div id="seatNumber" class="seatNumber BookedSeat"></div>
+  <div id="seatNumber" class="seatNumber emptySeat"></div>
+  <div id="seatNumber" class="seatNumber emptySeat"></div>
+  <div id="seatNumber" class="seatNumber emptySeat"></div>
+</div>
+<div id="seatRowB" class="matrixGW seatRowB">
+  <div id="seatNumber" class="seatNumber emptySeat"></div>
+  <div id="seatNumber" class="seatNumber emptySeat"></div>
+  <div id="seatNumber" class="seatNumber emptySeat"></div>
+  <div id="seatNumber" class="seatNumber emptySeat"></div>
+  <div id="seatNumber" class="seatNumber emptySeat"></div>
+  <div id="seatNumber" class="seatNumber emptySeat"></div>
+</div>
+<div id="seatRowC" class="matrixGW seatRowC">
+  <div id="seatNumber" class="seatNumber emptySeat"></div>
+  <div id="seatNumber" class="seatNumber emptySeat"></div>
+  <div id="seatNumber" class="seatNumber emptySeat"></div>
+  <div id="seatNumber" class="seatNumber emptySeat"></div>
+  <div id="seatNumber" class="seatNumber emptySeat"></div>
+  <div id="seatNumber" class="seatNumber emptySeat"></div>
+</div>
+<div id="seatRowD" class="matrixGW seatRowD">
+  <div id="seatNumber" class="seatNumber emptySeat"></div>
+  <div id="seatNumber" class="seatNumber emptySeat"></div>
+  <div id="seatNumber" class="seatNumber emptySeat"></div>
+  <div id="seatNumber" class="seatNumber emptySeat"></div>
+  <div id="seatNumber" class="seatNumber emptySeat"></div>
+  <div id="seatNumber" class="seatNumber emptySeat"></div>
+</div>
+<div id="seatRowE" class="matrixGW seatRowE">
+  <div id="seatNumber" class="seatNumber emptySeat"></div>
+  <div id="seatNumber" class="seatNumber emptySeat"></div>
+  <div id="seatNumber" class="seatNumber emptySeat"></div>
+  <div id="seatNumber" class="seatNumber emptySeat"></div>
+  <div id="seatNumber" class="seatNumber emptySeat"></div>
+  <div id="seatNumber" class="seatNumber emptySeat"></div>
+</div>
+  `;
+  seatNumber = document.querySelectorAll("#seatNumber");
+}
+
+
 // 좌석 선택 상태 초기화 함수
 function resetSeatStatus(){
   selectedSeatCount = 0;
@@ -12,39 +65,49 @@ function resetSeatStatus(){
       v.classList.remove("SelectedSeat");
       v.classList.add("emptySeat");
     }
+    if(v.classList.contains("disabledSeat")){
+      v.classList.remove("disabledSeat");
+      v.classList.add("emptySeat");
+    }
   });
 }
+/**************필요한것*****************
+좌석 버튼 클릭했을때 : empty <-> selected ,  selectedSeatCount+-
+selectedSeatCount == maxSelectableCount -> emptySeat 비활성화
+selectedSeatCount < maxSelectableCount -> emptySeat 활성화
+***************************************/
 
-// 좌석
-seatNumber.forEach(function (v, i, a) {
-  // 각 좌석마다 버튼 대응
-  a[i].addEventListener("click", function (e) {
-    // 선택한 좌석이 예약된 자리인경우
-    if(e.target.classList.contains("BookedSeat")){
-      alert("이미 예약되어있는 자리입니다.");
-    }else{
-      // 예약안됐고 선택된 시트인경우 비선택으로 바꾸기
-      if(e.target.classList.contains("SelectedSeat")){
-      e.target.classList.remove("SelectedSeat");
-      e.target.classList.add("emptySeat")
-      selectedSeatCount--;
-      // 예약안됐고 선택안된 시트인경우 선택으로 바꾸기
-      }else{
-        e.target.classList.remove("emptySeat");
-        e.target.classList.add("SelectedSeat");
-        selectedSeatCount++;
+// 좌석 선택상태와 선택된 좌석 수 컨트롤하는 함수
+let seatStatusChange = function(targetSeat){
+  if(targetSeat.classList.contains("emptySeat") && maxSelectableCount > selectedSeatCount){
+    targetSeat.classList.remove("emptySeat");
+    targetSeat.classList.add("SelectedSeat");
+    selectedSeatCount++;
+  } else if(targetSeat.classList.contains("SelectedSeat")){
+    targetSeat.classList.remove("SelectedSeat");
+    targetSeat.classList.add("emptySeat");
+    selectedSeatCount--;
+  }
+  // 선택한 인원 수 만큼 사람을 선택한 경우
+  if(maxSelectableCount == selectedSeatCount){
+    seatSelectComplete.style.backgroundColor = "var(--textRed)";
+    seatNumber.forEach(function(v){
+      if(v.classList.contains("emptySeat")){
+        v.classList.remove("emptySeat");
+        v.classList.add("disabledSeat");
       }
-    }
-    // 선택을 마쳤을때 선택한 좌석수가 최대 선택 좌석수보다 많은경우
-    if(maxSelectableCount < selectedSeatCount){
-      e.target.classList.remove("SelectedSeat");
-      e.target.classList.add("emptySeat");
-      selectedSeatCount--;
-      console.log(selectedSeatCount);
-      alert("선택 가능한 좌석 수 초과");
-    }
-  });
-});
+    });
+  // 선택한 인원 수 만큼 사람을 선택하지 않은 경우
+  } else {
+    seatNumber.forEach(function(v){
+      if(v.classList.contains("disabledSeat")){
+        v.classList.remove("disabledSeat");
+        v.classList.add("emptySeat");
+      }
+    });
+  }
+}
+
 
 // 좌석 선택 완료시
 seatSelectComplete.addEventListener('click',function(){
@@ -63,7 +126,6 @@ seatSelectComplete.addEventListener('click',function(){
     if(countDisable){ document.querySelector('#paymentContentInfoNumber').innerHTML += `<p>장애인 ${countDisable}매</p>`; }
     showReserveConfirmPage();
   } else { // 선택한 인원수와 맞지 않게 좌석을 선택한 경우
-    alert("인원수에 맞게 좌석을 선택해주세요");
+    // 아무일도 일어나지 않음
   }
-  
-})
+});

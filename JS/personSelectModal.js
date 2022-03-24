@@ -88,24 +88,20 @@ personSelectCompleteButton.addEventListener('click',function(){
   // 7매 이하로 클릭했을때
   console.log("인원 선택 완료 클릭");
   // 7매 이하로 클릭했을때
-  if(movieTotalPeopleCount <= 7){
+  if(movieTotalPeopleCount <= 7 && movieTotalPeopleCount != 0){
     // 좌석 선택상태 초기화
-    seatNumber.forEach(function (v, i, a) {
-      if(a[i].classList.contains("SelectedSeat")){
-        a[i].classList.remove("SelectedSeat");
-        a[i].classList.add("emptySeat");
-      } 
-    });
+    ticketCountAdult.innerHTML = countAdult + "매";
+    ticketCountChild.innerHTML = countChild + "매";
+    ticketCountSenior.innerHTML = countSenior + "매";
+    ticketCountDisable.innerHTML = countDisable + "매";
+    document.querySelector("#TicketingPrice").innerHTML = `${movieTotalPrice} 원`;
     maxSelectableCount = movieTotalPeopleCount;
     showSeatSelectPage(); // 좌석 선택 화면으로 이동
-  } else {
-    alert("잘못된 인원수 설정");
-    showPersonSelectModal();
+  } else if (movieTotalPeopleCount > 7) {
+    document.querySelector("#personSelectModalAlertMessage").innerHTML = "<span>최대 7매</span>까지 가능합니다 <span>다시 선택해주세요</span>";
+  } else{
+    document.querySelector("#personSelectModalAlertMessage").innerHTML = "<span>최소 1매</span>이상 선택해야 합니다. <span>다시 선택해주세요</span>";
   }
-  
-  
-  
-  
   console.log(nowPage);
 });
 

@@ -273,60 +273,19 @@
             <div class="ticketingArea">
               <div class="ticketingHistory">
                 <div class="ticketRankA ticketRank">일반</div>
-                <div class="ticketRankANumber ticketNumber">0매</div>
+                <div id="ticketAdultCount" class="ticketRankANumber ticketNumber">0매</div>
                 <div class="ticketRankB ticketRank">청소년</div>
-                <div class="ticketRankBNumber ticketNumber">0매</div>
+                <div id="ticketChildCount" class="ticketRankBNumber ticketNumber">0매</div>
                 <div class="ticketRankC ticketRank">장애인</div>
-                <div class="ticketRankCNumber ticketNumber">0매</div>
+                <div id="ticketDisableCount" class="ticketRankCNumber ticketNumber">0매</div>
                 <div class="ticketRankD ticketRank">경로우대</div>
-                <div class="ticketRankDNumber ticketNumber">0매</div>
+                <div id="ticketSeniorCount" class="ticketRankDNumber ticketNumber">0매</div>
               </div>
-              <div class="TicketingPrice">28,000원</div>
+              <div id="TicketingPrice" class="TicketingPrice"></div>
             </div>
 
             <div id="screenBox" class="screenBox">SCREEN</div>
-            <div id="seatArea" class="seatArea">
-              <div id="seatRowA" class="matrixGW seatRowA">
-                <div id="seatNumber" class="seatNumber emptySeat"></div>
-                <div id="seatNumber" class="seatNumber SelectedSeat"></div>
-                <div id="seatNumber" class="seatNumber BookedSeat"></div>
-                <div id="seatNumber" class="seatNumber emptySeat"></div>
-                <div id="seatNumber" class="seatNumber emptySeat"></div>
-                <div id="seatNumber" class="seatNumber emptySeat"></div>
-              </div>
-              <div id="seatRowB" class="matrixGW seatRowB">
-                <div id="seatNumber" class="seatNumber emptySeat"></div>
-                <div id="seatNumber" class="seatNumber emptySeat"></div>
-                <div id="seatNumber" class="seatNumber emptySeat"></div>
-                <div id="seatNumber" class="seatNumber emptySeat"></div>
-                <div id="seatNumber" class="seatNumber emptySeat"></div>
-                <div id="seatNumber" class="seatNumber emptySeat"></div>
-              </div>
-              <div id="seatRowC" class="matrixGW seatRowC">
-                <div id="seatNumber" class="seatNumber emptySeat"></div>
-                <div id="seatNumber" class="seatNumber emptySeat"></div>
-                <div id="seatNumber" class="seatNumber emptySeat"></div>
-                <div id="seatNumber" class="seatNumber emptySeat"></div>
-                <div id="seatNumber" class="seatNumber emptySeat"></div>
-                <div id="seatNumber" class="seatNumber emptySeat"></div>
-              </div>
-              <div id="seatRowD" class="matrixGW seatRowD">
-                <div id="seatNumber" class="seatNumber emptySeat"></div>
-                <div id="seatNumber" class="seatNumber emptySeat"></div>
-                <div id="seatNumber" class="seatNumber emptySeat"></div>
-                <div id="seatNumber" class="seatNumber emptySeat"></div>
-                <div id="seatNumber" class="seatNumber emptySeat"></div>
-                <div id="seatNumber" class="seatNumber emptySeat"></div>
-              </div>
-              <div id="seatRowE" class="matrixGW seatRowE">
-                <div id="seatNumber" class="seatNumber emptySeat"></div>
-                <div id="seatNumber" class="seatNumber emptySeat"></div>
-                <div id="seatNumber" class="seatNumber emptySeat"></div>
-                <div id="seatNumber" class="seatNumber emptySeat"></div>
-                <div id="seatNumber" class="seatNumber emptySeat"></div>
-                <div id="seatNumber" class="seatNumber emptySeat"></div>
-              </div>
-            </div>
+            <div id="seatArea" class="seatArea"></div>
             <div id="paymentBtn" class="paymentBtn">결제하기</div>
           </section>
         </div>
@@ -553,7 +512,7 @@
           <div id="seniorPersonNumber" class="defaultPersonNumber">7</div>
         </div>
       </div>
-      <p><span>최대 7매</span>까지 가능합니다 <span>다시 선택해주세요</span></p>
+      <p id="personSelectModalAlertMessage"><span>최대 7매</span>까지 가능합니다 <span>다시 선택해주세요</span></p>
       <div id="seeNumberSelectionBtnArea" class="seeNumberSelectionBtnArea">
         <button id="personSelectCompleteButton" class="seePersonSelectionBtn">완료</button>
         <button id="personSelectCancelButton" class="seePersonSelectionBtn">취소</button>
