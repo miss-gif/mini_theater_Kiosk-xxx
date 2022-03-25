@@ -1,6 +1,6 @@
 // 인원수 선택 모달창
 let personSelectCompleteButton = document.querySelector("#personSelectCompleteButton");  // 인원선택완료버튼
-let personSelectCancelButton = document.querySelector("#personSelectCancelButton"); // 인원선택취소버튼
+//let personSelectCancelButton = document.querySelector("#personSelectCancelButton"); // 인원선택취소버튼
 let numberSelectArrayAdult = document.querySelectorAll("#adultPersonNumber");  // 성인 0-7 버튼
 let numberSelectArrayChild = document.querySelectorAll("#childPersonNumber"); // 어린이 0-7 버튼
 let numberSelectArraySenior = document.querySelectorAll("#seniorPersonNumber");  // 노인 0-7 버튼
@@ -105,9 +105,9 @@ personSelectCompleteButton.addEventListener('click',function(){
   console.log(nowPage);
 });
 
-personSelectCancelButton.addEventListener('click', function(){
+/*personSelectCancelButton.addEventListener('click', function(){
   console.log("인원 선택 취소");
   showMovieSelectPage();  // 영화 선택 화면으로 이동
   console.log(nowPage);
-});
+});*/
 

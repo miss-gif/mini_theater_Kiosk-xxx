@@ -1,6 +1,6 @@
 // 좌석 선택 페이지를 제어하는 스크립트
 let seatNumber = document.querySelectorAll("#seatNumber"); // 좌석
-let seatSelectComplete = document.querySelector("#paymentBtn");
+let seatSelectComplete = document.querySelector("#seatSelectCompleteButton"); // 좌석 선택 완료 버튼
 let maxSelectableCount = 0; // 최대 선택가능한 좌석수
 let selectedSeatCount = 0;  // 현재 선택한 좌석수
 
@@ -114,7 +114,9 @@ seatSelectComplete.addEventListener('click',function(){
   // 인원 선택한 수에 맞게 좌석을 선택한경우
   if(maxSelectableCount == selectedSeatCount){
     let paymentContent = document.querySelector('#paymentContent');
-    document.querySelector('#paymentPrice').innerHTML = movieTotalPrice + "원";
+    document.querySelector('#totalTicketPrice').innerHTML = movieTotalPrice + "원";
+    document.querySelector('#discountTicketPrice').innerHTML = '원';
+    document.querySelector('#finallyTicketPrice').innerHTML = "원";
     paymentContent.querySelector('img').src = selectedMovieImageUrl;
     paymentContent.querySelector('H3').innerHTML = selectedMovieName;
     paymentContent.querySelectorAll('P')[0].innerHTML = `CGV 안산 ${selectedMoviePlace}`;

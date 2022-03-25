@@ -285,7 +285,7 @@
 
             <div id="screenBox" class="screenBox">S C R E E N</div>
             <div id="seatArea" class="seatArea"></div>
-            <div id="paymentBtn" class="paymentBtn">선택완료</div>
+            <div id="seatSelectCompleteButton" class="paymentBtn">선택완료</div>
           </section>
         </div>
       </main>
@@ -366,13 +366,13 @@
             </div>
           </div>
           <div class="paymentContentBottom">
-            <p>총 주문 금액<span>38,000원</span></p>
-            <p>할인 금액<span>0원</span></p>
-            <p>총 주문 금액<span>33,000원</span></p>
+            <p>총 주문 금액<span id="totalTicketPrice">38,000원</span></p>
+            <p>할인 금액<span id="discountTicketPrice">0원</span></p>
+            <p>최종 결제 금액<span id="finallyTicketPrice">33,000원</span></p>
           </div>
           <div class="paymentBtnArea">
-            <button id="paymentBtn" class="paymentBtnPoint">포인트 결제</button>
-            <button id="paymentBtn" class="paymentBtn">바로 결제</button>
+            <button id="ticketPointPaymentButton" class="paymentBtnPoint">포인트 결제</button>
+            <button id="ticketNormalPaymentButton" class="paymentBtn">바로 결제</button>
           </div>
         </section>
       </main>
