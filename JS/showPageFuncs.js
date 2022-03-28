@@ -2,7 +2,6 @@
 let nowPage = "storeSelectPage";
 
 let storeSelectPage = document.querySelector("#storeSelectPage");
-let ticketPublishPage = document.querySelector("#ticketPublishPage");
 let movieSelectPage = document.querySelector("#currentScreeningsWindow");
 let ageNoticeModal = document.querySelector("#ageLimitGuidanceWindow");
 let personSelectModal = document.querySelector("#seeNumberSelectionWindow");
@@ -15,14 +14,9 @@ let unavailableTicketModal = document.querySelector("#ticketLookupFailureWindow"
 // 현재 페이지를 전달받아 이 페이지의 이전페이지로 전환하는 함수
 function pageChangeToBack(whereIsNowPage){
   switch(whereIsNowPage){
-    case "ticketPublishPage" : {
-      // 티켓 발행 화면에서 뒤로가기
-      showStoreSelectPage();
-      break;
-    }
     case "movieSelectPage" :{
       // 영화 선택 화면에서 뒤로가기
-      showTicketPublishPage();
+      showStoreSelectPage();
       break;
     }
     case "ageNoticeModal" :{
@@ -47,7 +41,7 @@ function pageChangeToBack(whereIsNowPage){
     }
     case "reservedTicketSearchPage" : {
       // 예매되어있는 티켓 검색 화면
-      showTicketPublishPage();
+      showStoreSelectPage();
       break;
     }
     case "availableTicketPage" : {
@@ -66,7 +60,6 @@ function pageChangeToBack(whereIsNowPage){
 // 모든 화면 숨기는 함수
 function hideAllPages(){
   storeSelectPage.style.visibility = "hidden";
-  ticketPublishPage.style.visibility = "hidden";
   movieSelectPage.style.visibility = "hidden";
   ageNoticeModal.style.visibility = "hidden";
   personSelectModal.style.visibility = "hidden";
@@ -85,19 +78,16 @@ function showStoreSelectPage(){
 // 매점 프로세스로 전환하는 함수
 function showCafeteriaStorePage(){
 }
-// 티켓 발행 방식 선택 페이지로 전환하는 함수
+// 티켓 발행 방식 선택 페이지로 전환하는 함수 ( 폐ㅒ기 )
 function showTicketPublishPage(){
   reservedTicketSearchPage.style.visibility = "hidden";
-  storeSelectPage.style.visibility = "hidden";  // 티켓매점선택화면 숨김
-  movieSelectPage.style.visibility = "hidden";  // 영화선택화면 숨김
-  ticketPublishPage.style.visibility = "visible"; // 티켓 발행 방식 선택 화면 표시
-  nowPage = "ticketPublishPage";
+  storeSelectPage.style.visibility = "hidden";  // 메인 화면 숨김
 }
 // 영화 상영표 화면으로 전환하는 함수
 function showMovieSelectPage(){
   movieSelectPage.style.opacity = '1'; // 영화 선택 화면 뚜렷하게
   hideAllPages();
-  ticketPublishPage.style.visibility = "hidden";  // 티켓 발행 방식 선택 화면 숨김
+  storeSelectPage.style.visibility = "hidden";  // 메인 화면 숨김
   ageNoticeModal.style.visibility = "hidden"; // 연령 고지 모달 숨김
   movieSelectPage.style.visibility = "visible"; // 영화 선택 화면 표시
   transitionChangeHalfSeceond(className); // 영화상영표 트랜지션 0.5s설정
@@ -166,7 +156,7 @@ function showReserveConfirmPage(){
 // 기존 예매된 티켓 검색하는 화면으로 전환
 function showReservedTicketSearchPage(){
   ticketNumberPrintArea.value = ""; // 검색 인풋란 초기화
-  ticketPublishPage.style.visibility = "hidden"; // 티켓 발행 방식 선택 화면 숨김
+  storeSelectPage.style.visibility = "hidden"; // 메인 화면 숨김
   reservedTicketSearchPage.style.visibility = "visible"; // 예매된 티켓 검색 화면 표시
   availableTicketPage.style.visibility = "hidden"; // 예매된 영화 정보 화면 숨김
   unavailableTicketModal.style.visibility = "hidden"; // 유효하지 않은 티켓 모달 숨김

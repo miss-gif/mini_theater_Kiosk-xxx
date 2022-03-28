@@ -13,44 +13,41 @@
     <!-- 리셋 CSS -->
     <link rel="stylesheet" href="./CSS/reset.css" />
     <!-- CSS -->
+    <link rel="stylesheet" href="./kioskmain.css" />
     <link rel="stylesheet" href="./CSS/style.css" />
     <link rel="stylesheet" href="./CSS/index.css" />
   </head>
 
   <body>
-    <!-- (임시) storeSelectPage -->
-    <div id="storeSelectPage" class="storeSelectPage">
-      <!--전체상자-->
-      <div class="box">
-        <!--cgv로고와 이미지 배경-->
-        <header>
-          <img class="logo" id="logoBackground" src="image/logobackground.png" alt="cgv로고 배경" />
-          <img class="logo" id="logoMain" src="image/logoRed.png" alt="cgv로고" />
-        </header>
-        <!--티켓과 매점 버튼-->
-        <button type="button" class="orderButton" id="ticketPublishButton">
-          <a href="#">
-            <img src="image/ticket.png" alt="티켓" />
-            <p>티켓</p>
-          </a>
-        </button>
-        <button type="button" class="orderButton" id="cafeteriaStoreButton">
-          <a href="#">
-            <img src="image/popcorn.png" alt="팝콘" />
-            <p>매점</p>
-          </a>
-        </button>
-        <!--광고-->
-        <footer>
-          <img src="image/01.png" alt="광고" />
-        </footer>
-      </div>
+    <!-- 새로 추가한 메인 화면 -->
+    <div id="storeSelectPage" class="mainWrap">
+      <header class="headerLogo">
+        <img src="./img/cgvback.png" alt="" class="logoBackground" />
+        <img src="./img/logo.png" alt="" class="mainLogo" />
+      </header>
+      <section class="selectionBtn">
+        <article id="newTicketPurchase" class="selectTicket">
+          <img src="./img/ticket.png" alt="" class="ticketImg" />
+          <p>티켓구매</p>
+        </article>
+        <article id="reservedTicketPrint" class="selectPrint">
+          <img src="./img/printer.png" alt="" class="printImg" />
+          <p>예매티켓출력</p>
+        </article>
+        <a href="./CGV/kiosk.html">
+          <article class="selectSnack">
+            <img src="./img/popcorn.png" alt="" class="SnackImg" />
+            <p>매점구매</p>
+          </article>
+        </a>
+      </section>
+      <section class="mainWrapFooter">
+        <img src="./img/03.png" alt="" class="" />
+      </section>
     </div>
-    <!-- (임시) ticketPublishPage-->
-    <div id="ticketPublishPage" class="ticketPublishPage">
-      <button id="newTicketPurchase" class="newTicketPurchase">티켓구매</button>
-      <button id="reservedTicketPrint" class="reservedTicketPrint">예매티켓<br />출력</button>
-    </div>
+    <!-- 새로 추가한 메인 화면 종료 -->
+
+    
     <!-- 현재 상영표 -->
     <div id="currentScreeningsWindow" class="currentScreenings">
       <header>
@@ -534,7 +531,6 @@
     <script src="./JS/seatSelectPage.js"></script>
     <script src="./JS/showPageFuncs.js"></script>
     <script src="./JS/storeSelectPage.js"></script>
-    <script src="./JS/ticketPublishPage.js"></script>
     <script src="./JS/unavailableTicketModal.js"></script>
   </body>
 </html>

@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+		<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css" />
+		<link rel="stylesheet" type="text/css" href="path/to/xeicon/xeicon.min.css" />
+		<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+		<link rel="stylesheet" href="./CSS/kiosk.css" />
+		<title>CGV KIOSK</title>
+	</head>
+	<body>
+		<!--키오스크 박스-->
+		<section class="mainBox">
+			<!--헤더 (홈/로고)-->
+			<header class="mainHeader">
+				<!--
+				<div class="homeIcon">
+					<a href="../index.html"><span class="returnTohome"></span></a>
+					<span class="returnToprev"></span>
+				</div>
+				-->
+				<div class="headerLogo">
+					<img class="mainLogo" src="./img/logo.png" alt="logo" />
+				</div>
+			</header>
+			<!--메뉴바-->
+			<nav class="mainMenu">
+				<!--<button><a href="#">콤보</a></button>
+      			<button><a href="#">팝콘</a></button>
+    				<button><a href="#">음료</a></button>
+      			<button><a href="#">스낵</a></button>-->
+				<ul class="menuBar">
+					<li class="menuCombo selectMenu"><p>콤보</p></li>
+					<li class="menuPopcorn selectMenu"><p>팝콘</p></li>
+					<li class="menuBeverage selectMenu"><p>음료</p></li>
+					<li class="menuSnack selectMenu"><p>스낵</p></li>
+				</ul>
+			</nav>
+
+			<!--메뉴목록-->
+			<section class="menuArea">
+				<!--콤보메뉴-->
+				<section class="comboMenu menuList">
+					<ul class="comboBtn">
+						<li class="comboList cgvCombo">
+							<img src="./img/snackbar/combo1.png" alt="cgvcombo" class="comboImg1 storeImg cgvcomboImg" />
+							<p>CGV콤보</p>
+							<span>9,000</span><span>원</span>
+						</li>
+						<li class="comboList largeCombo">
+							<img src="./img/snackbar/combo2.png" alt="largecombo" class="comboImg2 storeImg largeComboImg" />
+							<p>라지콤보</p>
+							<span>14,000</span><span>원</span>
+						</li>
+						<li class="comboList doubleCombo">
+							<img src="./img/snackbar/combo3.png" alt="doublecombo" class="comboImg3 storeImg doubleComboImg" />
+							<p>더블콤보</p>
+							<span>12,000</span><span>원</span>
+						</li>
+						<li class="comboList smallCombo">
+							<img src="./img/snackbar/combo4.png" alt="smallcombo" class="comboImg4 storeImg smallComboImg" />
+							<p>스몰세트</p>
+							<span>6,500</span><span>원</span>
+						</li>
+					</ul>
+				</section>
+				<!--팝콘메뉴-->
+				<section class="popcornMenu menuList">
+					<ul class="popcornBtn">
+						<li class="popconList storeList">
+							<img src="./img/snackbar/popcorn1.png" alt="originalpopcorn" class="popcornImg1 storeImg notComboMenu" />
+							<p>고소팝콘 (L)</p>
+							<span>5,000</span><span>원</span>
+						</li>
+						<li class="popconList storeList">
+							<img src="./img/snackbar/popcorn1M.png" alt="sweetpopcorn" class="popcornImg2 storeImg notComboMenu" />
+							<p>고소팝콘 (M)</p>
+							<span>6,000</span><span>원</span>
+						</li>
+						<li class="popconList storeList">
+							<img src="./img/snackbar/popcorn2.png" alt="halfpopcorn" class="popcornImg5 storeImg notComboMenu" />
+							<p>달콤팝콘 (L)</p>
+							<span>6,000</span><span>원</span>
+						</li>
+						<li class="popconList storeList">
+							<img src="./img/snackbar/popcorn2M.png" alt="halfpopcorn" class="popcornImg5 storeImg notComboMenu" />
+							<p>달콤팝콘 (M)</p>
+							<span>6,000</span><span>원</span>
+						</li>
+					</ul>
+				</section>
+				<!--음료메뉴-->
+				<section class="beverageMenu menuList">
+					<ul class="beverageBtn">
+						<li class="beverageList storeList">
+							<img src="./img/snackbar/cokeL.png" alt="colaL" class="beverageImg1 storeImg notComboMenu" />
+							<p>콜라 (L)</p>
+							<span>3,000</span><span>원</span>
+						</li>
+						<li class="beverageList storeList">
+							<img src="./img/snackbar/cokeM.png" alt="colaM" class="beverageImg2 storeImg notComboMenu" />
+							<p>콜라 (M)</p>
+							<span>2,500</span><span>원</span>
+						</li>
+						<li class="beverageList storeList">
+							<img src="./img/snackbar/ciderL.png" alt="softDrinkL" class="beverageImg3 storeImg notComboMenu" />
+							<p>사이다 (L)</p>
+							<span>3,000</span><span>원</span>
+						</li>
+						<li class="beverageList storeList">
+							<img src="./img/snackbar/ciderM.png" alt="softDringkM" class="beverageImg4 storeImg notComboMenu" />
+							<p>사이다 (M)</p>
+							<span>2,500</span><span>원</span>
+						</li>
+					</ul>
+				</section>
+				<!--스낵메뉴-->
+				<section class="snackMenu menuList">
+					<ul class="snackBtn">
+						<li class="snackList storeList">
+							<img src="./img/snackbar/snack1.png" alt="squid" class="snackImg1 storeImg notComboMenu" />
+							<p>오징어</p>
+							<span>3,500</span><span>원</span>
+						</li>
+						<li class="snackList storeList">
+							<img src="./img/snackbar/snack2.png" alt="nachos" class="snackImg2 storeImg notComboMenu" />
+							<p>나쵸</p>
+							<span>5,000</span><span>원</span>
+						</li>
+						<li class="snackList storeList">
+							<img src="./img/snackbar/snack3.png" alt="hotdog" class="snackImg3 storeImg notComboMenu" />
+							<p>핫도그</p>
+							<span>4,500</span><span>원</span>
+						</li>
+						<li class="snackList storeList">
+							<img src="./img/snackbar/snack4.png" alt="chestnut" class="snackImg4 storeImg notComboMenu" />
+							<p>맛밤</p>
+							<span>3,500</span><span>원</span>
+						</li>
+					</ul>
+				</section>
+			</section>
+			<!--오더/결제-->
+			<section class="orderArea">
+				<section class="orderBox">
+					<ul class="orderList"></ul>
+					<div class="totalPrice">
+						총 금액
+						<p class="totalAmount">0</p>
+						<span>원</span>
+					</div>
+				</section>
+
+				<section class="orderPayment">
+					<div class="paymentBtn"><p>결제하기</p></div>
+				</section>
+			</section>
+
+			<!-- 콤보 메뉴 모달 -->
+			<article class="comboModal">
+				<!-- cgv 콤보 --->
+				<section class="choiceArea">
+					<button class="closeButton"></button>
+					<div class="modalCloseBtn"></div>
+					<ul class="comboPopcornchoice selectCombo">
+						<h1 class="selectInfomation">팝콘을 선택해주세요 (택1)</h1>
+						<li>
+							<p>고소 (L)</p>
+							<img src="./img/snackbar/popcorn1.png" alt="" class="" />
+							<span>0</span>
+							<button class="minusCount"></button>
+							<input
+								class="countingNumber oneSelect"
+								type="number"
+								min="0"
+								max="1"
+								placeholder="0"
+								value="0"
+								readonly
+							/>
+							<button class="plusCount oneSelectPlus"></button>
+						</li>
+						<li>
+							<p>달콤 (L)</p>
+							<img src="./img/snackbar/popcorn2.png" alt="" class="" />
+							<span>500</span>
+							<button class="minusCount"></button>
+							<input
+								class="countingNumber oneSelect"
+								type="number"
+								min="0"
+								max="1"
+								placeholder="0"
+								value="0"
+								readonly
+							/>
+							<button class="plusCount oneSelectPlus"></button>
+						</li>
+						<li>
+							<p>반반 (L)</p>
+							<img src="./img/snackbar/popcorn5.png" alt="" class="" />
+							<span>500</span>
+							<button class="minusCount"></button>
+							<input
+								class="countingNumber oneSelect"
+								type="number"
+								min="0"
+								max="1"
+								placeholder="0"
+								value="0"
+								readonly
+							/>
+							<button class="plusCount oneSelectPlus"></button>
+						</li>
+					</ul>
+
+					<!--- 라지 콤보 모달 --->
+					<ul class="largeCombochoice selectCombo">
+						<h1 class="selectInfomation">팝콘을 선택해주세요 (택2)</h1>
+						<li>
+							<p>고소 (L)</p>
+							<img src="./img/snackbar/popcorn1.png" alt="" class="" />
+							<span>0</span>
+							<button class="minusCount"></button>
+							<input
+								class="countingNumber twoSelect"
+								type="number"
+								min="0"
+								max="2"
+								placeholder="0"
+								value="0"
+								readonly
+							/>
+							<button class="plusCount twoSelectPlus"></button>
+						</li>
+						<li>
+							<p>달콤 (L)</p>
+							<img src="./img/snackbar/popcorn2.png" alt="" class="" />
+							<span>500</span>
+							<button class="minusCount"></button>
+							<input
+								class="countingNumber twoSelect"
+								type="number"
+								min="0"
+								max="2"
+								placeholder="0"
+								value="0"
+								readonly
+							/>
+							<button class="plusCount twoSelectPlus"></button>
+						</li>
+						<li>
+							<p>반반 (L)</p>
+							<img src="./img/snackbar/popcorn5.png" alt="" class="" />
+							<span>500</span>
+							<button class="minusCount"></button>
+							<input
+								class="countingNumber twoSelect"
+								type="number"
+								min="0"
+								max="2"
+								placeholder="0"
+								value="0"
+								readonly
+							/>
+							<button class="plusCount"></button>
+							<button class="countingButton twoSelectPlus"></button>
+						</li>
+					</ul>
+
+					<!--- 더블콤보 모달 --->
+					<ul class="doubleCombochoice selectCombo">
+						<h1 class="selectInfomation">팝콘을 선택해주세요 (택2)</h1>
+						<li>
+							<p>고소 (M)</p>
+							<img src="./img/snackbar/popcorn1M.png" alt="" class="" />
+							<span>0</span>
+							<button class="minusCount"></button>
+							<input
+								class="countingNumber twoSelect"
+								type="number"
+								min="0"
+								max="2"
+								placeholder="0"
+								value="0"
+								readonly
+							/>
+							<button class="plusCount twoSelectPlus"></button>
+						</li>
+						<li>
+							<p>달콤 (M)</p>
+							<img src="./img/snackbar/popcorn2M.png" alt="" class="" />
+							<span>500</span>
+							<button class="minusCount"></button>
+							<input
+								class="countingNumber twoSelect"
+								type="number"
+								min="0"
+								max="2"
+								placeholder="0"
+								value="0"
+								readonly
+							/>
+							<button class="plusCount twoSelectPlus"></button>
+						</li>
+					</ul>
+
+					<!--- 스몰 세트 모달 --->
+					<ul class="smallSetchoice selectCombo">
+						<h1 class="selectInfomation">팝콘을 선택해주세요 (택1)</h1>
+						<li>
+							<p>고소 (M)</p>
+							<img src="./img/snackbar/popcorn1M.png" alt="" class="" />
+							<span>0</span>
+							<button class="minusCount"></button>
+							<input
+								class="countingNumber oneSelect"
+								type="number"
+								min="0"
+								max="1"
+								placeholder="0"
+								value="0"
+								readonly
+							/>
+							<button class="plusCount oneSelectPlus"></button>
+						</li>
+						<li>
+							<p>달콤 (M)</p>
+							<img src="./img/snackbar/popcorn2M.png" alt="" class="" />
+							<span>500</span>
+							<button class="minusCount"></button>
+							<input
+								class="countingNumber oneSelect"
+								type="number"
+								min="0"
+								max="1"
+								placeholder="0"
+								value="0"
+								readonly
+							/>
+							<button class="plusCount oneSelectPlus"></button>
+						</li>
+					</ul>
+
+					<!--- 세트메뉴시 음료 선택 --->
+
+					<ul class="drinkChoice">
+						<h1 class="selectInfomationDrink"></h1>
+						<li>
+							<p>콜라 (M)</p>
+							<img src="./img/snackbar/cokeM.png" alt="" class="" />
+							<span>0</span>
+							<button class="minusCountDrink"></button>
+							<input class="drinkSelect" type="number" min="0" max="2" placeholder="0" value="0" readonly />
+							<button class="plusCountDrink"></button>
+						</li>
+						<li>
+							<p>사이다 (M)</p>
+							<img src="./img/snackbar/ciderM.png" alt="" class="" />
+							<span>0</span>
+							<button class="minusCountDrink"></button>
+							<input class="drinkSelect" type="number" min="0" max="2" placeholder="0" value="0" readonly />
+							<button class="plusCountDrink"></button>
+						</li>
+					</ul>
+					<p class="checkQty"><span>수량</span>을 확인해주세요</p>
+					<p class="checkQtyDrink"><span>수량</span>을 확인해주세요</p>
+					<section class="modalBtn">
+						<button class="modalClose">닫기</button>
+						<button class="modalNext">다음</button>
+					</section>
+				</section>
+			</article>
+			<!-- 주문내역 확인창 -->
+			<section class="checkOrder">
+				<div class="basketHeader">
+					<a href="../index.html"><span class="returnTohome"></span></a>
+					<img class="mainLogo" src="./img/logo.png" alt="logo" />
+					<span class="returnToprev"></span>
+				</div>
+				<div class="titleLine">
+					<h2>주문 내역을 확인하세요</h2>
+				</div>
+				<div class="orderCheckbox">
+				</div>
+				<div class="cutOff"></div>
+				<section>
+					<p>
+						주문 금액<br />할인 금액<br />
+						결제 금액<br />
+						<span class="lastPayMent"></span>
+						<span>0원</span>
+						<span class="discountPayMent"></span>
+					</p>
+				</section>
+				<section class="paymentSector">
+					<button class="pointProcess">포인트 결제</button>
+					<button class="directProcess">바로 결제</button>
+				</section>
+			</section>
+		</section>
+
+		<script src="./JS/kiosk.js"></script>
+	</body>
+</html>

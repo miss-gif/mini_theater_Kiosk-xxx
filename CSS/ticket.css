@@ -1,5 +1,5 @@
 @font-face {
-  font-family: 'GongGothicLight';
+  font-family: "GongGothicLight";
   src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10@1.0/GongGothicLight.woff") format("woff");
   font-weight: normal;
   font-style: normal;
@@ -9,7 +9,7 @@
   margin: 0;
   padding: 0;
   font-size: 10px;
-  font-family: 'GongGothicLight';
+  font-family: "GongGothicLight";
   list-style-type: none;
   text-decoration: none;
   color: #363636;

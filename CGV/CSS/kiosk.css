@@ -1,0 +1,1051 @@
+@charset "UTF-8";
+@font-face {
+  font-family: 'GongGothicLight';
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10@1.0/GongGothicLight.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  font-size: 10px;
+  font-family: 'GongGothicLight';
+  list-style-type: none;
+  text-decoration: none;
+  color: #363636;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  background-color: #f1f1f1;
+}
+
+.hidden {
+  z-index: -100;
+  visibility: hidden;
+}
+
+.mainBox {
+  width: 70rem;
+  height: 90rem;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #eeeeee;
+  position: relative;
+  overflow: hidden;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  /*.orderArea {
+    .orderBox {
+      display: inline-block;
+      float: left;
+      background-color: #ffffff;
+      width: 42rem;
+      height: 17rem;
+      ul {
+        padding: 2rem;
+        li {
+          .orderName {
+            display: inline-block;
+            font-size: 1.6rem;
+          }
+          .orderCount {
+            margin-left: 6rem;
+            font-size: 1.6rem;
+          }
+          .orderCount::before {
+            content: "\e91f";
+            font-family: "xeicon";
+          }
+          .orderCount::after {
+            content: "\e918";
+            font-family: "xeicon";
+          }
+          .orderPrice {
+            display: inline-block;
+            margin-left: 6rem;
+            font-size: 1.6rem;
+            span {
+              font-size: 1.6rem;
+            }
+          }
+            .orderPrice::after {
+            margin-left: 3rem;
+            content: "\e926";
+            font-family: "xeicon";
+            }
+        }
+      }
+    }
+    .orderPayment {
+      display: inline-block;
+      .paymentBtn {
+        cursor: pointer;
+        width: 28rem;
+        height: 17rem;
+        background-color: #ed3124;
+        p {
+          text-align: center;
+          line-height: 16.5rem;
+          font-size: 4rem;
+          color: #ffffff;
+        }
+      }
+    }
+  }*/
+  /* 콤보  클릭 모달*/
+}
+
+.mainBox .mainHeader {
+  height: 9rem;
+}
+
+.mainBox .headerLogo {
+  display: inline-block;
+  -webkit-transform: translate(10rem, 2rem);
+          transform: translate(10rem, 2rem);
+}
+
+.mainBox .mainLogo {
+  width: 10rem;
+  height: 4.5rem;
+}
+
+.mainBox .homeIcon {
+  display: inline-block;
+  -webkit-transform: translate(3rem, 1rem);
+          transform: translate(3rem, 1rem);
+}
+
+.mainBox .mainMenu {
+  height: 9rem;
+}
+
+.mainBox .mainMenu .menuBar {
+  -webkit-transform: translate(-0.3rem, 2rem);
+          transform: translate(-0.3rem, 2rem);
+}
+
+.mainBox .mainMenu .menuBar .menuCombo {
+  background-color: #ed3214;
+  border: 0.3rem solid #ed3214;
+}
+
+.mainBox .mainMenu .menuBar .menuCombo p {
+  color: white;
+}
+
+.mainBox .mainMenu .menuBar li {
+  display: inline-block;
+  text-align: center;
+  margin-left: 1.5rem;
+  width: 15rem;
+  height: 4.5rem;
+  border-radius: 1rem;
+  border: 0.3rem solid #363636;
+  background-color: #ffffff;
+}
+
+.mainBox .mainMenu .menuBar li p {
+  font-size: 2.4rem;
+  line-height: 4.8rem;
+  color: #363636;
+  cursor: pointer;
+}
+
+.mainBox .menuArea {
+  position: relative;
+  width: 70rem;
+  height: 55rem;
+  overflow: hidden;
+}
+
+.mainBox .menuArea .comboMenu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 70rem;
+  height: 55rem;
+  margin-top: 3rem;
+  padding-left: 8rem;
+}
+
+.mainBox .menuArea .comboMenu .comboBtn li {
+  width: 22.5rem;
+  height: 22.5rem;
+  margin-left: 2.5rem;
+  margin-bottom: 3rem;
+  border-radius: 3rem;
+  cursor: pointer;
+  text-align: center;
+  display: inline-block;
+  background-color: #ffffff;
+  -webkit-box-shadow: 0.5rem 0.5rem 1rem 0rem #c2c2c2;
+          box-shadow: 0.5rem 0.5rem 1rem 0rem #c2c2c2;
+}
+
+.mainBox .menuArea .comboMenu .comboBtn li img {
+  width: 17rem;
+  height: 17rem;
+  margin-left: 0rem;
+}
+
+.mainBox .menuArea .comboMenu .comboBtn li p {
+  font-size: 2rem;
+  line-height: 3rem;
+}
+
+.mainBox .menuArea .comboMenu .comboBtn li span {
+  font-size: 1.3rem;
+}
+
+.mainBox .menuArea .popcornMenu {
+  position: absolute;
+  top: 0;
+  left: 70rem;
+  width: 70rem;
+  height: 55rem;
+  margin-top: 3rem;
+  padding-left: 8rem;
+}
+
+.mainBox .menuArea .popcornMenu .popcornBtn li {
+  width: 22.5rem;
+  height: 22.5rem;
+  margin-left: 3rem;
+  margin-bottom: 3rem;
+  border-radius: 3rem;
+  cursor: pointer;
+  text-align: center;
+  display: inline-block;
+  background-color: #ffffff;
+  -webkit-box-shadow: 0.5rem 0.5rem 1rem 0rem #c2c2c2;
+          box-shadow: 0.5rem 0.5rem 1rem 0rem #c2c2c2;
+}
+
+.mainBox .menuArea .popcornMenu .popcornBtn li img {
+  width: 17rem;
+  height: 17rem;
+  margin-left: 0rem;
+}
+
+.mainBox .menuArea .popcornMenu .popcornBtn li p {
+  font-size: 2rem;
+  line-height: 3rem;
+  text-align: center;
+}
+
+.mainBox .menuArea .popcornMenu .popcornBtn li span {
+  font-size: 1.3rem;
+}
+
+.mainBox .menuArea .beverageMenu {
+  width: 70rem;
+  height: 55rem;
+  padding-top: 3rem;
+  padding-left: 8rem;
+  position: absolute;
+  top: 0;
+  left: 140rem;
+}
+
+.mainBox .menuArea .beverageMenu .beverageBtn li {
+  width: 22.5rem;
+  height: 22.5rem;
+  margin-left: 3rem;
+  margin-bottom: 3rem;
+  border-radius: 3rem;
+  cursor: pointer;
+  text-align: center;
+  display: inline-block;
+  background-color: #ffffff;
+  -webkit-box-shadow: 0.5rem 0.5rem 1rem 0rem #c2c2c2;
+          box-shadow: 0.5rem 0.5rem 1rem 0rem #c2c2c2;
+}
+
+.mainBox .menuArea .beverageMenu .beverageBtn li img {
+  width: 17rem;
+  height: 17rem;
+  margin-left: 0rem;
+}
+
+.mainBox .menuArea .beverageMenu .beverageBtn li p {
+  font-size: 2rem;
+  line-height: 3rem;
+  text-align: center;
+}
+
+.mainBox .menuArea .beverageMenu .beverageBtn li span {
+  font-size: 1.3rem;
+}
+
+.mainBox .menuArea .snackMenu {
+  width: 70rem;
+  height: 55rem;
+  padding-top: 3rem;
+  padding-left: 8rem;
+  position: absolute;
+  top: 0;
+  left: 210rem;
+}
+
+.mainBox .menuArea .snackMenu .snackBtn li {
+  width: 22.5rem;
+  height: 22.5rem;
+  margin-left: 3rem;
+  margin-bottom: 3rem;
+  border-radius: 3rem;
+  cursor: pointer;
+  text-align: center;
+  display: inline-block;
+  background-color: #ffffff;
+  -webkit-box-shadow: 0.5rem 0.5rem 1rem 0rem #c2c2c2;
+          box-shadow: 0.5rem 0.5rem 1rem 0rem #c2c2c2;
+}
+
+.mainBox .menuArea .snackMenu .snackBtn li img {
+  width: 17rem;
+  height: 17rem;
+  margin-left: 0rem;
+}
+
+.mainBox .menuArea .snackMenu .snackBtn li p {
+  font-size: 2rem;
+  line-height: 3rem;
+  text-align: center;
+}
+
+.mainBox .menuArea .snackMenu .snackBtn li span {
+  font-size: 1.3rem;
+}
+
+.mainBox .orderArea {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.mainBox .orderArea .orderBox {
+  display: inline-block;
+  -webkit-box-flex: 7.5;
+      -ms-flex: 7.5;
+          flex: 7.5;
+  overflow-y: auto;
+  background-color: #ffffff;
+  position: relative;
+}
+
+.mainBox .orderArea .orderBox ul {
+  width: 42rem;
+  height: 10rem;
+  overflow-x: hidden;
+  padding-top: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.mainBox .orderArea .orderBox ul .orderMenu {
+  margin: 0 auto;
+  text-align: right;
+  padding-right: 2rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 0.1rem solid rgba(0, 0, 0, 0.3);
+  width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.mainBox .orderArea .orderBox ul .orderMenu > * {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  font-size: 1.2rem;
+}
+
+.mainBox .orderArea .orderBox ul .orderMenu > i {
+  cursor: pointer;
+  font-size: 1.2rem;
+  -webkit-box-flex: 0.1;
+      -ms-flex: 0.1;
+          flex: 0.1;
+}
+
+.mainBox .orderArea .orderBox ul .orderMenu span {
+  padding-left: 2rem;
+  text-align: left;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.mainBox .orderArea .orderBox ul .orderMenu > div {
+  display: inline-block;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  text-align: center;
+}
+
+.mainBox .orderArea .orderBox ul .orderMenu div {
+  display: none;
+}
+
+.mainBox .orderArea .orderBox ul .orderMenu .price {
+  text-align: right;
+}
+
+.mainBox .orderArea .orderBox ul .orderMenu p {
+  -webkit-box-flex: 0.1;
+      -ms-flex: 0.1;
+          flex: 0.1;
+  text-align: center;
+}
+
+.mainBox .orderArea .orderBox .totalPrice {
+  position: absolute;
+  font-size: 2rem;
+  line-height: 2rem;
+  height: 3.8rem;
+  bottom: 0;
+  left: 2rem;
+}
+
+.mainBox .orderArea .orderBox .totalPrice p {
+  position: absolute;
+  font-size: 2rem;
+  top: 0;
+  padding-left: 27rem;
+}
+
+.mainBox .orderArea .orderBox .totalPrice span {
+  position: absolute;
+  left: 35rem;
+  font-size: 2rem;
+}
+
+.mainBox .orderArea .orderPayment {
+  -webkit-box-flex: 2.5;
+      -ms-flex: 2.5;
+          flex: 2.5;
+  display: inline-block;
+}
+
+.mainBox .orderArea .orderPayment .paymentBtn {
+  cursor: pointer;
+  width: 28rem;
+  height: 17rem;
+  background-color: #cf0c00;
+}
+
+.mainBox .orderArea .orderPayment .paymentBtn p {
+  text-align: center;
+  line-height: 16.5rem;
+  font-size: 4rem;
+  color: #ffffff;
+}
+
+.mainBox .comboModal {
+  position: absolute;
+  width: 100%;
+  top: 90rem;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.mainBox .comboModal .choiceArea {
+  height: 77.5rem;
+  background-color: #eee;
+  border-top-left-radius: 5rem;
+  border-top-right-radius: 5rem;
+}
+
+.mainBox .comboModal .choiceArea .closeButton::after {
+  content: '\f00d';
+  font-family: FontAwesome;
+  font-weight: 300;
+  font-size: 3rem;
+  width: 3rem;
+  height: 3rem;
+  position: absolute;
+  left: 90%;
+  top: 3%;
+  z-index: 100;
+  cursor: pointer;
+}
+
+.mainBox .comboModal .choiceArea .comboPopcornchoice,
+.mainBox .comboModal .choiceArea .largeCombochoice {
+  height: 57.5rem;
+}
+
+.mainBox .comboModal .choiceArea .comboPopcornchoice li,
+.mainBox .comboModal .choiceArea .largeCombochoice li {
+  /**
+					width: 19rem;
+					height: 19rem;
+					margin-top: 1.5rem;
+					**/
+  width: 22.5rem;
+  height: 22.5rem;
+  -webkit-transform: translate(8rem, 1rem);
+          transform: translate(8rem, 1rem);
+  margin-top: 1.5rem;
+  margin-left: 3rem;
+  margin-bottom: 1.5rem;
+  border-radius: 3rem;
+  cursor: pointer;
+  text-align: center;
+  display: inline-block;
+  background-color: #ffffff;
+  -webkit-box-shadow: 0.5rem 0.5rem 1rem 0rem #c2c2c2;
+          box-shadow: 0.5rem 0.5rem 1rem 0rem #c2c2c2;
+}
+
+.mainBox .comboModal .choiceArea .comboPopcornchoice li img,
+.mainBox .comboModal .choiceArea .largeCombochoice li img {
+  width: 14rem;
+  height: 14rem;
+}
+
+.mainBox .comboModal .choiceArea .comboPopcornchoice li p,
+.mainBox .comboModal .choiceArea .largeCombochoice li p {
+  margin-top: 2rem;
+  font-size: 1.8rem;
+}
+
+.mainBox .comboModal .choiceArea .comboPopcornchoice li span,
+.mainBox .comboModal .choiceArea .largeCombochoice li span {
+  display: block;
+  font-size: 1.3rem;
+  margin-top: -1.2rem;
+  margin-bottom: 1rem;
+  color: #d94925;
+}
+
+.mainBox .comboModal .choiceArea .modalBtn {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  top: 65rem;
+}
+
+.mainBox .comboModal .choiceArea .modalBtn .modalClose {
+  width: 28rem;
+  height: 12.5rem;
+  font-size: 3rem;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  background-color: #eeeeee;
+}
+
+.mainBox .comboModal .choiceArea .modalBtn .modalNext {
+  width: 42rem;
+  height: 12.5rem;
+  font-size: 3rem;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  color: #ffffff;
+  background-color: #cf0c00;
+}
+
+/** 모달 수량 안내 **/
+.selectInfomation {
+  font-size: 4rem;
+  font-weight: 500;
+  text-align: center;
+  line-height: 5rem;
+  padding-top: 1.5rem;
+}
+
+.selectInfomationDrink {
+  font-size: 4rem;
+  font-weight: 500;
+  text-align: center;
+  line-height: 5rem;
+  padding-top: 1.5rem;
+}
+
+.checkQty {
+  position: absolute;
+  left: 25rem;
+  top: 60rem;
+  line-height: 3rem;
+  text-align: center;
+  font-size: 2.5rem;
+}
+
+.checkQty span {
+  font-size: 2.5rem;
+  color: #ba1a0f;
+}
+
+.checkQtyDrink {
+  visibility: hidden;
+  position: absolute;
+  left: 25rem;
+  top: 60rem;
+  line-height: 3rem;
+  text-align: center;
+  font-size: 2.5rem;
+}
+
+.checkQtyDrink span {
+  font-size: 2.5rem;
+  color: #ba1a0f;
+}
+
+.comboModal {
+  position: absolute;
+  top: 90rem;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.comboModal .choiceArea {
+  height: 77.5rem;
+  background-color: #ffffff;
+  border-top-left-radius: 5rem;
+  border-top-right-radius: 5rem;
+}
+
+.comboModal .choiceArea .drinkChoice {
+  position: absolute;
+  top: 10rem;
+  left: 70rem;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  text-align: center;
+}
+
+.comboModal .choiceArea .drinkChoice h1 {
+  margin-top: -10rem;
+  margin-left: 2rem;
+}
+
+.comboModal .choiceArea .drinkChoice p {
+  margin-top: -10rem;
+}
+
+.comboModal .choiceArea .doubleCombochoice,
+.comboModal .choiceArea .smallSetchoice,
+.comboModal .choiceArea .popcornChoice,
+.comboModal .choiceArea .drinkChoice {
+  height: 57.5rem;
+  position: absolute;
+}
+
+.comboModal .choiceArea .doubleCombochoice li,
+.comboModal .choiceArea .smallSetchoice li,
+.comboModal .choiceArea .popcornChoice li,
+.comboModal .choiceArea .drinkChoice li {
+  width: 27.5rem;
+  height: 27.5rem;
+  margin-top: 0rem;
+  margin-left: 5rem;
+  margin-bottom: 3rem;
+  border-radius: 3rem;
+  -webkit-transform: translate(0, 9rem);
+          transform: translate(0, 9rem);
+  cursor: pointer;
+  text-align: center;
+  display: inline-block;
+  background-color: #fff;
+  -webkit-box-shadow: 0.5rem 0.5rem 1rem 0rem #c2c2c2;
+          box-shadow: 0.5rem 0.5rem 1rem 0rem #c2c2c2;
+}
+
+.comboModal .choiceArea .doubleCombochoice li img,
+.comboModal .choiceArea .smallSetchoice li img,
+.comboModal .choiceArea .popcornChoice li img,
+.comboModal .choiceArea .drinkChoice li img {
+  width: 15.5rem;
+  height: 15.5rem;
+}
+
+.comboModal .choiceArea .doubleCombochoice li p,
+.comboModal .choiceArea .smallSetchoice li p,
+.comboModal .choiceArea .popcornChoice li p,
+.comboModal .choiceArea .drinkChoice li p {
+  margin-top: 2rem;
+  font-size: 1.8rem;
+}
+
+.comboModal .choiceArea .doubleCombochoice li span,
+.comboModal .choiceArea .smallSetchoice li span,
+.comboModal .choiceArea .popcornChoice li span,
+.comboModal .choiceArea .drinkChoice li span {
+  display: block;
+  font-size: 1.3rem;
+  margin-top: -1.2rem;
+  margin-bottom: 1rem;
+  color: #d94925;
+}
+
+.comboModal .choiceArea .doubleCombochoice li span::before,
+.comboModal .choiceArea .smallSetchoice li span::before,
+.comboModal .choiceArea .popcornChoice li span::before,
+.comboModal .choiceArea .drinkChoice li span::before {
+  content: '+';
+}
+
+.comboModal .choiceArea .comboPopcornchoice,
+.comboModal .choiceArea .largeCombochoice {
+  height: 57.5rem;
+  position: absolute;
+}
+
+.comboModal .choiceArea .comboPopcornchoice li,
+.comboModal .choiceArea .largeCombochoice li {
+  width: 22.5rem;
+  height: 22.5rem;
+  margin-top: 1rem;
+  margin-left: 6rem;
+  margin-bottom: 3rem;
+  border-radius: 3rem;
+  -webkit-transform: translate(3rem, -3rem);
+          transform: translate(3rem, -3rem);
+  cursor: pointer;
+  text-align: center;
+  display: inline-block;
+  background-color: #fff;
+  -webkit-box-shadow: 0.5rem 0.5rem 1rem 0rem #c2c2c2;
+          box-shadow: 0.5rem 0.5rem 1rem 0rem #c2c2c2;
+}
+
+.comboModal .choiceArea .comboPopcornchoice li img,
+.comboModal .choiceArea .largeCombochoice li img {
+  width: 12.5rem;
+  height: 12.5rem;
+}
+
+.comboModal .choiceArea .comboPopcornchoice li p,
+.comboModal .choiceArea .largeCombochoice li p {
+  margin-top: 2rem;
+  font-size: 1.8rem;
+}
+
+.comboModal .choiceArea .comboPopcornchoice li span,
+.comboModal .choiceArea .largeCombochoice li span {
+  display: block;
+  font-size: 1.3rem;
+  margin-top: -1.2rem;
+  margin-bottom: 1rem;
+  color: #d94925;
+}
+
+.comboModal .choiceArea .comboPopcornchoice li span::before,
+.comboModal .choiceArea .largeCombochoice li span::before {
+  content: '+';
+}
+
+.returnTohome::before {
+  content: '\e3af';
+  font-family: FontAwesome;
+  font-weight: 300;
+  font-size: 5rem;
+  background-color: transparent;
+  position: absolute;
+  left: 0rem;
+  margin-top: -3rem;
+  z-index: 150;
+  cursor: pointer;
+}
+
+.returnToprev::before {
+  content: '\f2ea';
+  font-family: FontAwesome;
+  font-weight: 300;
+  font-size: 5rem;
+  background-color: transparent;
+  left: 57rem;
+  margin-top: -0.5rem;
+  z-index: 100;
+  position: absolute;
+  cursor: pointer;
+  visibility: visible;
+}
+
+/***  주문 내역 확인창 ***/
+.checkOrder {
+  visibility: hidden;
+  width: 70rem;
+  height: 90rem;
+  background-color: #eeeeee;
+  position: absolute;
+  left: 50%;
+  top: 0%;
+  transform: translate(-50%, 0);
+  z-index: 150;
+  -webkit-transform: translate(-50%, 0);
+  -moz-transform: translate(-50%, 0);
+  -ms-transform: translate(-50%, 0);
+  -o-transform: translate(-50%, 0);
+}
+
+.basketHeader {
+  width: 70rem;
+  height: 10rem;
+}
+
+.basketHeader img {
+  display: block;
+  position: absolute;
+  left: 10rem;
+  top: 2.2rem;
+}
+
+.basketHeader .returnTohome::before {
+  left: 2rem;
+  top: 5rem;
+  visibility: visible;
+}
+
+.basketHeader .returnToprev::before {
+  left: 62rem;
+  top: 3rem;
+  visibility: hidden;
+}
+
+.orderCheckbox {
+  width: 45rem;
+  height: 30rem;
+  border: 0.2rem solid #c2c2c2;
+  position: relative;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+  overflow-y: auto;
+}
+
+.titleLine {
+  width: 70rem;
+  height: 10rem;
+  background-color: #cf0c00;
+  text-align: center;
+  display: block;
+  margin-bottom: 5rem;
+}
+
+.titleLine > h2 {
+  color: #fff;
+  line-height: 9.8rem;
+  font-size: 4rem;
+  font-weight: 700;
+}
+
+.orderCheckbox > p:nth-child(odd) {
+  margin-top: 4rem;
+  margin-left: 3rem;
+  font-size: 3rem;
+  line-height: 4rem;
+  float: left;
+  display: block;
+}
+
+.orderCheckbox > span {
+  margin-top: 4rem;
+  margin-right: 3rem;
+  font-size: 3rem;
+  color: #ba1a0f;
+  float: right;
+  display: block;
+}
+
+.orderCheckbox > p:nth-child(even) {
+  margin-top: 7rem;
+  margin-left: 3rem;
+  margin-right: 3rem;
+  line-height: 4rem;
+  font-size: 1.5rem;
+  display: block;
+  border-bottom: 0.1rem solid black;
+}
+
+.checkOrder > section {
+  text-align: center;
+  height: 20rem;
+}
+
+.checkOrder > section p {
+  font-size: 3rem;
+  font-weight: 500;
+  float: left;
+  -webkit-transform: translate(15rem, 3rem);
+          transform: translate(15rem, 3rem);
+  line-height: 5rem;
+  color: #363636;
+}
+
+.checkOrder > section p span {
+  font-size: 3rem;
+  font-weight: 700;
+  -webkit-transform: translate(28rem, -15rem);
+          transform: translate(28rem, -15rem);
+  color: #ba1a0f;
+  float: right;
+  clear: both;
+}
+
+.checkOrder > section .checkOrder > span:nth-last-of-type(1) {
+  font-size: 3.5rem;
+  margin-left: -1rem;
+}
+
+.cutOff {
+  content: '';
+  width: 43rem;
+  border-bottom: 0.3rem solid #c2c2c2;
+  margin: 0 auto;
+  padding-bottom: 1rem;
+  padding-top: 1.5rem;
+  display: block;
+}
+
+.paymentSector {
+  width: 70rem;
+  height: 15rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-transform: translate(0, -8rem);
+          transform: translate(0, -8rem);
+}
+
+.paymentSector .pointProcess {
+  width: 25rem;
+  height: 10rem;
+  background-color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.paymentSector .directProcess {
+  width: 45rem;
+  height: 10rem;
+  background-color: #cf0c00;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+/**  수량 조절  **/
+.plusCount::after {
+  content: '\2b';
+  font-family: FontAwesome;
+  font-weight: 300;
+  font-size: 1.5rem;
+  cursor: pointer;
+  background-color: #333333;
+  border: none;
+  outline: 0;
+  color: #eee;
+}
+
+.minusCount::before {
+  content: '\f068';
+  font-family: FontAwesome;
+  font-weight: 300;
+  font-size: 1.5rem;
+  cursor: pointer;
+  background-color: #333333;
+  color: #fff;
+}
+
+.plusCountDrink::after {
+  content: '\2b';
+  font-family: FontAwesome;
+  font-weight: 300;
+  font-size: 1.5rem;
+  cursor: pointer;
+  background-color: #333333;
+  border: none;
+  outline: 0;
+  color: #eee;
+}
+
+.minusCountDrink::before {
+  content: '\f068';
+  font-family: FontAwesome;
+  font-weight: 300;
+  font-size: 1.5rem;
+  cursor: pointer;
+  background-color: #333333;
+  color: #fff;
+}
+
+.countingNumber {
+  display: inline-block;
+  width: 2.5rem;
+  height: 2rem;
+  font-size: 1.5rem;
+  line-height: 1.6rem;
+  direction: rtl;
+  left: 50%;
+  margin-top: 0rem;
+  margin-left: 0rem;
+  margin-right: 1.5rem;
+  background-color: transparent;
+  border: none;
+}
+
+.drinkSelect {
+  display: inline-block;
+  width: 2.5rem;
+  height: 2rem;
+  font-size: 1.5rem;
+  line-height: 1.6rem;
+  direction: rtl;
+  left: 50%;
+  margin-top: 0rem;
+  margin-left: 0rem;
+  margin-right: 1.5rem;
+  background-color: transparent;
+  border: none;
+}
+
+/********************
+세트별 모달 내용 히든 처리
+.comboPopcornchoice cgv콤보
+.largeCombochoice   라지콤보
+.doubleCombochoice  더블콤보
+.smallSetchoice     스몰세트
+
+
+.popcornChoice      팝콘 메뉴
+.drinkChoice        세트메뉴에 있는 음료 선택
+
+********************/
+.comboModal > .choiceArea > .comboPopcornchoice,
+.comboModal > .choiceArea > .smallSetchoice,
+.comboModal > .choiceArea > .doubleCombochoice,
+.comboModal > .choiceArea > .popcornChoice {
+  visibility: hidden;
+}
+/*# sourceMappingURL=kiosk.css.map */
