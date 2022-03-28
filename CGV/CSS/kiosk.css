@@ -770,20 +770,6 @@ body {
   cursor: pointer;
 }
 
-.returnToprev::before {
-  content: '\f2ea';
-  font-family: FontAwesome;
-  font-weight: 300;
-  font-size: 5rem;
-  background-color: transparent;
-  left: 57rem;
-  margin-top: -0.5rem;
-  z-index: 100;
-  position: absolute;
-  cursor: pointer;
-  visibility: visible;
-}
-
 /***  주문 내역 확인창 ***/
 .checkOrder {
   visibility: hidden;
@@ -804,6 +790,7 @@ body {
 .basketHeader {
   width: 70rem;
   height: 10rem;
+  position: relative;
 }
 
 .basketHeader img {
@@ -819,10 +806,24 @@ body {
   visibility: visible;
 }
 
+.basketHeader .returnToprev {
+  position: absolute;
+  left: 8rem;
+}
+
 .basketHeader .returnToprev::before {
+  content: '\f2ea';
+  font-family: FontAwesome;
+  font-weight: 300;
+  font-size: 5rem;
+  background-color: transparent;
+  margin-top: -0.5rem;
+  z-index: 100;
+  position: absolute;
+  cursor: pointer;
   left: 62rem;
   top: 3rem;
-  visibility: hidden;
+  visibility: visible;
 }
 
 .orderCheckbox {

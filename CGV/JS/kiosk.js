@@ -418,9 +418,13 @@ let main = (() =>{
       let lastPayMent = document.querySelector(".lastPayMent");
       let totalAmount = document.querySelector(".totalAmount");
       let discountPayMent = document.querySelector(".discountPayMent");
+      let returnToprev = document.querySelector(".returnToprev");
+
       orderPayment.addEventListener("click",()=>{
-        checkOrder.style.visibility = "visible";
         let orderMenu = document.querySelectorAll(".orderMenu");
+        if(orderMenu.length >= 1) {
+        checkOrder.style.visibility = "visible";
+        returnToprev.style.left = "0rem";
         for(let i = 0; i < orderMenu.length; i++) {
         let resultCombo = orderMenu[i].childNodes[7].innerHTML.replace("undefined","");
         let resultDrink = orderMenu[i].childNodes[6].innerHTML.replace("undefined","");
@@ -434,6 +438,14 @@ let main = (() =>{
         lastPayMent.innerHTML = `${totalAmount.innerHTML} 원`;
         discountPayMent.innerHTML = `${totalAmount.innerHTML} 원`;
         }
+      }
+      })
+      returnToprev.addEventListener("click",()=>{
+        orderCheckbox.innerHTML = "";
+        lastPayMent.innerHTML = `0 원`;
+        discountPayMent.innerHTML = `0 원`;
+        checkOrder.style.visibility = "hidden";
+        returnToprev.style.left = "8rem";
       })
     }
 
