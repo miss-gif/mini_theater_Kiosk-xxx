@@ -25,7 +25,7 @@ function transitionChangeZeroSecond(paramArray){
 }
 
 // 영화목록 왼쪽으로 버튼
-previousBtn.addEventListener('click',function(){
+afterBtn.addEventListener('click',function(){
   className.unshift(className.pop());
   className[0].style.left = "50%";
   className[0].style.transform = "translate(-50%, -50%)";
@@ -45,7 +45,7 @@ previousBtn.addEventListener('click',function(){
 });
 
 // 영화목록 오른쪽으로 버튼
-afterBtn.addEventListener('click',function(){
+previousBtn.addEventListener('click',function(){
   className.push(className.shift());
   className[0].style.left = "50%";
   className[0].style.transform = "translate(-50%, -50%)";
