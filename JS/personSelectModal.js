@@ -26,14 +26,10 @@ function selectionButtonChange(targetButton){
     v.classList.remove("SelectionBtnStyle");
   });
 }
-// 인자를 받아서 천단위 콤마 찍고 반환하는 함수
-function commaMaker(number){
-  return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-}
 // 가격의 총액을 반환하는 함수
 function priceTotal(paramAdult, paramChild, paramSenior, paramDisable){
   let resultTotal = paramAdult * priceAdult + paramChild * priceChild + paramSenior * priceSenior + paramDisable * priceDisable;
-  resultTotal = commaMaker(resultTotal);
+  //resultTotal = commaMaker(resultTotal);
   console.log(resultTotal);   
   return resultTotal;
 }
@@ -104,10 +100,4 @@ personSelectCompleteButton.addEventListener('click',function(){
   }
   console.log(nowPage);
 });
-
-/*personSelectCancelButton.addEventListener('click', function(){
-  console.log("인원 선택 취소");
-  showMovieSelectPage();  // 영화 선택 화면으로 이동
-  console.log(nowPage);
-});*/
 

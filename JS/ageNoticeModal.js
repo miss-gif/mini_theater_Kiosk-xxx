@@ -1,6 +1,5 @@
 // 연령 고지 모달 제어 스크립트
 let ageNoticeOK = document.querySelector("#ageLimitGuidanceBtn");
-//let ageNoticeNO = document.querySelector("#ageNoticeNO");
 
 ageNoticeOK.addEventListener('click',function(){
   numberSelectArrayAdult[0].click();  // 관람 인원수 성인 디폴트값인 0으로 초기화
@@ -9,11 +8,6 @@ ageNoticeOK.addEventListener('click',function(){
   numberSelectArrayDisable[0].click();  // 관람 인원수 장애인 디폴트값인 0으로 초기화
   showPersonSelectModal();  // 관람 인원수 모달 표시
 });
-
-/*ageNoticeNO.addEventListener('click',function(){
-  showMovieSelectPage();  // 영화 선택 화면 표시
-});*/
-
 
 
 
