@@ -1,5 +1,5 @@
 // 페이지가 로드되었을때 실행
-let movieDiscountPrice = 0;
+let movieDiscountPrice = 0; // 영화 할인 금액
 
 window.addEventListener('load',function(){
   hideAllPages();

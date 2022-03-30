@@ -68,7 +68,7 @@ let resetSeatAll = function(){
   `;
   seatNumber = document.querySelectorAll("#seatNumber");
 }
-
+// 
 
 // 좌석 선택 상태 초기화 함수
 function resetSeatStatus(){
@@ -77,8 +77,7 @@ function resetSeatStatus(){
     if(v.classList.contains("SelectedSeat")){
       v.classList.remove("SelectedSeat");
       v.classList.add("emptySeat");
-    }
-    if(v.classList.contains("disabledSeat")){
+    } else if(v.classList.contains("disabledSeat")){
       v.classList.remove("disabledSeat");
       v.classList.add("emptySeat");
     }
@@ -98,6 +97,7 @@ let seatStatusChange = function(targetSeat){
   // 선택한 인원 수 만큼 사람을 선택한 경우
   if(maxSelectableCount == selectedSeatCount){
     seatSelectComplete.style.backgroundColor = "var(--textRed)";
+    seatSelectComplete.style.cursor = "pointer";
     seatNumber.forEach(function(v){
       if(v.classList.contains("emptySeat")){
         v.classList.remove("emptySeat");
@@ -106,6 +106,8 @@ let seatStatusChange = function(targetSeat){
     });
   // 선택한 인원 수 만큼 사람을 선택하지 않은 경우
   } else {
+    seatSelectComplete.style.backgroundColor = "#D6D6D6";
+    seatSelectComplete.style.cursor = "default";
     seatNumber.forEach(function(v){
       if(v.classList.contains("disabledSeat")){
         v.classList.remove("disabledSeat");
@@ -122,7 +124,7 @@ seatSelectComplete.addEventListener('click',function(){
   if(maxSelectableCount == selectedSeatCount){
     let todayInfo = new Date();
     let selectedMovieEndTime = "";
-    let finallyPaymentPrice;
+    finallyPaymentPrice = 0;
     if( (movieTotalPrice - movieDiscountPrice) < 0){
       finallyPaymentPrice = 0;
     } else {
@@ -136,7 +138,7 @@ seatSelectComplete.addEventListener('click',function(){
     document.querySelector('#discountTicketPrice').innerHTML = commaMaker(movieDiscountPrice) + '원';
     document.querySelector('#finallyTicketPrice').innerHTML = commaMaker(finallyPaymentPrice) +"원";
     paymentContent.querySelector('img').src = selectedMovieImageUrl;
-    paymentContent.querySelector('H3').innerHTML = selectedMovieName;
+    paymentContent.querySelector('H3').innerHTML = `<div id="ageLimit" class="ageLimit">15</div>` + selectedMovieName;
     paymentContent.querySelectorAll('P')[0].innerHTML = `CGV 안산 ${selectedMoviePlace}`;
     paymentContent.querySelectorAll('P')[1].innerHTML = `${todayInfo.getFullYear()}/${todayInfo.getMonth() + 1}/${todayInfo.getDate()}(${ dayReplacer(todayInfo.getDay())}) ${selectedMovieStartTime} ~ ${selectedMovieEndTime}`;    
     // 선택한 좌석을 감지해서 정보를 결제정보창에 넘겨줌

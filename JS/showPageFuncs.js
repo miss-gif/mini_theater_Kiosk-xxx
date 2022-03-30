@@ -75,9 +75,6 @@ function showStoreSelectPage(){
   storeSelectPage.style.visibility = "visible"; //티켓매점선택화면 표시
   nowPage = "storeSelectPage";
 }
-// 매점 프로세스로 전환하는 함수
-function showCafeteriaStorePage(){
-}
 // 티켓 발행 방식 선택 페이지로 전환하는 함수 ( 폐ㅒ기 )
 function showTicketPublishPage(){
   reservedTicketSearchPage.style.visibility = "hidden";
@@ -128,6 +125,7 @@ function showSeatSelectPage(){
   // 인원 선택을 마치면 각 좌석에 클릭했을때 이벤트 부여
   resetSeatAll();
   resetSeatStatus();  // 좌석 선택 상태 초기화
+  seatSelectComplete.style.cursor = "default"; // 커서 디폴트로
   seatNumber.forEach(function seatClickEvent(v){
     if(!v.classList.contains("BookedSeat")){
       v.addEventListener("click",function seatEvent(e){

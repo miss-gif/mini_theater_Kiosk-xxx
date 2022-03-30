@@ -1,0 +1,64 @@
+.baseModal {
+  width: 70rem;
+  height: 90rem;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  -webkit-transform: translate(0%, 0%);
+          transform: translate(0%, 0%);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  visibility: hidden;
+}
+
+.baseModal .mainSketch {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  -webkit-transform: translate(0%, 0%);
+          transform: translate(0%, 0%);
+  display: none;
+  visibility: hidden;
+}
+
+.baseModal .mainSketch .mainHeader {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: none;
+  visibility: hidden;
+}
+
+.baseModal .mainSketch .creditCard1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  visibility: hidden;
+}
+
+.baseModal .mainSketch .creditCard2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  visibility: hidden;
+}
+
+.baseModal .mainSketch .completePage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  visibility: hidden;
+}
+/*# sourceMappingURL=add.css.map */

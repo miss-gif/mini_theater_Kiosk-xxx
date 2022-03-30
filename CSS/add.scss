@@ -1,0 +1,68 @@
+// 포인트 조회 모달창
+.baseModal {
+  width: 70rem;
+  height: 90rem;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transform: translate(0%, 0%);
+  box-sizing: border-box;
+  visibility: hidden;
+  // display: none;
+
+  // 포인트 조회 번호 넣는 부분
+  .modalList {
+    // position: absolute;
+    // visibility: hidden;
+  }
+  .mainSketch {
+    // position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transform: translate(0%, 0%);
+    display: none;
+    visibility: hidden;
+
+    .mainHeader {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      display: none;
+      visibility: hidden;
+    }
+    .creditCard1 {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      // display: none;
+      visibility: hidden;
+    }
+    .creditCard2 {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      // display: none;
+      visibility: hidden;
+    }
+    .completePage {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      // display: none;
+      visibility: hidden;
+    }
+  }
+}

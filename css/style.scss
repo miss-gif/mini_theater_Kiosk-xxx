@@ -5,7 +5,7 @@ body {
 .onePage {
   width: 70rem;
   height: 90rem;
-  // margin: auto;
+  margin: auto;
 }
 
 .storeSelectPage {
@@ -153,19 +153,29 @@ header {
     background-color: var(--background);
 
     a.homeBtn {
-      margin-right: 0.5rem;
+      // margin-right: 2rem;
+      margin-left: 2rem;
+      i {
+        font-size: 5rem;
+        margin-right: 2.4rem;
+      }
     }
 
     img {
-      height: 3rem; // 30
+      width: 10rem;
+      // height: 3rem; // 30
     }
 
     .replyBtn {
       width: 3.8rem;
       height: 3.8rem;
       position: absolute;
-      right: 0;
+      right: 2.5rem;
+      font-size: 5rem;
       cursor: pointer;
+      i {
+        font-size: 5rem;
+      }
     }
   }
 
@@ -185,6 +195,7 @@ main {
   width: 70rem;
   height: 71rem;
   position: relative;
+  background-color: var(--background);
 }
 
 // ticketPublishPage
@@ -456,7 +467,6 @@ section.nowMovie {
   display: block; // 작업 중에 사용
   // display: none;
   //position: absolute;
-  top: 0;
   background-color: var(--background);
   z-index: 30;
 
@@ -467,7 +477,7 @@ section.nowMovie {
     border-top: 0.5rem solid #9a1f1677;
     border-bottom: 0.5rem solid #9a1f1677;
     padding: 1rem 0;
-    margin: 3rem 0;
+    // margin: 3rem 0;
     .ticketingHistory {
       // margin: 30 0;
       display: flex;
@@ -1253,6 +1263,11 @@ section.ticketingTicketInquiry {
       margin: 0.5rem;
     }
   }
+
+  // 포인트 결제 모달
+  .baseModal {
+    position: absolute;
+  }
 }
 
 // 화면 제어 - 작업용
@@ -1294,7 +1309,7 @@ body {
     z-index: 50;
 
     .advanceTicketConfirm2 {
-      margin-top: 5rem;
+      // margin-top: 5rem;
     }
   }
 
@@ -1316,7 +1331,7 @@ body {
     // display: none;
     position: absolute;
     top: 0;
-    transform: translate(0, 41%);
+    transform: translate(10%, 44%);
     z-index: 61;
   }
 
@@ -1325,7 +1340,7 @@ body {
     // display: none;
     position: absolute;
     top: 0;
-    transform: translate(0, 60%);
+    transform: translate(10%, 65%);
     z-index: 71;
   }
 
@@ -1334,7 +1349,7 @@ body {
     // display: none;
     position: absolute;
     top: 0;
-    transform: translate(0, 75%);
+    transform: translate(11%, 75%);
     z-index: 76;
   }
 }
